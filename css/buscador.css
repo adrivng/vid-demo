@@ -1,0 +1,148 @@
+/* ============================================================
+   BUSCADOR DE DESTINOS — Estilos del dropdown
+   Agregar en style.css o en un bloque <style> en el layout
+   ============================================================ */
+
+/* ── Variables (adaptar a tu paleta) ──────────────────────── */
+:root {
+    --buscador-bg          : #ffffff;
+    --buscador-border      : #e2e8f0;
+    --buscador-shadow      : 0 8px 32px rgba(0, 0, 0, 0.12);
+    --buscador-radio       : 12px;
+    --buscador-item-hover  : #f0f7ff;
+    --buscador-item-activo : #dbeafe;
+    --buscador-header-color: #64748b;
+    --buscador-nombre-color: #1e293b;
+    --buscador-region-color: #94a3b8;
+    --buscador-icono-color : #3b82f6;
+    --buscador-mark-bg     : #fef08a;
+    --buscador-mark-color  : #1e293b;
+    --buscador-vacio-color : #64748b;
+}
+
+/* ── Contenedor del dropdown ──────────────────────────────── */
+#resultadosBusqueda {
+    position        : absolute;
+    top             : calc(100% + 6px);
+    left            : 0;
+    right           : 0;
+    z-index         : 9999;
+    background      : var(--buscador-bg);
+    border          : 1px solid var(--buscador-border);
+    border-radius   : var(--buscador-radio);
+    box-shadow      : var(--buscador-shadow);
+    max-height      : 380px;
+    overflow-y      : auto;
+
+    /* Animación de aparición */
+    animation       : buscadorFadeIn 0.18s ease-out both;
+
+    /* Scrollbar discreta */
+    scrollbar-width : thin;
+    scrollbar-color : #cbd5e1 transparent;
+}
+
+#resultadosBusqueda::-webkit-scrollbar        { width: 4px; }
+#resultadosBusqueda::-webkit-scrollbar-track  { background: transparent; }
+#resultadosBusqueda::-webkit-scrollbar-thumb  { background-color: #cbd5e1; border-radius: 4px; }
+
+@keyframes buscadorFadeIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* ── Cabecera de grupo (región) ───────────────────────────── */
+.resultado-grupo-header {
+    padding     : 8px 16px 4px;
+    font-size   : 0.7rem;
+    font-weight : 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color       : var(--buscador-header-color);
+    border-top  : 1px solid var(--buscador-border);
+}
+
+.resultado-grupo-header:first-child {
+    border-top: none;
+}
+
+/* ── Item individual ──────────────────────────────────────── */
+.resultado-item {
+    display         : flex;
+    align-items     : center;
+    gap             : 10px;
+    padding         : 10px 16px;
+    text-decoration : none;
+    color           : var(--buscador-nombre-color);
+    transition      : background 0.12s ease;
+    cursor          : pointer;
+}
+
+.resultado-item:hover,
+.resultado-item.resultado-activo {
+    background : var(--buscador-item-hover);
+    color      : var(--buscador-nombre-color);
+}
+
+.resultado-item.resultado-activo {
+    background : var(--buscador-item-activo);
+}
+
+/* Icono del pin */
+.resultado-icono {
+    color       : var(--buscador-icono-color);
+    font-size   : 0.85rem;
+    flex-shrink : 0;
+    width       : 16px;
+    text-align  : center;
+}
+
+/* Nombre del destino */
+.resultado-nombre {
+    flex        : 1;
+    font-size   : 0.9rem;
+    font-weight : 500;
+    line-height : 1.3;
+}
+
+/* Etiqueta de región (a la derecha) */
+.resultado-region {
+    font-size      : 0.75rem;
+    color          : var(--buscador-region-color);
+    white-space    : nowrap;
+    flex-shrink    : 0;
+    padding        : 2px 8px;
+    background     : #f1f5f9;
+    border-radius  : 99px;
+}
+
+/* Texto resaltado (la parte que coincide con la búsqueda) */
+#resultadosBusqueda mark {
+    background : var(--buscador-mark-bg);
+    color      : var(--buscador-mark-color);
+    border-radius: 2px;
+    padding    : 0 1px;
+}
+
+/* ── Estado vacío ─────────────────────────────────────────── */
+.resultado-vacio {
+    padding    : 20px 16px;
+    text-align : center;
+    color      : var(--buscador-vacio-color);
+    font-size  : 0.9rem;
+}
+
+.resultado-vacio strong {
+    color: var(--buscador-nombre-color);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 575.98px) {
+    #resultadosBusqueda {
+        max-height: 60vh;
+    }
+
+    .resultado-region {
+        display: none; /* En móvil pequeño ocultamos la etiqueta para ahorrar espacio */
+    }
+}
