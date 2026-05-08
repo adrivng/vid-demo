@@ -28,6 +28,8 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
 
+       
+
         <!-- buscador -->
         <link rel="stylesheet" href="css/buscador.css">
         <script src="js/buscador.js" defer></script>
@@ -89,7 +91,7 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-0">
                         <a href="index.html" class="nav-item nav-link active">Inicio</a>
-                        <a href="about.html" class="nav-item nav-link">Nosotros</a>
+                        <a href="nosotros.php" class="nav-item nav-link">Nosotros</a>
                         <a href="peru.php" class="nav-item nav-link">Perú</a>
                         <a href="internacional.php" class="nav-item nav-link">Internacional</a>
                         <a href="bloqueos.php" class="nav-item nav-link">Bloqueos</a>
@@ -122,57 +124,57 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <img src="img/carousel-2.jpg" class="img-fluid" alt="Image">
+                            <img src="img/carousel-2.jpg" class="img-fluid" alt="Image" loading="lazy">
                             <div class="carousel-caption">
                                 <div class="p-3" style="max-width: 900px;">
-                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Promos</h4>
-                                    <h1 class="display-2 text-capitalize text-white mb-4">Salidas Confirmadas</h1>
-                                    <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                    </p>
+                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Programa De Lealtad</h4>
+                                    <h1 class="display-2 text-capitalize text-white mb-4">CLUB VIDATUR</h1>
+                                    <!-- <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                    </p> -->
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Explorar</a>
+                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/carousel-1.jpg" class="img-fluid" alt="Image">
+                            <img src="img/carousel-1.jpg" class="img-fluid" alt="Image" loading="lazy">
                             <div class="carousel-caption">
                                 <div class="p-3" style="max-width: 900px;">
-                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Promos</h4>
-                                    <h1 class="display-2 text-capitalize text-white mb-4">Vende Estados Unidos</h1>
-                                    <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                    </p>
+                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Registro del Cotizador Online</h4>
+                                    <h1 class="display-2 text-capitalize text-white mb-4">Vidaur Online</h1>
+                                    <!-- <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                    </p> -->
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Explorar</a>
+                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/carousel-3.jpg" class="img-fluid" alt="Image">
+                            <img src="img/carousel-3.jpg" class="img-fluid" alt="Image" loading="lazy">
                             <div class="carousel-caption">
                                 <div class="p-3" style="max-width: 900px;">
-                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Promos</h4>
-                                    <h1 class="display-2 text-capitalize text-white mb-4">Parques Seaworld</h1>
-                                    <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                    </p>
+                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Beneficios GEA</h4>
+                                    <h1 class="display-2 text-capitalize text-white mb-4">GEA</h1>
+                                    <!-- <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                    </p> -->
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Explorar</a>
+                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <img src="img/carousel-3.jpg" class="img-fluid" alt="Image">
+                            <img src="img/carousel-3.jpg" class="img-fluid" alt="Image" loading="lazy">
                             <div class="carousel-caption">
                                 <div class="p-3" style="max-width: 900px;">
-                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Promos</h4>
-                                    <h1 class="display-2 text-capitalize text-white mb-4">Parques Xcaret</h1>
-                                    <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                                    </p>
+                                    <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">VPR</h4>
+                                    <h1 class="display-2 text-capitalize text-white mb-4">PROGRAMA DE RECOMPENSA</h1>
+                                    <!-- <p class="mb-5 fs-5">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                                    </p> -->
                                     <div class="d-flex align-items-center justify-content-center">
-                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Explorar</a>
+                                        <a class="btn-hover-bg btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
                                     </div>
                                 </div>
                             </div>
@@ -188,6 +190,7 @@
                     </button>
                 </div>
             </div>
+            
             <!-- Carousel End -->
         </div>
         
@@ -236,7 +239,7 @@
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-5">
-                        <div class="h-100" style="border: 50px solid; border-color: transparent #138a23 transparent #138a23;">
+                        <div class="h-100">
                             <img src="img/images-index/general.jpg" class="img-fluid w-100 h-100" alt="">
                         </div>
                     </div>
@@ -271,7 +274,7 @@
                                 <p class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Soporte 24/7</p>
                             </div>
                         </div>
-                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="">Leer Más</a>
+                        <a class="btn btn-primary rounded-pill py-3 px-5 mt-2" href="nosotros.php">Más</a>
                     </div>
                 </div>
             </div>
@@ -570,8 +573,8 @@
         <div class="container-fluid destination py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Destination</h5>
-                    <h1 class="mb-0">Popular Destination</h1>
+                    <h5 class="section-title px-3">Destinos</h5>
+                    <h1 class="mb-0">Destinos Populares</h1>
                 </div>
                 <div class="tab-class text-center">
                     <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
@@ -582,29 +585,29 @@
                         </li>
                         <li class="nav-item">
                             <a class="d-flex py-2 mx-3 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
-                                <span class="text-dark" style="width: 150px;">USA</span>
+                                <span class="text-dark" style="width: 150px;">Cartagena</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
-                                <span class="text-dark" style="width: 150px;">Canada</span>
+                                <span class="text-dark" style="width: 150px;">Punta Cana</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
-                                <span class="text-dark" style="width: 150px;">Europe</span>
+                                <span class="text-dark" style="width: 150px;">Cancún</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
-                                <span class="text-dark" style="width: 150px;">China</span>
+                                <span class="text-dark" style="width: 150px;">Varadero</span>
                             </a>
                         </li>
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-6">
                                 <span class="text-dark" style="width: 150px;">Singapore</span>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                     <div class="tab-content">
                         <div id="tab-1" class="tab-pane fade show p-0 active">
@@ -876,7 +879,7 @@
         <!-- Destination End -->
 
         <!-- Explore Tour Start -->
-        <div class="container-fluid ExploreTour py-5">
+        <!-- <div class="container-fluid ExploreTour py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">Explore Tour</h5>
@@ -1063,11 +1066,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Explore Tour Start -->
 
         <!-- Packages Start -->
-        <div class="container-fluid packages py-5">
+        <!-- <div class="container-fluid packages py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">Packages</h5>
@@ -1208,11 +1211,11 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Packages End -->
 
         <!-- Gallery Start -->
-        <div class="container-fluid gallery py-5 my-5">
+        <!-- <div class="container-fluid gallery py-5 my-5">
             <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                 <h5 class="section-title px-3">Our Gallery</h5>
                 <h1 class="mb-4">Tourism & Traveling Gallery.</h1>
@@ -1522,7 +1525,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Gallery End -->
 
         <!-- Tour Booking Start -->
@@ -1530,15 +1533,15 @@
             <div class="container py-5">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
-                        <h5 class="section-booking-title pe-3">Booking</h5>
-                        <h1 class="text-white mb-4">Online Booking</h1>
+                        <h5 class="section-booking-title pe-3">COTIZADOR ONLINE 2.0</h5>
+                        <h1 class="text-white mb-4">Online</h1>
                         <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium? Repudiandae iste voluptatem fugiat doloribus quasi quo iure officia.
                         </p>
                         <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium? Repudiandae iste voluptatem fugiat doloribus quasi quo iure officia.
                         </p>
-                        <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Read More</a>
+                        <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Registro directo</a>
                     </div>
-                    <div class="col-lg-6">
+                    <!-- <div class="col-lg-6">
                         <h1 class="text-white mb-3">Book A Tour Deals</h1>
                         <p class="text-white mb-4">Get <span class="text-warning">50% Off</span> On Your First Adventure Trip With Travela. Get More Deal Offers Here.</p>
                         <form>
@@ -1603,7 +1606,7 @@
                                 </div>
                             </div>
                         </form>
-                    </div>
+                    </div> --> <!-- Tengo pensado que ira una goto -->
                 </div>
             </div>
         </div>
@@ -1613,8 +1616,8 @@
         <div class="container-fluid guide py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Travel Guide</h5>
-                    <h1 class="mb-0">Meet Our Guide</h1>
+                    <h1 class="section-title px-3">EQUIPO VIDATUR</h1>
+                    <h1 class="mb-0"></h1>
                 </div>
                 <div class="row g-4">
                     <div class="col-md-6 col-lg-3">
@@ -1707,7 +1710,7 @@
         <!-- Travel Guide End -->
 
         <!-- Blog Start -->
-        <div class="container-fluid blog py-5">
+        <!-- <div class="container-fluid blog py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
                     <h5 class="section-title px-3">Our Blog</h5>
@@ -1787,15 +1790,15 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- Blog End -->
 
         <!-- Testimonial Start -->
         <div class="container-fluid testimonial py-5">
             <div class="container py-5">
                 <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-                    <h5 class="section-title px-3">Testimonial</h5>
-                    <h1 class="mb-0">Our Clients Say!!!</h1>
+                    <h2 class="section-title px-3">Agencias que trabajan con Nosotros</h2>
+                    <!-- <h1 class="mb-0">Nuestras Agencias</h1> -->
                 </div>
                 <div class="testimonial-carousel owl-carousel">
                     <div class="testimonial-item text-center rounded pb-4">
@@ -1888,12 +1891,12 @@
             <div class="container text-center py-5">
                 <div class="mx-auto text-center" style="max-width: 900px;">
                     <h5 class="subscribe-title px-3">Subscribe</h5>
-                    <h1 class="text-white mb-4">Our Newsletter</h1>
+                    <h1 class="text-white mb-4">Nuestro Boletín</h1>
                     <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
                     </p>
                     <div class="position-relative mx-auto">
-                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
+                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Tu email">
+                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Enviar</button>
                     </div>
                 </div>
             </div>
@@ -1906,42 +1909,40 @@
                 <div class="row g-5">
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Get In Touch</h4>
-                            <a href=""><i class="fas fa-home me-2"></i> 123 Street, New York, USA</a>
-                            <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a>
-                            <a href=""><i class="fas fa-phone me-2"></i> +012 345 67890</a>
-                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a>
+                            <h4 class="mb-4 text-white">Lima</h4>
+                            <a href=""><i class="fas fa-home me-2"></i> <small>Av. José Larco 930, Miraflores 15074</small></a>
+                            <a href=""><i class="fas fa-envelope me-2"></i> <small>soporte@vidatur.net</small></a>
+                            <a href=""><i class="fas fa-phone me-2"></i> <small>+51 999999999</small></a>
+                            <a href="" class="mb-3"><i class="fas fa-print me-2"></i><small> +51 837212312</small></a>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-white me-2"></i>
                                 <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                                <!-- <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a> -->
                                 <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
-                                <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a>
+                                <!-- <a class="btn-square btn btn-primary rounded-circle mx-1" href=""><i class="fab fa-linkedin-in"></i></a> -->
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Company</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> About</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Careers</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
+                            <h4 class="mb-4 text-white">Compañia</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Nosotros</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Contacto</a>
+                            <!-- <a href=""><i class="fas fa-angle-right me-2"></i> Blog</a>
                             <a href=""><i class="fas fa-angle-right me-2"></i> Press</a>
                             <a href=""><i class="fas fa-angle-right me-2"></i> Gift Cards</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Magazine</a> -->
                         </div>
                     </div>
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Support</h4>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Contact</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Legal Notice</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Terms and Conditions</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Sitemap</a>
-                            <a href=""><i class="fas fa-angle-right me-2"></i> Cookie policy</a>
+                            <h4 class="mb-4 text-white">Servicios</h4>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Bloqueos</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Salidas Confirmadas</a>
+                            <a href=""><i class="fas fa-angle-right me-2"></i> Online</a>                            
                         </div>
                     </div>
+                    
                     <div class="col-md-6 col-lg-6 col-xl-3">
                         <div class="footer-item">
                             <div class="row gy-3 gx-2 mb-4">
@@ -1991,17 +1992,28 @@
         <!-- Copyright Start -->
         <div class="container-fluid copyright text-body py-4">
             <div class="container">
-                <div class="row g-4 align-items-center">
-                    <div class="col-md-6 text-center text-md-end mb-md-0">
-                        <i class="fas fa-copyright me-2"></i><a class="text-white" href="#">Your Site Name</a>, All right reserved.
+                <div class="row align-items-center">
+
+                    <!-- IZQUIERDA -->
+                    <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                        <a href="#" class="text-white me-3">
+                            <small><small>Política de Privacidad</small></small>
+                        </a>
+
+                        <a href="#" class="text-white">
+                            <small><small>Términos y Condiciones</small></small>
+                        </a>
                     </div>
-                    <div class="col-md-6 text-center text-md-start">
-                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
-                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
-                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
-                        Designed By <a class="text-white" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
+
+                    <!-- DERECHA -->
+                    <div class="col-md-6 text-center text-md-end">
+                        <i class="fas fa-copyright me-2"></i>
+
+                        <a class="text-white" href="#">
+                            <small><small>2026 Vidatur, TODOS LOS DERECHOS RESERVADOS</small></small>
+                        </a>
                     </div>
-                    </div>
+
                 </div>
             </div>
         </div>
@@ -2022,6 +2034,22 @@
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
+
+        <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            var myCarousel = document.querySelector('#carouselId');
+
+            new bootstrap.Carousel(myCarousel, {
+                interval: 3000,
+                ride: 'carousel',
+                pause: false,
+                wrap: true
+            });
+
+        });
+        </script>
+        
     </body>
 
 </html>

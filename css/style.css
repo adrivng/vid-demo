@@ -271,7 +271,7 @@
         top: 0;
         left: 0;
         border-bottom: 1px solid rgba(255, 255, 255, .1);
-        z-index: 999;
+        z-index: 1200;
     }
     
     .sticky-top.navbar-light {
@@ -1500,3 +1500,62 @@
     }
 }
 /* ========== FIN ESTILOS DEL BUSCADOR ========== */
+
+
+/* === SERVICIOS HOME VIDATUR === */
+
+.service .service-content-inner {
+    transition: all 0.4s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.service .service-content-inner:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(123, 19, 19, 0.18);
+}
+
+/* imágenes e iconos */
+.service .service-content-inner img,
+.service .service-content-inner i {
+    transition: all 0.4s ease;
+}
+
+.service .service-content-inner:hover img {
+    transform: scale(1.08);
+}
+
+.service .service-content-inner:hover i {
+    transform: scale(1.15);
+}
+
+/* TEXTO BLANCO EN HOVER */
+.service .service-content-inner:hover h5,
+.service .service-content-inner:hover p,
+.service .service-content-inner:hover i {
+    color: #fff !important;
+}
+
+/* evita que las cards oscuras se vuelvan azules */
+.service .bg-success:hover,
+.service .bg-dark:hover,
+.service .bg-internacional:hover,
+.service .bg-nacional:hover,
+.service .bg-representaciones:hover {
+    background: inherit !important;
+}
+
+/* cards personalizadas */
+.bg-internacional {
+    background: #0b1238;
+}
+
+.bg-nacional {
+    background: #198754;
+}
+
+.bg-representaciones {
+    background: #055888;
+}
+
+/* === FIN SERVICIOS HOME VIDATUR === */
