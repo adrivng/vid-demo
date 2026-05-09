@@ -124,24 +124,17 @@
 
         <div class="container py-5">
 
-            <!-- CONTENEDOR -->
-            <div style="display:flex; gap:20px;">
+            <div class="map_container">
 
                 <!-- MAPA -->
-                <div id="chartdiv" style="width:65%; height:700px;"></div>
+                <div id="chartdiv"></div>
 
-                <!-- IMAGEN DERECHA -->
-                <div style="width:35%;">
+                <!-- VIDEO -->
+                <div class="video_side">
 
-                    <img id="previewImage"
-                        src="images/peru.jpg"
-                        style="
-                        width:100%;
-                        height:700px;
-                        object-fit:cover;
-                        border-radius:20px;
-                        transition:0.3s;
-                        ">
+                    <video autoplay muted loop playsinline>
+                        <source src="videos/peru.mp4" type="video/mp4">
+                    </video>
 
                 </div>
 
@@ -279,42 +272,34 @@
 
 am5.ready(function() {
 
-  // ROOT
   var root = am5.Root.new("chartdiv");
 
-  // THEME
   root.setThemes([
     am5themes_Animated.new(root)
   ]);
 
-  // MAPA
   var chart = root.container.children.push(
     am5map.MapChart.new(root, {
       projection: am5map.geoMercator()
     })
   );
 
-  // SERIES
   var polygonSeries = chart.series.push(
     am5map.MapPolygonSeries.new(root, {
       geoJSON: am5geodata_peruLow
     })
   );
 
-  // ESTILO DEL MAPA
+  // ESTILO
   polygonSeries.mapPolygons.template.setAll({
 
     tooltipText: "{name}",
     interactive: true,
 
-    // ROJO PERÚ
     fill: am5.color(0xb31217),
 
-    // BORDES BLANCOS
     stroke: am5.color(0xffffff),
     strokeWidth: 2,
-
-    fillOpacity: 0.95,
 
     cursorOverStyle: "pointer"
 
@@ -323,10 +308,7 @@ am5.ready(function() {
   // HOVER
   polygonSeries.mapPolygons.template.states.create("hover", {
 
-    // ROJO MÁS CLARO
     fill: am5.color(0xe63946),
-
-    // EFECTO
     scale: 1.02
 
   });
@@ -340,7 +322,6 @@ am5.ready(function() {
     })
   );
 
-  // FONDO TOOLTIP
   polygonSeries.mapPolygons.template
     .get("tooltip")
     .get("background")
@@ -352,7 +333,6 @@ am5.ready(function() {
 
     });
 
-  // TEXTO TOOLTIP
   polygonSeries.mapPolygons.template
     .get("tooltip")
     .label
@@ -364,48 +344,14 @@ am5.ready(function() {
 
     });
 
-  // DESTINOS
-  const destinos = {
+  // REDIRECCIONES
+  const rutas = {
 
-    "Arequipa": {
-      image: "images/arequipa.jpg"
-    },
-
-    "Ayacucho": {
-      image: "images/ayacucho.jpg"
-    },
-
-    "Cajamarca": {
-      image: "images/cajamarca.jpg"
-    },
-
-    "Cusco": {
-      image: "images/cusco.jpg"
-    },
-
-    "Lima": {
-      image: "images/lima.jpg"
-    },
-
-    "Ica": {
-      image: "images/ica.jpg"
-    },
-
-    "Iquitos": {
-      image: "images/iquitos.jpg"
-    },
-
-    "Puno": {
-      image: "images/puno.jpg"
-    },
-
-    "Tarapoto": {
-      image: "images/tarapoto.jpg"
-    },
-
-    "Trujillo": {
-      image: "images/trujillo.jpg"
-    }
+    "Cusco": "cusco.php",
+    "Lima": "lima.php",
+    "Arequipa": "arequipa.php",
+    "Puno": "puno.php",
+    "Ica": "ica.php"
 
   };
 
@@ -416,12 +362,9 @@ am5.ready(function() {
 
     console.log(data.name);
 
-    // SI EXISTE
-    if(destinos[data.name]){
+    if(rutas[data.name]){
 
-      // CAMBIAR FOTO
-      document.getElementById("previewImage").src =
-        destinos[data.name].image;
+      window.location.href = rutas[data.name];
 
     }
 

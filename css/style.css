@@ -394,14 +394,19 @@
 
 /*** Single Page Hero Header Start ***/
 .bg-breadcrumb {
-    background: linear-gradient(rgba(19, 53, 123, 0.5), rgba(19, 53, 123, 0.5)), url(../img/breadcrumb-bg.jpg);
-    background-position: center center;
+    /* Menos azul, más transparencia para que resalten las ruinas */
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), 
+                url(../img/Peru_Machu_Picchu_banner.jpg);
+    
+    /* Ajustamos la posición al 20% para que suba la imagen y se vea la cima */
+    background-position: center 20%; 
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    padding: 150px 0 50px 0;
+    
+    /* Quitamos el 'fixed' temporalmente para asegurar que la imagen no se pierda */
+    padding: 100px 0; 
+    text-align: center;
 }
-
 .bg-breadcrumb .breadcrumb-item a {
     color: var(--bs-secondary) !important;
 }
@@ -1567,7 +1572,6 @@
 }
 
 /* === FIN SERVICIOS HOME VIDATUR === */
-
 /* === PERU.PHP MAPA === */
 
 .map_container{
@@ -1578,9 +1582,25 @@
 #chartdiv{
     width:65%;
     height:700px;
+
+    border:3px solid rgba(255,255,255,0.8);
+
+    border-radius:25px;
+
+    box-shadow:
+    0 10px 30px rgba(0,0,0,0.15),
+    0 0 15px rgba(179,18,23,0.2);
+
+    overflow:hidden;
+
+    background:white;
 }
 
-#previewImage{
+.video_side{
+    width:35%;
+}
+
+.video_side video{
     width:100%;
     height:700px;
     object-fit:cover;
@@ -1588,7 +1608,8 @@
     transition:0.3s;
 }
 
-#previewImage:hover{
+.video_side video:hover{
     transform:scale(1.02);
 }
-/* === PERU.PHP MAPA FIN  === */
+
+/* === PERU.PHP MAPA FIN === */
