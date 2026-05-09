@@ -124,7 +124,28 @@
 
         <div class="container py-5">
 
-            <div id="chartdiv" style="width: 100%; height: 600px;"></div>
+            <!-- CONTENEDOR -->
+            <div style="display:flex; gap:20px;">
+
+                <!-- MAPA -->
+                <div id="chartdiv" style="width:65%; height:700px;"></div>
+
+                <!-- IMAGEN DERECHA -->
+                <div style="width:35%;">
+
+                    <img id="previewImage"
+                        src="images/peru.jpg"
+                        style="
+                        width:100%;
+                        height:700px;
+                        object-fit:cover;
+                        border-radius:20px;
+                        transition:0.3s;
+                        ">
+
+                </div>
+
+            </div>
         
 </div> 
 
@@ -255,57 +276,160 @@
         <!-- Template Javascript -->
         <script src="js/main.js"></script>
 <script>
+
 am5.ready(function() {
 
+  // ROOT
   var root = am5.Root.new("chartdiv");
 
+  // THEME
   root.setThemes([
     am5themes_Animated.new(root)
   ]);
 
+  // MAPA
   var chart = root.container.children.push(
     am5map.MapChart.new(root, {
-      panX: "rotateX",
-      panY: "translateY",
       projection: am5map.geoMercator()
     })
   );
 
+  // SERIES
   var polygonSeries = chart.series.push(
     am5map.MapPolygonSeries.new(root, {
       geoJSON: am5geodata_peruLow
     })
   );
 
+  // ESTILO DEL MAPA
   polygonSeries.mapPolygons.template.setAll({
+
     tooltipText: "{name}",
-    interactive: true
+    interactive: true,
+
+    // ROJO PERÚ
+    fill: am5.color(0xb31217),
+
+    // BORDES BLANCOS
+    stroke: am5.color(0xffffff),
+    strokeWidth: 2,
+
+    fillOpacity: 0.95,
+
+    cursorOverStyle: "pointer"
+
   });
 
+  // HOVER
   polygonSeries.mapPolygons.template.states.create("hover", {
-    fill: am5.color(0x13357b)
+
+    // ROJO MÁS CLARO
+    fill: am5.color(0xe63946),
+
+    // EFECTO
+    scale: 1.02
+
   });
 
-  // CLICK EVENT
+  // TOOLTIP
+  polygonSeries.mapPolygons.template.set(
+    "tooltip",
+    am5.Tooltip.new(root, {
+      getFillFromSprite: false,
+      autoTextColor: false
+    })
+  );
+
+  // FONDO TOOLTIP
+  polygonSeries.mapPolygons.template
+    .get("tooltip")
+    .get("background")
+    .setAll({
+
+      fill: am5.color(0xffffff),
+      stroke: am5.color(0xb31217),
+      strokeWidth: 2
+
+    });
+
+  // TEXTO TOOLTIP
+  polygonSeries.mapPolygons.template
+    .get("tooltip")
+    .label
+    .setAll({
+
+      fill: am5.color(0xb31217),
+      fontSize: 18,
+      fontWeight: "600"
+
+    });
+
+  // DESTINOS
+  const destinos = {
+
+    "Arequipa": {
+      image: "images/arequipa.jpg"
+    },
+
+    "Ayacucho": {
+      image: "images/ayacucho.jpg"
+    },
+
+    "Cajamarca": {
+      image: "images/cajamarca.jpg"
+    },
+
+    "Cusco": {
+      image: "images/cusco.jpg"
+    },
+
+    "Lima": {
+      image: "images/lima.jpg"
+    },
+
+    "Ica": {
+      image: "images/ica.jpg"
+    },
+
+    "Iquitos": {
+      image: "images/iquitos.jpg"
+    },
+
+    "Puno": {
+      image: "images/puno.jpg"
+    },
+
+    "Tarapoto": {
+      image: "images/tarapoto.jpg"
+    },
+
+    "Trujillo": {
+      image: "images/trujillo.jpg"
+    }
+
+  };
+
+  // CLICK
   polygonSeries.mapPolygons.template.events.on("click", function(ev) {
+
     var data = ev.target.dataItem.dataContext;
-    
-    // aquí decides a dónde manda
-    if (data.name === "Cusco") {
-      window.location.href = "cusco.php";
+
+    console.log(data.name);
+
+    // SI EXISTE
+    if(destinos[data.name]){
+
+      // CAMBIAR FOTO
+      document.getElementById("previewImage").src =
+        destinos[data.name].image;
+
     }
 
-    if (data.name === "Lima") {
-      window.location.href = "lima.php";
-    }
-
-    if (data.name === "Arequipa") {
-      window.location.href = "arequipa.php";
-    }
   });
 
 });
-</script>   
+
+</script>
     
     </body>
 

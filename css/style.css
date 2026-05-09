@@ -1567,3 +1567,28 @@
 }
 
 /* === FIN SERVICIOS HOME VIDATUR === */
+
+/* === PERU.PHP MAPA === */
+
+.map_container{
+    display:flex;
+    gap:20px;
+}
+
+#chartdiv{
+    width:65%;
+    height:700px;
+}
+
+#previewImage{
+    width:100%;
+    height:700px;
+    object-fit:cover;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+#previewImage:hover{
+    transform:scale(1.02);
+}
+/* === PERU.PHP MAPA FIN  === */
