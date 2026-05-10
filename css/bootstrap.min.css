@@ -693,7 +693,7 @@ progress {
     .container-md,
     .container-sm,
     .container {
-        max-width: 1320px
+        max-width: 1500px
     }
 }
 
@@ -3139,7 +3139,7 @@ fieldset:disabled .btn {
 
 .btn-primary {
     color: #fff;
-    background-color: #13357b;
+    background-color: #f1ae12;
     border-color: #13357b
 }
 

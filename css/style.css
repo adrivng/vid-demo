@@ -175,7 +175,7 @@
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
     padding: 23px 15px;
-    color: var(--bs-dark) !important;
+    color: var(--bs-green) !important;
 }
 
 .navbar-light .navbar-nav .nav-link:hover,
@@ -251,7 +251,7 @@
     .navbar-light .navbar-nav .nav-link,
     .sticky-top.navbar-light .navbar-nav .nav-link {
         padding: 10px 0;
-        color: var(--bs-dark) !important;
+        color: var(--bs-green) !important;
     }
 
     .navbar-light .navbar-nav .nav-link:hover,
@@ -958,7 +958,7 @@
 /* =====================================================
    19. FOOTER
    ===================================================== */
-.footer { background: var(--bs-dark); }
+.footer { background: var(--bs-green); }
 
 .footer .footer-item a {
     line-height: 30px;
@@ -977,7 +977,7 @@
    ===================================================== */
 .copyright {
     border-top: 1px solid rgba(255,255,255,0.08);
-    background: var(--bs-dark) !important;
+    background: var(--bs-green) !important;
 }
 
 

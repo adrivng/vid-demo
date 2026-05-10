@@ -38,7 +38,7 @@
             </div>
 
             <!-- Columna 3: Servicios -->
-            <div class="col-md-6 col-lg-6 col-xl-3">
+            <div class="col-md-6 col-lg-6 col-xl-3" style="margin-left: -100px;">
                 <div class="footer-item d-flex flex-column">
                     <h4 class="mb-4 text-white">Servicios</h4>
                     <a href="bloqueos.php"><i class="fas fa-angle-right me-2"></i> Bloqueos</a>
