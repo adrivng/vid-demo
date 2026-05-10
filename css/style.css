@@ -174,7 +174,7 @@
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
-    padding: 20px 15px;
+    padding: 23px 15px;
     color: var(--bs-dark) !important;
 }
 
@@ -187,8 +187,8 @@
 .navbar-light .navbar-brand h1 { color: var(--bs-white); }
 .sticky-top.navbar-light .navbar-brand h1 { color: var(--bs-primary); }
 
-.navbar-light .navbar-brand img { max-height: 110px; transition: .5s; }
-.sticky-top.navbar-light .navbar-brand img { max-height: 50px; }
+.navbar-light .navbar-brand img { max-height: 95px; transition: .5s; }
+.sticky-top.navbar-light .navbar-brand img { max-height: 72px; }
 
 /* Dropdown arrow personalizado */
 .navbar .dropdown-toggle::after {
@@ -234,6 +234,7 @@
         position: relative;
         background: var(--bs-white);
     }
+    
     .navbar-light .navbar-brand h1 { color: var(--bs-primary); }
 
     .navbar.navbar-expand-lg .navbar-toggler {
@@ -258,7 +259,7 @@
         color: var(--bs-primary) !important;
     }
 
-    .navbar-light .navbar-brand img { max-height: 45px; }
+    .navbar-light .navbar-brand img { max-height: 85px; }
 }
 
 /* Navbar desktop flotante / sticky */
