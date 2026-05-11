@@ -25,7 +25,7 @@ require_once 'includes/head.php';
 <!-- ========== BREADCRUMB ========== -->
 <div class="container-fluid bg-breadcrumb">
     <div class="container text-center py-5" style="max-width: 900px;">
-        <h3 class="text-white display-3 mb-4">Perú</h3>
+        <h3 class="text-white display-3 mb-4">Paquetes Perú</h3>
     </div>
 </div>
 <!-- ========== FIN BREADCRUMB ========== -->

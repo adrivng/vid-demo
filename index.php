@@ -128,7 +128,7 @@ require_once 'includes/head.php';
             <div class="col-lg-5">
                 <img src="img/images-index/general.jpg" class="img-fluid w-100 h-100" alt="Vidatur">
             </div>
-            <div class="col-lg-7" style="background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)), url(img/about-img-1.png);">
+            <div class="col-lg-7" style="background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)) ;"> <!--, url(img/about-img-1.png) esto es para el fonde en el about--> 
                 <h5 class="section-about-title pe-3">Sobre Nosotros</h5>
                 <h1 class="mb-4">Agencia Mayorista +25 años</h1>
                 <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dolorum, doloribus sunt dicta, officia voluptatibus libero necessitatibus natus impedit quam ullam assumenda? Id atque iste consectetur. Commodi odit ab saepe!</p>
@@ -382,7 +382,7 @@ require_once 'includes/head.php';
         </div>
 
         <div class="text-center mt-4">
-            <a class="btn btn-primary rounded-pill py-3 px-5" href="#">Ver Más Servicios</a>
+            <a class="btn btn-primary rounded-pill py-3 px-5" href="#">Ver Socios Estratégicos</a>
         </div>
 
     </div>
@@ -401,7 +401,7 @@ require_once 'includes/head.php';
             <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
                 <li class="nav-item">
                     <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
-                        <span class="text-dark" style="width: 150px;">All</span>
+                        <span class="text-dark" style="width: 150px;">Caribe</span>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -594,95 +594,216 @@ require_once 'includes/head.php';
         <div class="mx-auto text-center mb-5" style="max-width: 900px;">
             <h1 class="section-title px-3">EQUIPO VIDATUR</h1>
         </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <div class="guide-item">
-                    <div class="guide-img">
-                        <div class="guide-img-efects">
-                            <img src="img/guide-1.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="guide-icon rounded-pill p-2">
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
+
+        <!-- Carrusel wrapper -->
+        <div class="team-carousel-wrapper">
+
+            <!-- Flecha izquierda -->
+            <button class="team-arrow team-arrow--prev" id="teamPrev" aria-label="Anterior">
+                <i class="fa fa-chevron-left"></i>
+            </button>
+
+            <div class="team-carousel-viewport" id="teamViewport">
+                <div class="team-carousel-track" id="teamTrack">
+
+                    <?php
+                    /*
+                     * ── DATO ESTRUCTURADO ──────────────────────────────
+                     * Para agregar un miembro: añade un elemento al array.
+                     * ─────────────────────────────────────────────────── */
+                    $equipo = [
+                        [
+                            'nombre' => 'Miguel Portugal',
+                            'cargo'  => 'Gerente General',
+                            'img'    => 'img/images-index/miguel_angel_gerente_4.jpg',
+                            'wa'     => '51999999999',
+                        ],
+                        [
+                            'nombre' => 'Mirko',
+                            'cargo'  => 'Ventas',
+                            'img'    => 'img/images-index/mirko_producto.png',
+                            'wa'     => '51999999999',
+                        ],
+                        [
+                            'nombre' => 'Naomi',
+                            'cargo'  => 'Producto',
+                            'img'    => 'img/images-index/naomi_producto_2.jpg',
+                            'wa'     => '51999999999',
+                        ],
+                        [
+                            'nombre' => 'Yulieth',
+                            'cargo'  => 'Producto',
+                            'img'    => 'img/images-index/yulieth_producto_2.jpg',
+                            'wa'     => '51999999999',
+                        ],
+                        [
+                            'nombre' => 'Miluska',
+                            'cargo'  => 'Ventas',
+                            'img'    => 'img/images-index/milureduc.jpg',
+                            'wa'     => '51999999999',
+                        ],
+                        [
+                            'nombre' => 'Daniel',
+                            'cargo'  => 'Ventas',
+                            'img'    => 'img/images-index/Daniel_campo_verde_ventas_3.jpg',
+                            'wa'     => '51999999999',
+                        ],
+                        [
+                            'nombre' => 'Brenda',
+                            'cargo'  => 'Counter',
+                            'img'    => 'img/images-index/brenda_cornejo_counter_2.jpg',
+                            'wa'     => '51999999999',
+                        ],
+                        [
+                            'nombre' => 'Giuliana',
+                            'cargo'  => 'Counter',
+                            'img'    => 'img/images-index/giuliana_portugal_2.jpg',
+                            'wa'     => '51999999999',
+                        ],
+                        [
+                            'nombre' => 'Liz',
+                            'cargo'  => 'Counter',
+                            'img'    => 'img/images-index/liz_tavera_counter.jpg',
+                            'wa'     => '51999999999',
+                        ],
+                        [
+                            'nombre' => 'Brendha',
+                            'cargo'  => 'Counter',
+                            'img'    => 'img/images-index/brendha_juarez_counter.jpg',
+                            'wa'     => '51999999999',
+                        ],
+                        [
+                            'nombre' => 'Lady',
+                            'cargo'  => 'Atencion Al Cliente',
+                            'img'    => 'img/images-index/giuliana_portugal_2.jpg',
+                            'wa'     => '51999999999',
+                        ],
+                        [
+                            'nombre' => 'Victor',
+                            'cargo'  => 'Atencion Al Cliente',
+                            'img'    => 'img/images-index/victor_cardenas_atc.jpg',
+                            'wa'     => '51999999999',
+                        ],
+                        /* ── Agrega más miembros aquí ── */
+                    ];
+                    foreach ($equipo as $m): ?>
+
+                    <div class="team-slide">
+                        <div class="guide-item">
+                            <div class="guide-img">
+                                <div class="guide-img-efects">
+                                    <img src="<?= $m['img'] ?>" class="img-fluid w-100 rounded-top" alt="<?= $m['nombre'] ?>">
+                                </div>
+                                <div class="guide-icon rounded-pill p-2">
+                                    <a class="btn-wa-team"
+                                    href="https://wa.me/<?= $m['wa'] ?>?text=Hola+<?= urlencode($m['nombre']) ?>%2C+me+comunico+desde+la+web+de+Vidatur"
+                                    target="_blank" rel="noopener">
+                                        <i class="fab fa-whatsapp"></i> Contactar
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="guide-title text-center rounded-bottom p-4">
+                                <div class="guide-title-inner">
+                                    <h4 class="mt-3"><?= $m['nombre'] ?></h4>
+                                    <p class="mb-0"><?= $m['cargo'] ?></p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="guide-title text-center rounded-bottom p-4">
-                        <div class="guide-title-inner">
-                            <h4 class="mt-3">Full Name</h4>
-                            <p class="mb-0">Designation</p>
-                        </div>
-                    </div>
+
+                    <?php endforeach; ?>
+
                 </div>
             </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="guide-item">
-                    <div class="guide-img">
-                        <div class="guide-img-efects">
-                            <img src="img/guide-2.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="guide-icon rounded-pill p-2">
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="guide-title text-center rounded-bottom p-4">
-                        <div class="guide-title-inner">
-                            <h4 class="mt-3">Full Name</h4>
-                            <p class="mb-0">Designation</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="guide-item">
-                    <div class="guide-img">
-                        <div class="guide-img-efects">
-                            <img src="img/guide-3.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="guide-icon rounded-pill p-2">
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="guide-title text-center rounded-bottom p-4">
-                        <div class="guide-title-inner">
-                            <h4 class="mt-3">Full Name</h4>
-                            <p class="mb-0">Designation</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <div class="guide-item">
-                    <div class="guide-img">
-                        <div class="guide-img-efects">
-                            <img src="img/guide-4.jpg" class="img-fluid w-100 rounded-top" alt="">
-                        </div>
-                        <div class="guide-icon rounded-pill p-2">
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-square btn-primary rounded-circle mx-1" href="#"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="guide-title text-center rounded-bottom p-4">
-                        <div class="guide-title-inner">
-                            <h4 class="mt-3">Full Name</h4>
-                            <p class="mb-0">Designation</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <!-- Flecha derecha -->
+            <button class="team-arrow team-arrow--next" id="teamNext" aria-label="Siguiente">
+                <i class="fa fa-chevron-right"></i>
+            </button>
+
         </div>
+
+        <!-- Dots -->
+        <div class="team-dots" id="teamDots"></div>
+
     </div>
 </div>
-<!-- ========== FIN EQUIPO ========== -->
+
+<script>
+(function () {
+    const track    = document.getElementById('teamTrack');
+    const viewport = document.getElementById('teamViewport');
+    const btnPrev  = document.getElementById('teamPrev');
+    const btnNext  = document.getElementById('teamNext');
+    const dotsWrap = document.getElementById('teamDots');
+
+    let current = 0;
+
+    /* ── Slides visibles según ancho ── */
+    function visibleSlides() {
+        const w = viewport.offsetWidth;
+        if (w >= 992) return 4;
+        if (w >= 640) return 2;
+        return 1;
+    }
+
+    const slides = track.querySelectorAll('.team-slide');
+    const total  = slides.length;
+
+    /* ── Dots ── */
+    function buildDots() {
+        dotsWrap.innerHTML = '';
+        const pages = Math.ceil(total / visibleSlides());
+        for (let i = 0; i < pages; i++) {
+            const d = document.createElement('button');
+            d.className = 'team-dot' + (i === 0 ? ' active' : '');
+            d.addEventListener('click', () => goTo(i * visibleSlides()));
+            dotsWrap.appendChild(d);
+        }
+    }
+
+    /* ── Ir a índice ── */
+    function goTo(idx) {
+        const vs   = visibleSlides();
+        const maxI = Math.max(0, total - vs);
+        current    = Math.min(Math.max(idx, 0), maxI);
+
+        const slideW = slides[0].offsetWidth;
+        track.style.transform = `translateX(-${current * slideW}px)`;
+
+        /* dots activos */
+        const activePage = Math.floor(current / vs);
+        dotsWrap.querySelectorAll('.team-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === activePage);
+        });
+
+        /* flechas */
+        btnPrev.disabled = current === 0;
+        btnNext.disabled = current >= maxI;
+    }
+
+    btnPrev.addEventListener('click', () => goTo(current - visibleSlides()));
+    btnNext.addEventListener('click', () => goTo(current + visibleSlides()));
+
+    /* Touch / swipe */
+    let startX = 0;
+    viewport.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    viewport.addEventListener('touchend', e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? visibleSlides() : -visibleSlides()));
+    });
+
+    /* Recalcular en resize */
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => { buildDots(); goTo(0); }, 150);
+    });
+
+    buildDots();
+    goTo(0);
+})();
+</script>
 
 
 <!-- ========== TESTIMONIAL ========== -->

@@ -382,12 +382,46 @@
 .bg-breadcrumb {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
                 url(../img/Peru_Machu_Picchu_banner.jpg);
-    background-position: center 20%;
+    background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 100px 0;
     text-align: center;
 }
+
+/* ── Breadcrumb por página ── */
+
+.bg-breadcrumb--nosotros {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                      url(../img/bck-nosotros.jpg);
+    background-position: center center;
+}
+
+.bg-breadcrumb--bloqueos {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                      url(../img/bck-bloqueos.png);
+    background-position: center 52%;
+}
+
+.bg-breadcrumb--internacional {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                      url(../img/bck-internacional.png);
+    background-position: center 55%;
+}
+
+.bg-breadcrumb--eventos {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                      url(../img/packages-2.jpg);
+    background-position: center center;
+}
+
+.bg-breadcrumb--videos {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                      url(../img/packages-3.jpg);
+    background-position: center center;
+}
+
+/* Agrega más según necesites */
 
 .bg-breadcrumb .breadcrumb-item a { color: var(--bs-secondary) !important; }
 
@@ -961,14 +995,14 @@
 .footer { background: var(--bs-green); }
 
 .footer .footer-item a {
-    line-height: 30px;
+    line-height: 35px;
     color: var(--bs-white);
     transition: 0.5s;
 }
 
 .footer .footer-item a:hover {
     letter-spacing: 2px;
-    color: var(--bs-primary);
+    color: var(--bs-yellow);
 }
 
 
@@ -1012,3 +1046,123 @@
 }
 
 .video_side video:hover { transform: scale(1.02); }
+
+/* =====================================================
+   EQUIPO VIDATUR — Carrusel responsive
+   Añadir al final de style.css (sección 16 extendida)
+   ===================================================== */
+
+/* ── Wrapper del carrusel ── */
+.team-carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* ── Viewport (ventana de recorte) ── */
+.team-carousel-viewport {
+    overflow: hidden;
+    flex: 1;
+}
+
+/* ── Track (fila de slides) ── */
+.team-carousel-track {
+    display: flex;
+    transition: transform .4s cubic-bezier(.4,0,.2,1);
+}
+
+/* ── Cada slide ── */
+.team-slide {
+    flex: 0 0 25%;          /* 4 en desktop */
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+@media (max-width: 991.98px) {
+    .team-slide { flex: 0 0 50%; }   /* 2 en tablet */
+}
+@media (max-width: 639.98px) {
+    .team-slide { flex: 0 0 100%; }  /* 1 en móvil */
+}
+
+/* ── Altura uniforme de la imagen ── */
+.team-slide .guide-img-efects {
+    height: 320px;
+    overflow: hidden;
+}
+.team-slide .guide-img-efects img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;  /* encuadra desde la cara */
+}
+
+/* ── Flechas ── */
+.team-arrow {
+    flex-shrink: 0;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2px solid var(--bs-primary);
+    background: var(--bs-light);
+    color: var(--bs-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background .2s, color .2s, transform .15s;
+    z-index: 2;
+}
+.team-arrow:hover {
+    background: var(--bs-primary);
+    color: #fff;
+    transform: scale(1.08);
+}
+.team-arrow:disabled {
+    opacity: .3;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* ── Dots ── */
+.team-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 24px;
+}
+.team-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    transition: background .2s, width .25s;
+    padding: 0;
+}
+.team-dot.active {
+    width: 28px;
+    background: var(--bs-primary);
+}
+/* ── Botón WhatsApp equipo ── */
+.btn-wa-team {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #25d366;
+    color: #fff;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: .82rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background .2s, transform .15s;
+}
+.btn-wa-team:hover {
+    background: #1ebe5d;
+    transform: scale(1.04);
+    color: #fff;
+    text-decoration: none;
+}
+.btn-wa-team .fab { font-size: 1rem; }

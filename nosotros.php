@@ -16,7 +16,7 @@ require_once 'includes/head.php';
 <?php require_once 'includes/header.php'; ?>
 
 <!-- ========== BREADCRUMB ========== -->
-<div class="container-fluid bg-breadcrumb">
+<div class="container-fluid bg-breadcrumb bg-breadcrumb--nosotros">
     <div class="container text-center py-5" style="max-width: 900px;">
         <h3 class="text-white display-3 mb-4">Nosotros</h3>
     </div>
@@ -138,7 +138,7 @@ require_once 'includes/head.php';
 <!-- ========== FIN CARDS ========== -->
 
 
-<!-- ========== SUBSCRIBE ========== -->
+<!-- ========== SUBSCRIBE ========== 
 <div class="container-fluid subscribe py-5">
     <div class="container text-center py-5">
         <div class="mx-auto text-center" style="max-width: 900px;">
@@ -152,7 +152,7 @@ require_once 'includes/head.php';
         </div>
     </div>
 </div>
-<!-- ========== FIN SUBSCRIBE ========== -->
+========== FIN SUBSCRIBE ========== -->
 
 
 <?php require_once 'includes/footer.php'; ?>

@@ -1,0 +1,648 @@
+/* =====================================================
+   internacional.css — Vidatur
+   Módulo: Página de Paquetes Internacionales
+   =====================================================
+   ÍNDICE:
+   1.  Hero Banner
+   2.  Buscador por Destino (Explorer)
+   3.  Filtros de Continente
+   4.  Grid de Países
+   5.  Cards de País
+   6.  Sección CTA / Newsletter
+   7.  Responsive
+   ===================================================== */
+
+
+/* =====================================================
+   1. HERO BANNER
+   ===================================================== */
+.intl-hero {
+    position: relative;
+    background: linear-gradient(135deg, rgba(0,0,0,0.55) 0%, rgba(0,40,20,0.45) 100%),
+                url('../img/internacional-hero.jpg') center center / cover no-repeat;
+    min-height: 420px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px 80px;
+}
+
+.intl-hero__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.4);
+}
+
+.intl-hero__sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.88);
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   2. EXPLORER — Buscador por destino (panel blanco)
+   ===================================================== */
+.intl-explorer {
+    background: #fff;
+    border-radius: 20px;
+    padding: 28px 32px 24px;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.10);
+    margin-top: -60px;
+    position: relative;
+    z-index: 10;
+}
+
+.intl-explorer__heading {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.intl-explorer__heading i {
+    color: #1a7a4a;
+    font-size: 1.1rem;
+}
+
+/* Grid de países en el explorer */
+.intl-explorer__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+}
+
+.intl-explorer__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    padding: 10px 6px;
+    border: 1.5px solid #e8e8e8;
+    border-radius: 12px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    text-align: center;
+}
+
+.intl-explorer__item:hover {
+    border-color: #1a7a4a;
+    background: #f0fdf4;
+    color: #1a7a4a;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+/* Foto circular del lugar (no bandera) */
+.intl-explorer__flag {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e0e0e0;
+    transition: border-color 0.2s;
+}
+
+.intl-explorer__item:hover .intl-explorer__flag {
+    border-color: #1a7a4a;
+}
+
+.intl-explorer__btn-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 10px 6px;
+    background: #1a7a4a;
+    border-radius: 12px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    transition: background 0.2s, transform 0.15s;
+    border: none;
+    text-decoration: none;
+}
+
+.intl-explorer__btn-all:hover {
+    background: #145c37;
+    color: #fff;
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.intl-explorer__btn-all i {
+    font-size: 1.1rem;
+}
+
+
+/* =====================================================
+   3. FILTROS DE CONTINENTE
+   ===================================================== */
+.intl-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 0 2rem;
+}
+
+.intl-filter-btn {
+    background: #fff;
+    color: #444;
+    border: 1.5px solid #ddd;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 0.83rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.intl-filter-btn span.fi {
+    font-size: 1rem;
+}
+
+.intl-filter-btn:hover,
+.intl-filter-btn.active {
+    background: #1a7a4a;
+    color: #fff;
+    border-color: #1a7a4a;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(26,122,74,0.25);
+}
+
+/* Sub-filtro América */
+.intl-subfilters {
+    display: none;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: -10px;
+    margin-bottom: 1.5rem;
+    animation: fadeInDown 0.25s ease;
+}
+
+.intl-subfilters.visible {
+    display: flex;
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.intl-subfilter-btn {
+    background: #f0fdf4;
+    color: #1a7a4a;
+    border: 1.5px solid #a7f3c4;
+    border-radius: 20px;
+    padding: 5px 16px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.intl-subfilter-btn:hover,
+.intl-subfilter-btn.active {
+    background: #1a7a4a;
+    color: #fff;
+    border-color: #1a7a4a;
+}
+
+/* Contador de resultados */
+.intl-results-count {
+    font-size: 0.82rem;
+    color: #888;
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.intl-results-count strong {
+    color: #1a7a4a;
+}
+
+
+/* =====================================================
+   4. GRID DE PAÍSES
+   ===================================================== */
+.intl-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+/* Animación al filtrar */
+.intl-country-card {
+    animation: cardAppear 0.35s ease forwards;
+}
+
+@keyframes cardAppear {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.intl-country-card.hidden {
+    display: none;
+}
+
+
+/* =====================================================
+   5. CARDS DE PAÍS
+   ===================================================== */
+.country-card {
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 3px 18px rgba(0,0,0,0.08);
+    border: 2px solid transparent;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    position: relative;
+}
+
+.country-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.14);
+    border-color: #1a7a4a;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Imagen del lugar */
+.country-card__img-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.country-card__img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.country-card:hover .country-card__img-wrap img {
+    transform: scale(1.06);
+}
+
+/* Overlay degradado inferior */
+.country-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.55) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+/* Badge de continente (tipo etiqueta) */
+.country-card__badge {
+    position: absolute;
+    top: -13px;
+    left: 14px;
+    padding: 5px 14px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 5;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    pointer-events: none;
+}
+
+/* Colores por continente */
+.country-card__badge--europa      { background: #1a7a4a; }
+.country-card__badge--asia        { background: #e84393; }
+.country-card__badge--africa      { background: #e8790a; }
+.country-card__badge--norteamerica { background: #1565c0; }
+.country-card__badge--centroamerica{ background: #6a1fb5; }
+.country-card__badge--caribe      { background: #0097a7; }
+.country-card__badge--sudamerica  { background: #c62828; }
+.country-card__badge--oceania     { background: #2e7d32; }
+
+/* Número de paquetes disponibles (sobre imagen) */
+.country-card__pkg-count {
+    position: absolute;
+    bottom: 10px;
+    right: 12px;
+    background: rgba(255,255,255,0.95);
+    color: #1a7a4a;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    z-index: 4;
+    letter-spacing: 0.3px;
+}
+
+/* Cuerpo de la card */
+.country-card__body {
+    padding: 20px 18px 18px;
+    position: relative;
+}
+
+.country-card__name {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #1a7a4a;
+    margin-bottom: 3px;
+    line-height: 1.25;
+}
+
+.country-card__region {
+    font-size: 0.75rem;
+    color: #999;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.country-card__region i {
+    font-size: 0.7rem;
+}
+
+/* Tags de highlights */
+.country-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 14px;
+}
+
+.country-card__tag {
+    background: #f0fdf4;
+    color: #1a7a4a;
+    font-size: 0.67rem;
+    font-weight: 700;
+    padding: 3px 9px;
+    border-radius: 10px;
+    border: 1px solid #c6f0d8;
+}
+
+/* Pie de la card */
+.country-card__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.country-card__price-from {
+    font-size: 0.7rem;
+    color: #aaa;
+    line-height: 1.2;
+}
+
+.country-card__price {
+    font-size: 1.15rem;
+    font-weight: 900;
+    color: #1a1a1a;
+}
+
+.country-card__cta {
+    background: #f5a800;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.12s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.country-card__cta:hover {
+    background: #d48f00;
+    transform: scale(1.03);
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estado vacío al filtrar */
+.intl-empty {
+    display: none;
+    text-align: center;
+    padding: 60px 20px;
+    color: #aaa;
+    grid-column: 1 / -1;
+}
+
+.intl-empty i {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 12px;
+    color: #ddd;
+}
+
+.intl-empty.visible {
+    display: block;
+}
+
+
+/* =====================================================
+   6. SECCIÓN CTA / NEWSLETTER
+   ===================================================== */
+.intl-cta {
+    background: linear-gradient(135deg, #1a7a4a 0%, #0d5c35 100%);
+    border-radius: 20px;
+    padding: 48px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decoración de fondo */
+.intl-cta::before {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+    top: -80px;
+    right: -60px;
+    pointer-events: none;
+}
+
+.intl-cta::after {
+    content: '';
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+    bottom: -50px;
+    left: 40px;
+    pointer-events: none;
+}
+
+.intl-cta__text h2 {
+    font-size: clamp(1.4rem, 3vw, 1.9rem);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.intl-cta__text p {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.9rem;
+    max-width: 400px;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.intl-cta__badges {
+    display: flex;
+    gap: 12px;
+    margin-top: 14px;
+}
+
+.intl-cta__badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.12);
+    border-radius: 12px;
+    padding: 12px 20px;
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.intl-cta__badge i {
+    font-size: 1.3rem;
+    color: #f5a800;
+}
+
+.intl-cta__form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.intl-cta__input {
+    border: none;
+    border-radius: 10px;
+    padding: 13px 20px;
+    font-size: 0.88rem;
+    width: 260px;
+    outline: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.intl-cta__input::placeholder {
+    color: #aaa;
+}
+
+.intl-cta__submit {
+    background: #f5a800;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 13px 24px;
+    font-size: 0.88rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.12s;
+    white-space: nowrap;
+}
+
+.intl-cta__submit:hover {
+    background: #d48f00;
+    transform: scale(1.02);
+}
+
+
+/* =====================================================
+   7. RESPONSIVE
+   ===================================================== */
+@media (max-width: 1100px) {
+    .intl-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .intl-explorer__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .intl-grid {
+        grid-template-columns: 1fr;
+    }
+    .intl-explorer__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .intl-explorer {
+        padding: 20px 16px;
+        margin-top: -30px;
+        border-radius: 14px;
+    }
+    .intl-cta {
+        flex-direction: column;
+        padding: 32px 24px;
+        text-align: center;
+    }
+    .intl-cta__text p {
+        max-width: 100%;
+    }
+    .intl-cta__form {
+        justify-content: center;
+    }
+    .intl-cta__input {
+        width: 100%;
+    }
+    .intl-cta__badges {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .intl-explorer__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
