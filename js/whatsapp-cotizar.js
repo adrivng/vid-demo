@@ -63,9 +63,9 @@ function openWA(packageName) {
     // Actualiza el subtítulo del modal con el nombre del paquete
     const subtitle = document.getElementById('waSubtitle');
     if (subtitle) {
-        subtitle.textContent = 'Consultando: "' + packageName + '". Un asesor te atiende ahora.';
+        // innerText sí suele reconocer el \n como un salto de línea visual
+        subtitle.innerText = 'Consultando: "' + packageName + ' ".\nUn asesor te atiende ahora.';
     }
-
     // Abre el overlay y bloquea el scroll del fondo
     document.getElementById('waOverlay').classList.add('open');
     document.body.style.overflow = 'hidden';

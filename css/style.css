@@ -381,11 +381,11 @@
    ===================================================== */
 .bg-breadcrumb {
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
-                url(../img/Peru_Machu_Picchu_banner.jpg);
+                url(../img/images-portadas/mod-peru-cusco.png);
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 100px 0;
+    padding: 35px 0;
     text-align: center;
 }
 
@@ -405,8 +405,8 @@
 
 .bg-breadcrumb--internacional {
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
-                      url(../img/bck-internacional.png);
-    background-position: center 55%;
+                      url(../img/images-portadas/mod-internacional.png);
+    background-position: center 66.5%;
 }
 
 .bg-breadcrumb--eventos {
@@ -1016,38 +1016,6 @@
 
 
 /* =====================================================
-   21. MAPA PERÚ (peru.php)
-   ===================================================== */
-.map_container {
-    display: flex;
-    gap: 20px;
-}
-
-#chartdiv {
-    width: 65%;
-    height: 700px;
-    border: 3px solid rgba(255,255,255,0.8);
-    border-radius: 25px;
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.15),
-        0 0 15px rgba(179,18,23,0.2);
-    overflow: hidden;
-    background: white;
-}
-
-.video_side { width: 35%; }
-
-.video_side video {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-    border-radius: 20px;
-    transition: 0.3s;
-}
-
-.video_side video:hover { transform: scale(1.02); }
-
-/* =====================================================
    EQUIPO VIDATUR — Carrusel responsive
    Añadir al final de style.css (sección 16 extendida)
    ===================================================== */
@@ -1166,3 +1134,85 @@
     text-decoration: none;
 }
 .btn-wa-team .fab { font-size: 1rem; }
+
+
+/* =====================================================
+   PARQUES (grid de imágenes con zoom hover)
+   ===================================================== */
+.park-img {
+    height: 330px;
+    object-fit: cover;
+    transition: transform .4s ease, box-shadow .4s ease;
+}
+
+.park-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 28px rgba(19, 53, 123, 0.22);
+}
+
+.park-col {
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+/* =====================================================
+   PARQUES XCARET — Carrusel
+   ===================================================== */
+.xcaret-viewport { overflow: hidden; }
+
+.xcaret-track {
+    display: flex;
+    transition: transform .4s cubic-bezier(.4,0,.2,1);
+}
+
+.xcaret-slide {
+    flex: 0 0 25%;
+    padding: 0 8px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 991px) { .xcaret-slide { flex: 0 0 33.33%; } }
+@media (max-width: 767px) { .xcaret-slide { flex: 0 0 50%; } }
+@media (max-width: 480px) { .xcaret-slide { flex: 0 0 100%; } }
+
+
+/* =====================================================
+   MODULO PERU
+   ===================================================== */
+.destinos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.destino-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 20px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    text-transform: uppercase;
+    width: 140px;
+    transition: box-shadow .2s, transform .2s;
+}
+
+.destino-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,.12);
+    transform: translateY(-3px);
+    color: #b31217;
+}
+
+.destino-card img {
+    width: 52px;
+    height: 52px;
+    object-fit: cover;
+    border-radius: 50%;
+}

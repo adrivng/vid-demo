@@ -66,7 +66,7 @@ function isActive(string $page): string {
                 <a href="nosotros.php"        class="nav-item nav-link <?= isActive('nosotros') ?>">Nosotros</a>
                 <a href="peru.php"            class="nav-item nav-link <?= isActive('peru') ?>">Perú</a>
                 <a href="internacional.php"   class="nav-item nav-link <?= isActive('internacional') ?>">Internacional</a>
-                <a href="bloqueos.php"        class="nav-item nav-link <?= isActive('bloqueos') ?>">Bloqueos</a>
+                <a href="bloqueos.php"        class="nav-item nav-link <?= isActive('bloqueos') ?>">Bloqueos & Programas</a>
 
                 <!-- Dropdown: Más -->
                 <div class="nav-item dropdown">
@@ -76,8 +76,8 @@ function isActive(string $page): string {
                         <a href="videos.php"        class="dropdown-item">VIDEOS</a>
                         <a href="lgbt.php"          class="dropdown-item">LGBT</a>
                         <a href="circuitos.php"     class="dropdown-item">CIRCUITOS PERÚ</a>
-                        <a href="convencion.php"    class="dropdown-item">CONVENCIÓN</a>
-                        <a href="promociones.php"   class="dropdown-item">PROMOCIONES AGENTES</a>
+                        <a href="404.php"    class="dropdown-item">CONVENCIÓN</a>
+                        <a href="404.php"   class="dropdown-item">PROMOCIONES AGENTES</a>
                     </div>
                 </div>
 

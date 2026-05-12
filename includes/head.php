@@ -44,5 +44,4 @@ $pageTitle = $pageTitle ?? 'Vidatur';
 
     <!-- Estilos del sitio -->
     <link href="css/style.css" rel="stylesheet">
-
     

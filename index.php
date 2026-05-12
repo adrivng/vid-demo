@@ -2,6 +2,7 @@
 $pageTitle  = 'Inicio';
 $activePage = 'inicio';
 require_once 'includes/head.php';
+require_once '../vid-cms/config/database.php';
 ?>
 
 <link rel="stylesheet" href="css/buscador.css" rel="stylesheet">
@@ -157,8 +158,8 @@ require_once 'includes/head.php';
 
         <div class="mx-auto text-center mb-5" style="max-width: 900px;">
             <h1 class="section-title px-3">Nuestras Fortalezas</h1>
-            <hr>
-            <h2 class="mb-0">Representaciones</h2>
+            <hr style="border: none; height: 2px; background-color: #357d5c; opacity: 1; margin: 20px auto; width: 80%;">
+            <h2 class="fw-bold" style="color:#357d5c;">Representaciones</h2>
         </div>
 
         <!-- Cards de representaciones -->
@@ -183,102 +184,79 @@ require_once 'includes/head.php';
             </div>
         </div>
 
+        <BR>
         <!-- Parques SeaWorld -->
+        <?php
+        $parques = [
+            ['nombre' => 'SeaWorld Orlando',    'img' => 'img/images-index/sea_world_2025.png'],
+            ['nombre' => 'Busch Gardens Tampa', 'img' => 'img/images-index/bush_garden_2025.png'],
+            ['nombre' => 'Aquatica Orlando',    'img' => 'img/images-index/aquatica_2025.png'],
+            ['nombre' => 'Discovery Cove',      'img' => 'img/images-index/discovery_cove.png'],
+        ];
+        ?>
+
         <div class="mb-5">
             <div class="text-center mb-4">
-                <h3 class="text-primary fw-bold">PARQUES DE SEAWORLD</h3>
+                <h3 class="fw-bold" style="color:#357d5c;">PARQUES DE SEAWORLD</h3>
                 <hr class="w-25 mx-auto border-primary border-2">
             </div>
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                        <div class="service-content text-end">
-                            <h5 class="mb-4">SeaWorld Orlando</h5>
-                            <p class="mb-0">El parque marino más famoso del mundo. Shows con orcas, delfines y leones marinos. Atracciones acuáticas y experiencias únicas con animales.</p>
-                        </div>
-                        <div class="service-icon p-4"><i class="fa fa-water fa-4x text-primary"></i></div>
-                    </div>
+            <div class="row g-3">
+                <?php foreach ($parques as $p): ?>
+                <div class="col-6 col-lg-3 park-col">
+                    <img src="<?= $p['img'] ?>"
+                        alt="<?= $p['nombre'] ?>"
+                        class="img-fluid rounded w-100 park-img">
                 </div>
-                <div class="col-lg-6">
-                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                        <div class="service-icon p-4"><i class="fa fa-umbrella-beach fa-4x text-primary"></i></div>
-                        <div class="service-content">
-                            <h5 class="mb-4">Aquatica Orlando</h5>
-                            <p class="mb-0">Parque acuático de SeaWorld con toboganes, ríos lentos y playas de arena blanca. Perfecto para toda la familia.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                        <div class="service-content text-end">
-                            <h5 class="mb-4">Busch Gardens Tampa</h5>
-                            <p class="mb-0">Parque temático con montañas rusas de clase mundial y safaris. La mejor combinación de adrenalina y naturaleza.</p>
-                        </div>
-                        <div class="service-icon p-4"><i class="fa fa-hippo fa-4x text-primary"></i></div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                        <div class="service-icon p-4"><i class="fa fa-fish fa-4x text-primary"></i></div>
-                        <div class="service-content">
-                            <h5 class="mb-4">Discovery Cove</h5>
-                            <p class="mb-0">Experiencia exclusiva de nado con delfines, arrecifes de coral y aves tropicales. All-inclusive de lujo.</p>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
 
-        <!-- Parques Xcaret -->
+        <BR>
+                    <!-- Parques Xcaret -->
+        <?php
+        $xcaret = [
+            ['nombre' => 'Xcaret México', 'img' => 'img/images-index/parques_xcaret_mexico_update.png'],
+            ['nombre' => 'Xel-Há',        'img' => 'img/images-index/parque_xcaret_xeiha.png'],
+            ['nombre' => 'Xenotes',       'img' => 'img/images-index/parque_xenotes.png'],
+            ['nombre' => 'Xplor',         'img' => 'img/images-index/parque_xplor.png'],
+            ['nombre' => 'Xavage',        'img' => 'img/images-index/parque_xavage.png'],
+            ['nombre' => 'Xichén',        'img' => 'img/images-index/parques_xichen_update.png'],
+            ['nombre' => 'Xplor Fuego',   'img' => 'img/images-index/parques_xplor_fuego_update.png'],
+            ['nombre' => 'Xenses',        'img' => 'img/images-index/parques_xenenses_update.png'],
+            ['nombre' => 'Xoximilco',     'img' => 'img/images-index/parques_xomilco_update.png'],
+        ];
+        ?>
+
         <div class="mb-5">
             <div class="text-center mb-4">
-                <h3 class="text-primary fw-bold">PARQUES DE XCARET</h3>
-                <hr class="w-25 mx-auto border-primary border-2">
+                <h3 class="fw-bold" style="color:#357d5c;">PARQUES XCARET</h3>
+                <hr class="w-25 mx-auto border-2" style="border-color:#357d5c;">
             </div>
-            <div class="row g-4">
-                <div class="col-lg-6">
-                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                        <div class="service-content text-end">
-                            <h5 class="mb-4">Xcaret Park</h5>
-                            <p class="mb-0">El parque eco-arqueológico más famoso de México. Ríos subterráneos, fauna maya, espectáculo nocturno y cultura mexicana.</p>
+
+            <div class="d-flex align-items-center gap-2">
+                <button class="team-arrow" id="xcaretPrev"><i class="fa fa-chevron-left"></i></button>
+
+                <div class="xcaret-viewport flex-grow-1" id="xcaretViewport">
+                    <div class="xcaret-track" id="xcaretTrack">
+                        <?php foreach ($xcaret as $p): ?>
+                        <div class="xcaret-slide">
+                            <img src="<?= $p['img'] ?>" alt="<?= $p['nombre'] ?>"
+                                class="img-fluid rounded w-100 park-img">
                         </div>
-                        <div class="service-icon p-4"><i class="fa fa-leaf fa-4x text-primary"></i></div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                        <div class="service-icon p-4"><i class="fa fa-parachute-box fa-4x text-primary"></i></div>
-                        <div class="service-content">
-                            <h5 class="mb-4">Xplor Park</h5>
-                            <p class="mb-0">Aventura extrema con tirolesas, vehículos anfibios, ríos subterráneos y rappel. Para los amantes de la adrenalina.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 pe-0">
-                        <div class="service-content text-end">
-                            <h5 class="mb-4">Xel-Há Park</h5>
-                            <p class="mb-0">Caleta natural con snorkel ilimitado, toboganes naturales y actividades acuáticas. Un paraíso ecológico todo incluido.</p>
-                        </div>
-                        <div class="service-icon p-4"><i class="fa fa-mask fa-4x text-primary"></i></div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="service-content-inner d-flex align-items-center bg-white border border-primary rounded p-4 ps-0">
-                        <div class="service-icon p-4"><i class="fa fa-swimmer fa-4x text-primary"></i></div>
-                        <div class="service-content">
-                            <h5 class="mb-4">Xenses Park</h5>
-                            <p class="mb-0">Parque de los sentidos con actividades que desafían tu percepción. Experiencias visuales, táctiles y de equilibrio únicas.</p>
-                        </div>
-                    </div>
-                </div>
+
+                <button class="team-arrow" id="xcaretNext"><i class="fa fa-chevron-right"></i></button>
             </div>
         </div>
+
+         <BR>                   
 
         <!-- Aliados carrusel -->
         <div class="mb-5">
             <div class="text-center mb-4">
-                <h3 class="text-primary fw-bold">ALIADOS</h3>
+                <h3 class="fw-bold" style="color:#357d5c;">ALIADOS</h3>
                 <hr class="w-25 mx-auto border-primary border-2">
             </div>
             <div class="aliados-carousel-wrapper">
@@ -391,183 +369,7 @@ require_once 'includes/head.php';
 
 
 <!-- ========== DESTINATIONS ========== -->
-<div class="container-fluid destination py-5">
-    <div class="container py-5">
-        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
-            <h5 class="section-title px-3">Destinos</h5>
-            <h1 class="mb-0">Destinos Populares</h1>
-        </div>
-        <div class="tab-class text-center">
-            <ul class="nav nav-pills d-inline-flex justify-content-center mb-5">
-                <li class="nav-item">
-                    <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
-                        <span class="text-dark" style="width: 150px;">Caribe</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="d-flex py-2 mx-3 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
-                        <span class="text-dark" style="width: 150px;">Cartagena</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
-                        <span class="text-dark" style="width: 150px;">Punta Cana</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
-                        <span class="text-dark" style="width: 150px;">Cancún</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="d-flex mx-3 py-2 border border-primary bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
-                        <span class="text-dark" style="width: 150px;">Varadero</span>
-                    </a>
-                </li>
-            </ul>
-            <div class="tab-content">
-                <div id="tab-1" class="tab-pane fade show p-0 active">
-                    <div class="row g-4">
-                        <div class="col-xl-8">
-                            <div class="row g-4">
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-1.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">New York City</h4>
-                                            <a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-1.jpg" data-lightbox="destination-1"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-2.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">Las Vegas</h4>
-                                            <a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-2.jpg" data-lightbox="destination-2"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-7.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">Los Angeles</h4>
-                                            <a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-7.jpg" data-lightbox="destination-7"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="destination-img">
-                                        <img class="img-fluid rounded w-100" src="img/destination-8.jpg" alt="">
-                                        <div class="destination-overlay p-4">
-                                            <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                            <h4 class="text-white mb-2 mt-3">Miami</h4>
-                                            <a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a>
-                                        </div>
-                                        <div class="search-icon">
-                                            <a href="img/destination-8.jpg" data-lightbox="destination-8"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-4">
-                            <div class="destination-img h-100">
-                                <img class="img-fluid rounded w-100 h-100" src="img/destination-9.jpg" style="object-fit: cover; min-height: 300px;" alt="">
-                                <div class="destination-overlay p-4">
-                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                    <h4 class="text-white mb-2 mt-3">San Francisco</h4>
-                                    <a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a>
-                                </div>
-                                <div class="search-icon">
-                                    <a href="img/destination-9.jpg" data-lightbox="destination-9"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded w-100" src="img/destination-4.jpg" alt="">
-                                <div class="destination-overlay p-4">
-                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                    <h4 class="text-white mb-2 mt-3">Chicago</h4>
-                                    <a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a>
-                                </div>
-                                <div class="search-icon">
-                                    <a href="img/destination-4.jpg" data-lightbox="destination-4"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt="">
-                                <div class="destination-overlay p-4">
-                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                    <h4 class="text-white mb-2 mt-3">Orlando</h4>
-                                    <a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a>
-                                </div>
-                                <div class="search-icon">
-                                    <a href="img/destination-5.jpg" data-lightbox="destination-5"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="destination-img">
-                                <img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt="">
-                                <div class="destination-overlay p-4">
-                                    <a href="#" class="btn btn-primary text-white rounded-pill border py-2 px-3">20 Photos</a>
-                                    <h4 class="text-white mb-2 mt-3">Washington D.C.</h4>
-                                    <a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a>
-                                </div>
-                                <div class="search-icon">
-                                    <a href="img/destination-6.jpg" data-lightbox="destination-6"><i class="fa fa-plus-square fa-1x btn btn-light btn-lg-square text-primary"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tabs 2-5: agrega tus imágenes reales cuando las tengas -->
-                <div id="tab-2" class="tab-pane fade show p-0">
-                    <div class="row g-4">
-                        <div class="col-lg-6"><div class="destination-img"><img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt=""><div class="destination-overlay p-4"><h4 class="text-white mb-2 mt-3">Cartagena</h4><a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a></div></div></div>
-                        <div class="col-lg-6"><div class="destination-img"><img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt=""><div class="destination-overlay p-4"><h4 class="text-white mb-2 mt-3">Cartagena</h4><a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a></div></div></div>
-                    </div>
-                </div>
-                <div id="tab-3" class="tab-pane fade show p-0">
-                    <div class="row g-4">
-                        <div class="col-lg-6"><div class="destination-img"><img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt=""><div class="destination-overlay p-4"><h4 class="text-white mb-2 mt-3">Punta Cana</h4><a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a></div></div></div>
-                        <div class="col-lg-6"><div class="destination-img"><img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt=""><div class="destination-overlay p-4"><h4 class="text-white mb-2 mt-3">Punta Cana</h4><a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a></div></div></div>
-                    </div>
-                </div>
-                <div id="tab-4" class="tab-pane fade show p-0">
-                    <div class="row g-4">
-                        <div class="col-lg-6"><div class="destination-img"><img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt=""><div class="destination-overlay p-4"><h4 class="text-white mb-2 mt-3">Cancún</h4><a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a></div></div></div>
-                        <div class="col-lg-6"><div class="destination-img"><img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt=""><div class="destination-overlay p-4"><h4 class="text-white mb-2 mt-3">Cancún</h4><a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a></div></div></div>
-                    </div>
-                </div>
-                <div id="tab-5" class="tab-pane fade show p-0">
-                    <div class="row g-4">
-                        <div class="col-lg-6"><div class="destination-img"><img class="img-fluid rounded w-100" src="img/destination-5.jpg" alt=""><div class="destination-overlay p-4"><h4 class="text-white mb-2 mt-3">Varadero</h4><a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a></div></div></div>
-                        <div class="col-lg-6"><div class="destination-img"><img class="img-fluid rounded w-100" src="img/destination-6.jpg" alt=""><div class="destination-overlay p-4"><h4 class="text-white mb-2 mt-3">Varadero</h4><a href="#" class="btn-hover text-white">Ver destino <i class="fa fa-arrow-right ms-2"></i></a></div></div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?php require_once 'includes/sections/destinations.php'; ?>
 <!-- ========== FIN DESTINATIONS ========== -->
 
 
@@ -675,7 +477,7 @@ require_once 'includes/head.php';
                         [
                             'nombre' => 'Lady',
                             'cargo'  => 'Atencion Al Cliente',
-                            'img'    => 'img/images-index/giuliana_portugal_2.jpg',
+                            'img'    => 'img/images-index/lady_guillen_3.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
@@ -729,81 +531,7 @@ require_once 'includes/head.php';
     </div>
 </div>
 
-<script>
-(function () {
-    const track    = document.getElementById('teamTrack');
-    const viewport = document.getElementById('teamViewport');
-    const btnPrev  = document.getElementById('teamPrev');
-    const btnNext  = document.getElementById('teamNext');
-    const dotsWrap = document.getElementById('teamDots');
 
-    let current = 0;
-
-    /* ── Slides visibles según ancho ── */
-    function visibleSlides() {
-        const w = viewport.offsetWidth;
-        if (w >= 992) return 4;
-        if (w >= 640) return 2;
-        return 1;
-    }
-
-    const slides = track.querySelectorAll('.team-slide');
-    const total  = slides.length;
-
-    /* ── Dots ── */
-    function buildDots() {
-        dotsWrap.innerHTML = '';
-        const pages = Math.ceil(total / visibleSlides());
-        for (let i = 0; i < pages; i++) {
-            const d = document.createElement('button');
-            d.className = 'team-dot' + (i === 0 ? ' active' : '');
-            d.addEventListener('click', () => goTo(i * visibleSlides()));
-            dotsWrap.appendChild(d);
-        }
-    }
-
-    /* ── Ir a índice ── */
-    function goTo(idx) {
-        const vs   = visibleSlides();
-        const maxI = Math.max(0, total - vs);
-        current    = Math.min(Math.max(idx, 0), maxI);
-
-        const slideW = slides[0].offsetWidth;
-        track.style.transform = `translateX(-${current * slideW}px)`;
-
-        /* dots activos */
-        const activePage = Math.floor(current / vs);
-        dotsWrap.querySelectorAll('.team-dot').forEach((d, i) => {
-            d.classList.toggle('active', i === activePage);
-        });
-
-        /* flechas */
-        btnPrev.disabled = current === 0;
-        btnNext.disabled = current >= maxI;
-    }
-
-    btnPrev.addEventListener('click', () => goTo(current - visibleSlides()));
-    btnNext.addEventListener('click', () => goTo(current + visibleSlides()));
-
-    /* Touch / swipe */
-    let startX = 0;
-    viewport.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
-    viewport.addEventListener('touchend', e => {
-        const diff = startX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? visibleSlides() : -visibleSlides()));
-    });
-
-    /* Recalcular en resize */
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => { buildDots(); goTo(0); }, 150);
-    });
-
-    buildDots();
-    goTo(0);
-})();
-</script>
 
 
 <!-- ========== TESTIMONIAL ========== -->
@@ -921,6 +649,107 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
+                    <!--XCARET y EQUIPO VIDATUR CARUSEL-->
+<script>
+function initCarrusel(ids) {
+    const track    = document.getElementById(ids.track);
+    const viewport = document.getElementById(ids.viewport);
+    const btnPrev  = document.getElementById(ids.prev);
+    const btnNext  = document.getElementById(ids.next);
+    const dotsWrap = ids.dots ? document.getElementById(ids.dots) : null;
 
+    const slides = track.querySelectorAll(ids.slide);
+    const total  = slides.length;
+    let current  = 0;
+    let timer;
+
+    function visible() {
+        const w = viewport.offsetWidth;
+        if (w >= 992) return ids.cols?.lg ?? 4;
+        if (w >= 640) return ids.cols?.md ?? 2;
+        return 1;
+    }
+
+    function buildDots() {
+        if (!dotsWrap) return;
+        dotsWrap.innerHTML = '';
+        const pages = Math.ceil(total / visible());
+        for (let i = 0; i < pages; i++) {
+            const d = document.createElement('button');
+            d.className = 'team-dot' + (i === 0 ? ' active' : '');
+            d.addEventListener('click', () => { stopAuto(); goTo(i * visible()); startAuto(); });
+            dotsWrap.appendChild(d);
+        }
+    }
+
+    function goTo(idx) {
+        const vs  = visible();
+        const max = Math.max(0, total - vs);
+        current   = idx > max ? 0 : Math.max(idx, 0);
+
+        // Equipo usa offsetWidth, Xcaret usa porcentaje
+        if (ids.usePercent) {
+            track.style.transform = `translateX(-${current * (100 / vs)}%)`;
+        } else {
+            track.style.transform = `translateX(-${current * slides[0].offsetWidth}px)`;
+        }
+
+        if (dotsWrap) {
+            const activePage = Math.floor(current / vs);
+            dotsWrap.querySelectorAll('.team-dot').forEach((d, i) =>
+                d.classList.toggle('active', i === activePage)
+            );
+        }
+
+        if (btnPrev) btnPrev.disabled = current === 0;
+        if (btnNext) btnNext.disabled = current >= max;
+    }
+
+    function startAuto() { timer = setInterval(() => goTo(current + visible()), 3000); }
+    function stopAuto()  { clearInterval(timer); }
+
+    btnPrev?.addEventListener('click', () => { stopAuto(); goTo(current - visible()); startAuto(); });
+    btnNext?.addEventListener('click', () => { stopAuto(); goTo(current + visible()); startAuto(); });
+
+    viewport.addEventListener('mouseenter', stopAuto);
+    viewport.addEventListener('mouseleave', startAuto);
+
+    let startX = 0;
+    viewport.addEventListener('touchstart', e => { startX = e.touches[0].clientX; stopAuto(); }, { passive: true });
+    viewport.addEventListener('touchend',   e => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? visible() : -visible()));
+        startAuto();
+    });
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => { buildDots(); goTo(0); }, 150);
+    });
+
+    buildDots();
+    goTo(0);
+    startAuto();
+}
+
+// ── Equipo Vidatur ──
+initCarrusel({
+    track: 'teamTrack', viewport: 'teamViewport',
+    prev: 'teamPrev',   next: 'teamNext',
+    dots: 'teamDots',   slide: '.team-slide',
+    cols: { lg: 4, md: 2 },
+    usePercent: false
+});
+
+// ── Xcaret ──
+initCarrusel({
+    track: 'xcaretTrack', viewport: 'xcaretViewport',
+    prev: 'xcaretPrev',   next: 'xcaretNext',
+    dots: null,           slide: '.xcaret-slide',
+    cols: { lg: 4, md: 3 },
+    usePercent: true
+});
+</script>
 </body>
 </html>
