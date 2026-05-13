@@ -30,7 +30,7 @@ require_once '../vid-cms/config/database.php';
         <div class="carousel-inner" role="listbox">
 
             <div class="carousel-item active">
-                <img src="img/carousel-2.jpg" class="img-fluid" alt="Club Vidatur" loading="lazy">
+                <img src="img/images-portadas/mod-index-carrusel-avion-nubes.png" class="img-fluid" alt="Club Vidatur" loading="lazy">
                 <div class="carousel-caption">
                     <div class="p-3" style="max-width: 900px;">
                         <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Programa De Lealtad</h4>
@@ -43,7 +43,7 @@ require_once '../vid-cms/config/database.php';
             </div>
 
             <div class="carousel-item">
-                <img src="img/carousel-1.jpg" class="img-fluid" alt="Vidatur Online" loading="lazy">
+                <img src="img/images-portadas/mod-index-carrusel-crucero.png" class="img-fluid" alt="Vidatur Online" loading="lazy">
                 <div class="carousel-caption">
                     <div class="p-3" style="max-width: 900px;">
                         <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Registro del Cotizador Online</h4>
@@ -56,7 +56,7 @@ require_once '../vid-cms/config/database.php';
             </div>
 
             <div class="carousel-item">
-                <img src="img/carousel-3.jpg" class="img-fluid" alt="GEA" loading="lazy">
+                <img src="img/images-portadas/mod-index-carrusel-playas.png" class="img-fluid" alt="GEA" loading="lazy">
                 <div class="carousel-caption">
                     <div class="p-3" style="max-width: 900px;">
                         <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Beneficios GEA</h4>
@@ -748,6 +748,15 @@ initCarrusel({
     prev: 'xcaretPrev',   next: 'xcaretNext',
     dots: null,           slide: '.xcaret-slide',
     cols: { lg: 4, md: 3 },
+    usePercent: true
+});
+
+// ── Destinos Caribe ──
+initCarrusel({
+    track: 'destTrack', viewport: 'destViewport',
+    prev: 'destPrev',   next: 'destNext',
+    dots: 'destDots',   slide: '.dest-slide',
+    cols: { lg: 3, md: 2 },
     usePercent: true
 });
 </script>

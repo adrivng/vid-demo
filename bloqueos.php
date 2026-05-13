@@ -166,7 +166,7 @@ ksort($categoriasUnicas);
 
                     $rutaPrograma = $programa['ruta_php'];
 
-                    $dirPrograma = str_replace('index.php', '', $programa['ruta_php']);
+                    $dirPrograma = dirname($programa['ruta_php']) . '/';
 
                     $imagen = !empty($programa['imagen_pr'])
                         ? $dirPrograma . 'img/' . $programa['imagen_pr']
@@ -195,12 +195,6 @@ ksort($categoriasUnicas);
                             src="<?= $imagen ?>"
                             alt="<?= $programa['titulo'] ?>"
                             >
-
-                            <span class="pkg-card__tag">
-
-                                <?= strtoupper(str_replace('_',' ', $programa['tipo_programa'])) ?>
-
-                            </span>
 
                         </a>
 
@@ -242,13 +236,6 @@ ksort($categoriasUnicas);
 
                             <!-- Actions -->
                             <div class="pkg-card__actions">
-
-                                <button
-                                class="pkg-card__btn"
-                                onclick="openWA('<?= $programa['titulo'] ?>')"
-                                >
-                                    Cotizar
-                                </button>
 
                                 <a
                                 class="pkg-card__btn--outline"

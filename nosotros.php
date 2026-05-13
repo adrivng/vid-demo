@@ -70,7 +70,7 @@ require_once 'includes/head.php';
 
             <div class="col-md-6 col-lg-4">
                 <div class="service-content-inner text-center rounded p-4 h-100 shadow-sm text-white"
-                     onclick="window.location.href='promociones_nacionales.php'"
+                     onclick="window.location.href='peru.php'"
                      style="cursor:pointer; background:#198754;">
                     <img src="img/bandera_peru_2.png" class="img-fluid mb-4" style="height: 90px; object-fit: contain;">
                     <h5 class="mb-3 text-white">PAQUETES NACIONALES</h5>
@@ -80,7 +80,7 @@ require_once 'includes/head.php';
 
             <div class="col-md-6 col-lg-4">
                 <div class="service-content-inner text-center rounded p-4 h-100 shadow-sm text-white"
-                     onclick="window.location.href='promociones_internacionales.php'"
+                     onclick="window.location.href='internacional.php'"
                      style="cursor:pointer; background:#0b1238;">
                     <i class="bi bi-globe text-white mb-4" style="font-size: 70px; display:block;"></i>
                     <h5 class="mb-3 text-white">PAQUETES INTERNACIONALES</h5>

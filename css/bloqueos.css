@@ -223,30 +223,12 @@
 }
 .pkg-card__img-link img {
     width: 100%;
-    height: 200px;
-    /* object-fit: cover; ajusta el tamaño a la miniatura */
+    height: 240px;
+    object-fit: cover;
     display: block;
     transition: transform .35s ease;
 }
 .pkg-card__img-link:hover img { transform: scale(1.04); }
-
-/* Etiqueta sobre la imagen */
-.pkg-card__tag {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    background: #1a7a4a;
-    color: #fff;
-    font-size: .72rem;
-    font-weight: 800;
-    letter-spacing: .8px;
-    text-transform: uppercase;
-    padding: 5px 13px;
-    border-radius: 20px;
-    pointer-events: none;
-    z-index: 10;
-    box-shadow: 0 2px 8px rgba(0,0,0,.22);
-}
 
 /* ---- Cuerpo ---- */
 .pkg-card__body {
@@ -306,35 +288,9 @@
     gap: 5px;
 }
 
-/* ---- Botones: fila de 2 ---- */
+/* ---- Botón: Ver detalles ---- */
 .pkg-card__actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-}
-
-/* Botón Cotizar (naranja) */
-.pkg-card__btn {
     display: block;
-    background: #f5a800;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 11px 6px;
-    font-size: .82rem;
-    font-weight: 800;
-    letter-spacing: .3px;
-    text-align: center;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: background .2s, transform .12s;
-    text-decoration: none;
-}
-.pkg-card__btn:hover {
-    background: #d48f00;
-    transform: scale(1.02);
-    color: #fff;
-    text-decoration: none;
 }
 
 /* Botón Ver Detalles (outline verde) */
