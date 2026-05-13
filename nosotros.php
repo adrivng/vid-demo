@@ -3,6 +3,14 @@ $pageTitle  = 'Nosotros';
 $activePage = 'nosotros';
 require_once 'includes/head.php';
 ?>
+<style>
+.service-content-inner.hover-white:hover img {
+    filter: brightness(0) invert(1);
+}
+.service-content-inner.hover-white:hover svg {
+    fill: #fff !important;
+}
+</style>
 </head>
 <body>
 
@@ -36,7 +44,7 @@ require_once 'includes/head.php';
         <div class="row g-4">
 
             <div class="col-md-6 col-lg-4">
-                <div class="service-content-inner text-center border rounded p-4 h-100 shadow-sm"
+                <div class="service-content-inner text-center border rounded p-4 h-100 shadow-sm hover-white"
                      onclick="window.location.href='https://vidatur.paquetedinamico.com/home'"
                      style="cursor:pointer;">
                     <img src="img/cotizador_logo.png" class="img-fluid mb-4" style="height: 90px; object-fit: contain;">
@@ -46,7 +54,7 @@ require_once 'includes/head.php';
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="service-content-inner text-center border rounded p-4 h-100 shadow-sm"
+                <div class="service-content-inner text-center border rounded p-4 h-100 shadow-sm hover-white"
                      onclick="window.location.href='https://vidatur.net/vidatur_online_formulario_registro.html'"
                      style="cursor:pointer;">
                     <img src="img/formulario.png" class="img-fluid mb-4" style="height: 90px; object-fit: contain;">
@@ -56,7 +64,7 @@ require_once 'includes/head.php';
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="service-content-inner text-center border rounded p-4 h-100 shadow-sm"
+                <div class="service-content-inner text-center border rounded p-4 h-100 shadow-sm hover-white"
                      onclick="window.location.href='videos.php'"
                      style="cursor:pointer;">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"
@@ -89,7 +97,7 @@ require_once 'includes/head.php';
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="service-content-inner text-center rounded p-4 h-100 shadow-sm text-white"
+                <div class="service-content-inner text-center rounded p-4 h-100 shadow-sm text-white d-flex flex-column align-items-center justify-content-center"
                      id="abrirModalRepresentaciones"
                      style="cursor:pointer; background:#055888;">
                     <div class="d-flex justify-content-center align-items-center gap-3 mb-4">
@@ -122,7 +130,7 @@ require_once 'includes/head.php';
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <div class="service-content-inner text-center border rounded p-4 h-100 shadow-sm"
+                <div class="service-content-inner text-center border rounded p-4 h-100 shadow-sm hover-white"
                      onclick="window.location.href='cuentas_bancarias/cta_bancaria.php'"
                      style="cursor:pointer;">
                     <img src="https://mcusercontent.com/c184c181a3697a5d0bd22417a/images/37d37574-f34d-828a-34d0-cb862ece3c60.png"
