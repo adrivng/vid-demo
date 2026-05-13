@@ -9,26 +9,16 @@ require_once 'includes/head.php';
 
 <!-- Spinner -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+    <div class="spinner-border text-primary custom-spinner" role="status">
         <span class="sr-only">Cargando...</span>
     </div>
 </div>
 
-<?php require_once 'includes/header.php'; ?>
-
-
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->   
+<?php require_once 'includes/header.php'; ?>   
 
         
 
-        <!-- 404 Start -->
-        <div class="container-fluid py-5" style="background: linear-gradient(rgba(19, 53, 123, 0.3), rgba(19, 53, 153, 0.3)); object-fit: cover;">
+        <div class="container-fluid py-5 bg-404">
             <div class="container py-5 text-center">
                 <div class="row justify-content-center">
                     <div class="col-lg-6">
@@ -36,29 +26,11 @@ require_once 'includes/head.php';
                         <h1 class="display-1">404</h1>
                         <h1 class="mb-4 text-dark">Page Not Found</h1>
                         <p class="mb-4 text-dark">We’re sorry, the page you have looked for does not exist in our website! Maybe go to our home page or try to use a search?</p>
-                        <a class="btn btn-primary rounded-pill py-3 px-5" href="index.html">Go Back To Home</a>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="index.php">Go Back To Home</a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- 404 End -->
-
-        <!-- Subscribe Start -->
-        <div class="container-fluid subscribe py-5">
-            <div class="container text-center py-5">
-                <div class="mx-auto text-center" style="max-width: 900px;">
-                    <h5 class="subscribe-title px-3">Subscribe</h5>
-                    <h1 class="text-white mb-4">Our Newsletter</h1>
-                    <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo? Voluptate sunt eveniet fuga eligendi! Expedita laudantium fugiat corrupti eum cum repellat a laborum quasi.
-                    </p>
-                    <div class="position-relative mx-auto">
-                        <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
-                        <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Subscribe</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Subscribe End -->
 
         
         

@@ -260,6 +260,19 @@
     }
 
     .navbar-light .navbar-brand img { max-height: 85px; }
+
+    /* ── Cuando el navbar tiene bg-primary (header-green) ── */
+    .navbar-light.bg-primary .navbar-nav .nav-link,
+    .sticky-top.navbar-light.bg-primary .navbar-nav .nav-link {
+        color: var(--bs-white) !important;
+    }
+    .navbar-light.bg-primary .navbar-toggler {
+        border-color: var(--bs-white);
+        color: var(--bs-white);
+    }
+    .navbar-light.bg-primary .navbar-collapse {
+        border-top-color: rgba(255,255,255,0.25);
+    }
 }
 
 /* Navbar desktop flotante / sticky */
@@ -1251,3 +1264,27 @@
     object-fit: cover;
     border-radius: 50%;
 }
+
+/* =====================================================
+   UTILITIES — reemplazan inline styles
+   ===================================================== */
+.custom-spinner { width: 3rem; height: 3rem; }
+.topbar-height { height: 45px; }
+.text-max-900 { max-width: 900px; }
+.text-max-800 { max-width: 800px; }
+.carousel-caption-max { max-width: 900px; }
+.letter-spacing-3 { letter-spacing: 3px; }
+.color-primary-green { color: #357d5c; }
+.border-primary-green { border-color: #357d5c !important; }
+.about-bg { background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)); }
+.section-divider { border: none; height: 2px; background-color: #357d5c; opacity: 1; margin: 20px auto; width: 80%; }
+.testimonial-offset { margin-top: -35px; }
+.cursor-pointer { cursor: pointer; }
+.img-card-logo { height: 90px; object-fit: contain; }
+.min-h-200 { min-height: 200px; }
+.max-h-120 { max-height: 120px; object-fit: contain; }
+.vid-icon { width: 70px; height: 70px; fill: #28a745; }
+.globe-icon { font-size: 70px; display: block; }
+.repre-icon { height: 70px; object-fit: contain; }
+.bg-404 { background: linear-gradient(rgba(19, 53, 123, 0.3), rgba(19, 53, 153, 0.3)); object-fit: cover; }
+.intl-explorer-wrap { margin-top: -40px; position: relative; z-index: 10; }

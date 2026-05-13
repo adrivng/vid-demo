@@ -5,9 +5,7 @@ $activePage = 'bloqueos';
 require_once 'includes/head.php';
 require_once '../vid-cms/config/database.php';
 
-/* =========================================================
-   PROGRAMAS
-========================================================= */
+
 
 $sql = "
 
@@ -66,33 +64,29 @@ ksort($categoriasUnicas);
 
 <body>
 
-<!-- Spinner Start -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+    <div class="spinner-border text-primary custom-spinner" role="status">
         <span class="sr-only">Loading...</span>
     </div>
 </div>
-<!-- Spinner End -->
 
 <?php require_once 'includes/header.php'; ?>
 
-<!-- Header -->
+
 <div class="container-fluid bg-breadcrumb bg-breadcrumb--bloqueos">
-    <div class="container text-center py-5" style="max-width: 900px;">
+    <div class="container text-center py-5 text-max-900">
         <h3 class="text-white display-3 mb-4">Bloqueos</h3>
     </div>
 </div>
 
-<!-- Packages -->
+
 <div class="container-fluid packages py-5">
 
     <div class="container py-5">
 
         <div class="pkg-layout">
 
-            <!-- =====================================================
-                 SIDEBAR
-            ====================================================== -->
+            
 
             <aside class="pkg-sidebar">
 
@@ -131,13 +125,11 @@ ksort($categoriasUnicas);
 
             </aside>
 
-            <!-- =====================================================
-                 CONTENT
-            ====================================================== -->
+            
 
             <div class="pkg-content">
 
-                <!-- Mobile Filters -->
+                
                 <div class="pkg-filters pkg-filters--mobile mb-4">
 
                     <button class="btn-filter active" onclick="filterPkg(this,'all')">
@@ -152,10 +144,10 @@ ksort($categoriasUnicas);
 
                 </div>
 
-                <!-- Resultado -->
+                
                 <p class="pkg-result-count mb-3" id="pkgResultCount"></p>
 
-                <!-- GRID -->
+                
                 <h4 class="pkg-section-title">Programas & Bloqueos</h4>
 
                 <div class="pkg-grid">
@@ -185,7 +177,7 @@ ksort($categoriasUnicas);
 
                     >
 
-                        <!-- Imagen -->
+                        
                         <a
                         class="pkg-card__img-link"
                         href="<?= $rutaPrograma ?>"
@@ -198,7 +190,7 @@ ksort($categoriasUnicas);
 
                         </a>
 
-                        <!-- Body -->
+                        
                         <div class="pkg-card__body">
 
                             <a
@@ -212,7 +204,7 @@ ksort($categoriasUnicas);
 
                             </a>
 
-                            <!-- Fecha -->
+                            
                             <div class="pkg-card__urgency">
 
                                 Para comprar hasta
@@ -223,7 +215,7 @@ ksort($categoriasUnicas);
 
                             </div>
 
-                            <!-- Meta -->
+                            
                             <div class="pkg-card__meta">
 
                                 <span class="pkg-card__airline">                                   
@@ -234,7 +226,7 @@ ksort($categoriasUnicas);
 
                             </div>
 
-                            <!-- Actions -->
+                            
                             <div class="pkg-card__actions">
 
                                 <a
@@ -262,7 +254,7 @@ ksort($categoriasUnicas);
 
 </div>
 
-<!-- WhatsApp -->
+
 <div class="wa-overlay" id="waOverlay" onclick="closeWAOutside(event)">
 
     <div class="wa-modal">

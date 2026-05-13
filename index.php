@@ -5,13 +5,13 @@ require_once 'includes/head.php';
 require_once '../vid-cms/config/database.php';
 ?>
 
-<link rel="stylesheet" href="css/buscador.css" rel="stylesheet">
+<link rel="stylesheet" href="css/buscador.css">
 </head>
 <body>
 
-<!-- Spinner -->
+
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+    <div class="spinner-border text-primary custom-spinner" role="status">
         <span class="sr-only">Cargando...</span>
     </div>
 </div>
@@ -32,8 +32,8 @@ require_once '../vid-cms/config/database.php';
             <div class="carousel-item active">
                 <img src="img/images-portadas/mod-index-carrusel-avion-nubes.png" class="img-fluid" alt="Club Vidatur" loading="lazy">
                 <div class="carousel-caption">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Programa De Lealtad</h4>
+                    <div class="p-3 text-max-900">
+                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3">Programa De Lealtad</h4>
                         <h1 class="display-2 text-capitalize text-white mb-4">CLUB VIDATUR</h1>
                         <div class="d-flex align-items-center justify-content-center">
                             <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
@@ -45,8 +45,8 @@ require_once '../vid-cms/config/database.php';
             <div class="carousel-item">
                 <img src="img/images-portadas/mod-index-carrusel-crucero.png" class="img-fluid" alt="Vidatur Online" loading="lazy">
                 <div class="carousel-caption">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Registro del Cotizador Online</h4>
+                    <div class="p-3 text-max-900">
+                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3">Registro del Cotizador Online</h4>
                         <h1 class="display-2 text-capitalize text-white mb-4">VIDATUR ONLINE</h1>
                         <div class="d-flex align-items-center justify-content-center">
                             <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
@@ -58,8 +58,8 @@ require_once '../vid-cms/config/database.php';
             <div class="carousel-item">
                 <img src="img/images-portadas/mod-index-carrusel-playas.png" class="img-fluid" alt="GEA" loading="lazy">
                 <div class="carousel-caption">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">Beneficios GEA</h4>
+                    <div class="p-3 text-max-900">
+                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3">Beneficios GEA</h4>
                         <h1 class="display-2 text-capitalize text-white mb-4">GEA</h1>
                         <div class="d-flex align-items-center justify-content-center">
                             <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
@@ -71,8 +71,8 @@ require_once '../vid-cms/config/database.php';
             <div class="carousel-item">
                 <img src="img/carousel-3.jpg" class="img-fluid" alt="VPR" loading="lazy">
                 <div class="carousel-caption">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h4 class="text-white text-uppercase fw-bold mb-4" style="letter-spacing: 3px;">VPR</h4>
+                    <div class="p-3 text-max-900">
+                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3">VPR</h4>
                         <h1 class="display-2 text-capitalize text-white mb-4">PROGRAMA DE RECOMPENSA</h1>
                         <div class="d-flex align-items-center justify-content-center">
                             <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
@@ -129,7 +129,7 @@ require_once '../vid-cms/config/database.php';
             <div class="col-lg-5">
                 <img src="img/images-index/general.jpg" class="img-fluid w-100 h-100" alt="Vidatur">
             </div>
-            <div class="col-lg-7" style="background: linear-gradient(rgba(255,255,255,.8), rgba(255,255,255,.8)) ;"> <!--, url(img/about-img-1.png) esto es para el fonde en el about--> 
+            <div class="col-lg-7 about-bg"> 
                 <h5 class="section-about-title pe-3">Sobre Nosotros</h5>
                 <h1 class="mb-4">Agencia Mayorista +25 años</h1>
                 <p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, dolorum, doloribus sunt dicta, officia voluptatibus libero necessitatibus natus impedit quam ullam assumenda? Id atque iste consectetur. Commodi odit ab saepe!</p>
@@ -156,10 +156,10 @@ require_once '../vid-cms/config/database.php';
 <div class="container-fluid bg-light service py-5">
     <div class="container py-5">
 
-        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+        <div class="mx-auto text-center mb-5 text-max-900">
             <h1 class="section-title px-3">Nuestras Fortalezas</h1>
-            <hr style="border: none; height: 2px; background-color: #357d5c; opacity: 1; margin: 20px auto; width: 80%;">
-            <h2 class="fw-bold" style="color:#357d5c;">Representaciones</h2>
+            <hr class="section-divider">
+            <h2 class="fw-bold color-primary-green">Representaciones</h2>
         </div>
 
         <!-- Cards de representaciones -->
@@ -168,15 +168,15 @@ require_once '../vid-cms/config/database.php';
                 <div class="row justify-content-center g-4">
                     <div class="col-12 col-sm-6 col-lg-5">
                         <a href="https://sw.vidatur.net/" target="_blank" class="text-decoration-none">
-                            <div class="representacion-card bg-white rounded-4 shadow-sm p-5 text-center h-100 d-flex flex-column justify-content-center align-items-center" style="min-height: 200px;">
-                                <img src="img/images-index/united_parks_resorts.png" alt="United Parks & Resorts" class="img-fluid" style="max-height: 120px; object-fit: contain;">
+                            <div class="representacion-card bg-white rounded-4 shadow-sm p-5 text-center h-100 d-flex flex-column justify-content-center align-items-center" >
+                                <img src="img/images-index/united_parks_resorts.png" alt="United Parks & Resorts" class="img-fluid" >
                             </div>
                         </a>
                     </div>
                     <div class="col-12 col-sm-6 col-lg-5">
                         <a href="https://www.excursiontravelperu.com/" target="_blank" class="text-decoration-none">
-                            <div class="representacion-card bg-white rounded-4 shadow-sm p-5 text-center h-100 d-flex flex-column justify-content-center align-items-center" style="min-height: 200px;">
-                                <img src="img/images-index/xcaret_mexico_repre.png" alt="Xcaret Mexico" class="img-fluid" style="max-height: 120px; object-fit: contain;">
+                            <div class="representacion-card bg-white rounded-4 shadow-sm p-5 text-center h-100 d-flex flex-column justify-content-center align-items-center" >
+                                <img src="img/images-index/xcaret_mexico_repre.png" alt="Xcaret Mexico" class="img-fluid" >
                             </div>
                         </a>
                     </div>
@@ -197,7 +197,7 @@ require_once '../vid-cms/config/database.php';
 
         <div class="mb-5">
             <div class="text-center mb-4">
-                <h3 class="fw-bold" style="color:#357d5c;">PARQUES DE SEAWORLD</h3>
+                <h3 class="fw-bold color-primary-green">PARQUES DE SEAWORLD</h3>
                 <hr class="w-25 mx-auto border-primary border-2">
             </div>
             <div class="row g-3">
@@ -229,8 +229,8 @@ require_once '../vid-cms/config/database.php';
 
         <div class="mb-5">
             <div class="text-center mb-4">
-                <h3 class="fw-bold" style="color:#357d5c;">PARQUES XCARET</h3>
-                <hr class="w-25 mx-auto border-2" style="border-color:#357d5c;">
+                <h3 class="fw-bold color-primary-green">PARQUES XCARET</h3>
+                <hr class="w-25 mx-auto border-2 border-primary-green">
             </div>
 
             <div class="d-flex align-items-center gap-2">
@@ -256,7 +256,7 @@ require_once '../vid-cms/config/database.php';
         <!-- Aliados carrusel -->
         <div class="mb-5">
             <div class="text-center mb-4">
-                <h3 class="fw-bold" style="color:#357d5c;">ALIADOS</h3>
+                <h3 class="fw-bold color-primary-green">ALIADOS</h3>
                 <hr class="w-25 mx-auto border-primary border-2">
             </div>
             <div class="aliados-carousel-wrapper">
@@ -360,7 +360,7 @@ require_once '../vid-cms/config/database.php';
         </div>
 
         <div class="text-center mt-4">
-            <a class="btn btn-primary rounded-pill py-3 px-5" href="#">Ver Socios Estratégicos</a>
+            <a class="btn btn-primary rounded-pill py-3 px-5" href="socios_estrategicos/aliados.php">Ver Socios Estratégicos</a>
         </div>
 
     </div>
@@ -393,7 +393,7 @@ require_once '../vid-cms/config/database.php';
 <!-- ========== EQUIPO VIDATUR ========== -->
 <div class="container-fluid guide py-5">
     <div class="container py-5">
-        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+        <div class="mx-auto text-center mb-5 text-max-900">
             <h1 class="section-title px-3">EQUIPO VIDATUR</h1>
         </div>
 
@@ -537,7 +537,7 @@ require_once '../vid-cms/config/database.php';
 <!-- ========== TESTIMONIAL ========== -->
 <div class="container-fluid testimonial py-5">
     <div class="container py-5">
-        <div class="mx-auto text-center mb-5" style="max-width: 900px;">
+        <div class="mx-auto text-center mb-5 text-max-900">
             <h2 class="section-title px-3">Agencias que trabajan con Nosotros</h2>
         </div>
         <div class="testimonial-carousel owl-carousel">
@@ -548,7 +548,7 @@ require_once '../vid-cms/config/database.php';
                 <div class="testimonial-img p-1">
                     <img src="img/testimonial-1.jpg" class="img-fluid rounded-circle" alt="">
                 </div>
-                <div style="margin-top: -35px;">
+                <div class="testimonial-offset">
                     <h5 class="mb-0">John Abraham</h5>
                     <p class="mb-0">New York, USA</p>
                     <div class="d-flex justify-content-center">
@@ -565,7 +565,7 @@ require_once '../vid-cms/config/database.php';
                 <div class="testimonial-img p-1">
                     <img src="img/testimonial-2.jpg" class="img-fluid rounded-circle" alt="">
                 </div>
-                <div style="margin-top: -35px;">
+                <div class="testimonial-offset">
                     <h5 class="mb-0">Maria García</h5>
                     <p class="mb-0">Lima, Perú</p>
                     <div class="d-flex justify-content-center">
@@ -582,7 +582,7 @@ require_once '../vid-cms/config/database.php';
                 <div class="testimonial-img p-1">
                     <img src="img/testimonial-3.jpg" class="img-fluid rounded-circle" alt="">
                 </div>
-                <div style="margin-top: -35px;">
+                <div class="testimonial-offset">
                     <h5 class="mb-0">Carlos López</h5>
                     <p class="mb-0">Bogotá, Colombia</p>
                     <div class="d-flex justify-content-center">
@@ -599,7 +599,7 @@ require_once '../vid-cms/config/database.php';
                 <div class="testimonial-img p-1">
                     <img src="img/testimonial-4.jpg" class="img-fluid rounded-circle" alt="">
                 </div>
-                <div style="margin-top: -35px;">
+                <div class="testimonial-offset">
                     <h5 class="mb-0">Ana Torres</h5>
                     <p class="mb-0">Santiago, Chile</p>
                     <div class="d-flex justify-content-center">
@@ -618,7 +618,7 @@ require_once '../vid-cms/config/database.php';
 <!-- ========== SUBSCRIBE ========== -->
 <div class="container-fluid subscribe py-5">
     <div class="container text-center py-5">
-        <div class="mx-auto text-center" style="max-width: 900px;">
+        <div class="mx-auto text-center text-max-900">
             <h5 class="subscribe-title px-3">Subscribe</h5>
             <h1 class="text-white mb-4">Nuestro Boletín</h1>
             <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo?</p>
@@ -649,7 +649,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-                    <!--XCARET y EQUIPO VIDATUR CARUSEL-->
+
 <script>
 function initCarrusel(ids) {
     const track    = document.getElementById(ids.track);

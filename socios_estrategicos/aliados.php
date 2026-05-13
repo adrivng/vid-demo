@@ -33,6 +33,7 @@ require_once $subir . 'includes/head.php';
     color: #1a7a4a;
     margin-bottom: .25rem;
 }
+.socios-breadcrumb { max-width: 900px; }
 </style>
 </head>
 <body>
@@ -40,14 +41,13 @@ require_once $subir . 'includes/head.php';
 <?php require_once $subir . 'includes/header.php'; ?>
 
 <div class="container-fluid bg-breadcrumb">
-    <div class="container text-center py-5" style="max-width: 900px;">
+    <div class="container text-center py-5 socios-breadcrumb">
         <h3 class="text-white display-3 mb-4">Socios Estratégicos</h3>
     </div>
 </div>
 
 <div class="container py-5">
 
-    <!-- ALIADOS AÉREOS -->
     <div class="text-center mb-4">
         <h4 class="socios-section-title">ALIADOS AÉREOS</h4>
     </div>
@@ -71,7 +71,6 @@ require_once $subir . 'includes/head.php';
         <?php endforeach; ?>
     </div>
 
-    <!-- HOTELES -->
     <div class="text-center mb-4">
         <h4 class="socios-section-title">HOTELES INTERNACIONALES Y NACIONALES</h4>
     </div>
@@ -131,7 +130,6 @@ require_once $subir . 'includes/head.php';
         <?php endforeach; ?>
     </div>
 
-    <!-- OPERADORES -->
     <div class="text-center mb-4">
         <h4 class="socios-section-title">OPERADORES</h4>
     </div>
@@ -169,7 +167,6 @@ require_once $subir . 'includes/head.php';
         <?php endforeach; ?>
     </div>
 
-    <!-- REPRESENTACIONES -->
     <div class="text-center mb-4">
         <h4 class="socios-section-title">REPRESENTACIONES</h4>
     </div>
@@ -189,7 +186,6 @@ require_once $subir . 'includes/head.php';
         <?php endforeach; ?>
     </div>
 
-    <!-- MIEMBROS DE -->
     <div class="text-center mb-4">
         <h4 class="socios-section-title">MIEMBROS DE</h4>
     </div>

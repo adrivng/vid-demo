@@ -7,23 +7,23 @@ require_once 'includes/head.php';
 </head>
 <body>
 
-<!-- Spinner -->
+
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+    <div class="spinner-border text-primary custom-spinner" role="status">
         <span class="sr-only">Cargando...</span>
     </div>
 </div>
 
 <?php require_once 'includes/header.php'; ?>
 
-<!-- BREADCRUMB -->
+
 <div class="container-fluid bg-breadcrumb">
-    <div class="container text-center py-5" style="max-width: 900px;">
+    <div class="container text-center py-5 text-max-900">
         <h3 class="text-white display-3 mb-4">Paquetes Perú</h3>
     </div>
 </div>
 
-<!-- DESTINOS -->
+
 <div class="container py-5">
     <div class="destinos-grid">
 

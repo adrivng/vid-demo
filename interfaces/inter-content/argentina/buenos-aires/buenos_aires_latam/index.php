@@ -89,7 +89,6 @@ require_once $subir . 'includes/head.php';
     </div>
 </div>
 
-<!-- WhatsApp -->
 <div class="wa-overlay" id="waOverlay" onclick="closeWAOutside(event)">
     <div class="wa-modal">
         <button class="wa-modal__close" onclick="closeWA()">&#x2715;</button>

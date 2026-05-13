@@ -17,17 +17,12 @@
 /* ── HERO ── */
 .ev-hero {
     position: relative;
-    height: 420px;
-    background: url('img/packages-4.jpg') center center / cover no-repeat;
+    background: #2d7a3a;
+    padding: 130px 20px 60px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
-.ev-hero__overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.65));
 }
 .ev-hero__content {
     position: relative;

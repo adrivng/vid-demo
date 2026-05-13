@@ -11,7 +11,7 @@ require_once 'includes/head.php';
 
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+        <div class="spinner-border text-primary custom-spinner" role="status">
             <span class="sr-only">Loading...</span>
         </div>
     </div>
@@ -19,19 +19,13 @@ require_once 'includes/head.php';
 
     <?php require_once 'includes/header.php'; ?>
 
-    <!-- =====================================================
-         HERO BANNER
-    ===================================================== -->
     <div class="container-fluid bg-breadcrumb bg-breadcrumb--internacional">
-        <div class="container text-center py-5" style="max-width: 900px;">
+        <div class="container text-center py-5 text-max-900">
             <h3 class="text-white display-3 mb-4">Paquetes Internacional</h3>
         </div>
     </div>
 
-    <!-- =====================================================
-         EXPLORER — Panel de acceso rápido por destino
-    ===================================================== -->
-    <div class="container" style="margin-top: -40px; position: relative; z-index: 10;">
+    <div class="container intl-explorer-wrap">
         <div class="intl-explorer">
             <div class="intl-explorer__heading">
                 <i class="fa fa-compass"></i> Explora por Destino
@@ -126,9 +120,6 @@ require_once 'includes/head.php';
         </div>
     </div>
 
-    <!-- =====================================================
-         MÓDULO PRINCIPAL — Filtros + Grid de destinos
-    ===================================================== -->
     <div class="container-fluid py-5">
         <div class="container">
 
@@ -875,9 +866,6 @@ require_once 'includes/head.php';
         </div>
     </div>
 
-    <!-- =====================================================
-         CTA / NEWSLETTER
-    ===================================================== -->
     <div class="container pb-5">
         <div class="intl-cta">
             <div class="intl-cta__text">

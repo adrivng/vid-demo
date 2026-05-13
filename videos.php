@@ -9,7 +9,7 @@ require_once 'includes/head.php';
 
 <!-- Spinner Start -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary" style="width:3rem;height:3rem;" role="status">
+    <div class="spinner-border text-primary custom-spinner" role="status">
         <span class="sr-only">Loading...</span>
     </div>
 </div>
@@ -258,7 +258,7 @@ require_once 'includes/head.php';
         </div>
         <!-- /vid-grid -->
 
-        <p class="vid-empty" id="vidEmpty" style="display:none;">No hay videos en esta categoría.</p>
+        <p class="vid-empty d-none" id="vidEmpty">No hay videos en esta categoría.</p>
 
     </div>
 </section>
@@ -272,16 +272,6 @@ require_once 'includes/head.php';
         <p>Si tu agencia requiere de material específico con tu logo o para un evento especial, nuestro equipo creativo está listo para ayudarte a crear contenido de alto impacto.</p>
         <a href="contacto.php" class="vid-cta__btn">Contactar Soporte de Ventas</a>
     </div>
-    <!-- <div class="vid-cta__right">
-        <div class="vid-cta__service">
-            <strong><i class="fa fa-star"></i> Servicio exclusivo</strong>
-            <ul>
-                <li><i class="fa fa-check-circle"></i> Co-branding disponible</li>
-                <li><i class="fa fa-check-circle"></i> Formatos a medida</li>
-                <li><i class="fa fa-check-circle"></i> Entrega en 48h</li>
-            </ul>
-        </div>
-    </div> -->
 </section>
 
 <?php require_once 'includes/scripts.php'; ?>

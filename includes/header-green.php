@@ -27,7 +27,7 @@ $subir = $subir ?? '';
 </div>
 
 <div class="container-fluid position-relative p-0">
-    <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary px-4 px-lg-5 py-3 py-lg-0">
         <a href="<?= $subir ?>index.php" class="navbar-brand p-0">
             <h1 class="m-0"><img src="<?= $subir ?>img/images-index/logo.png" alt=""></h1>
         </a>
