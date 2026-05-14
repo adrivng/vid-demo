@@ -3,7 +3,7 @@ $pageTitle  = 'Bloqueos';
 $activePage = 'bloqueos';
 
 require_once 'includes/head.php';
-require_once '../vid-cms/config/database.php';
+require_once 'config/database.php';
 
 
 
@@ -162,7 +162,7 @@ ksort($categoriasUnicas);
 
                     $imagen = !empty($programa['imagen_pr'])
                         ? $dirPrograma . 'img/' . $programa['imagen_pr']
-                        : '/vid-demo/img/no-image.jpg';
+                        : '/img/no-image.jpg';
 
                     ?>
 

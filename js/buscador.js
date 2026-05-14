@@ -2,9 +2,6 @@
  * Buscador de Destinos
  * Módulo JS limpio, sin dependencias externas.
  * Consume /api/destinos.php y maneja el dropdown de resultados.
- *
- * Uso: incluir al final del <body> o con defer
- *   <script src="/js/buscador.js" defer></script>
  */
 
 'use strict';
@@ -12,7 +9,7 @@
 // ── Configuración ──────────────────────────────────────────────────────────────
 
 const CONFIG = {
-    apiUrl          : '/vid-demo/api/destinos.php', // Ruta de la API PHP
+    apiUrl          : '/api/destinos.php',
     minChars        : 2,                   // Mínimo de caracteres para buscar
     maxResultados   : 8,                   // Máximo de items en el dropdown
     debounceMs      : 250,                 // Espera tras dejar de escribir (ms)

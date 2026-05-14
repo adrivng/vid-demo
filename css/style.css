@@ -380,7 +380,7 @@
         margin-top: -100px;
     }
 
-    .carousel-header { height: 700px !important; }
+    .carousel-header { height: 570px !important; }
 
     .carousel-header .carousel-control-prev .carousel-control-prev-icon,
     .carousel-header .carousel-control-next .carousel-control-next-icon { opacity: 0; }
@@ -431,6 +431,18 @@
 .bg-breadcrumb--videos {
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
                       url(../img/packages-3.jpg);
+    background-position: center center;
+}
+
+.bg-breadcrumb--cuentas {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                      url(../img/bck-nosotros.jpg);
+    background-position: center center;
+}
+
+.bg-breadcrumb--equipo {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                      url(../img/bck-nosotros.jpg);
     background-position: center center;
 }
 
@@ -796,6 +808,63 @@
     .search-bar-custom .search-wrapper { padding: 15px 20px; border-radius: 25px; }
     .search-bar-custom .search-input { padding: 12px 20px; }
     .search-dropdown { border-radius: 10px; max-height: 300px; }
+}
+
+
+/* =====================================================
+   15. BENEFICIOS
+   ===================================================== */
+.beneficios-section {
+    padding: 50px 0;
+    background: #fff;
+}
+
+.beneficio-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 28px 16px 20px;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 16px;
+    text-decoration: none;
+    color: #333;
+    transition: all .25s;
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.beneficio-card:hover {
+    border-color: #1a7a4a;
+    box-shadow: 0 8px 30px rgba(26,122,74,0.12);
+    transform: translateY(-3px);
+    text-decoration: none;
+    color: #1a7a4a;
+}
+
+.beneficio-img {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.beneficio-img img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.beneficio-card h6 {
+    font-size: .8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    margin: 0;
+    text-align: center;
+    color: inherit;
 }
 
 
@@ -1288,3 +1357,12 @@
 .repre-icon { height: 70px; object-fit: contain; }
 .bg-404 { background: linear-gradient(rgba(19, 53, 123, 0.3), rgba(19, 53, 153, 0.3)); object-fit: cover; }
 .intl-explorer-wrap { margin-top: -40px; position: relative; z-index: 10; }
+
+@media (max-width: 767.98px) {
+    .beneficios-section { padding: 16px 0 24px; }
+    .beneficio-card { padding: 16px 10px 12px; }
+    .beneficio-img { height: 60px; }
+    .beneficio-card h6 { font-size: .7rem; }
+    .about.py-5 { padding-top: 1rem !important; padding-bottom: 1.5rem !important; }
+    .about .container.py-5 { padding-top: 0 !important; padding-bottom: 0 !important; }
+}

@@ -1,0 +1,35 @@
+.team-page .guide-item {
+    height: 100%;
+}
+.team-page .guide-img-efects {
+    height: 320px;
+    overflow: hidden;
+}
+.team-page .guide-img-efects img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+.team-page .email-wrap {
+    font-size: .78rem;
+    color: #555;
+    margin-top: 4px;
+    transition: color .5s;
+}
+.team-page .email-wrap i {
+    color: var(--bs-primary);
+    margin-right: 4px;
+}
+.team-page .guide-item:hover .email-wrap {
+    color: #e0e0e0;
+}
+.email-hidden { unicode-bidi: bidi-override; direction: rtl; text-align: left; display: inline; }
+
+@media (max-width: 767.98px) {
+    .team-page .guide-img-efects { height: auto; }
+    .team-page .guide-img-efects img { height: auto; object-fit: contain; }
+    .team-page .guide-title { padding: 1rem !important; }
+    .team-page .guide-title h4 { font-size: 1rem; }
+    .team-page .guide-title p { font-size: .85rem; }
+}

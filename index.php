@@ -2,7 +2,7 @@
 $pageTitle  = 'Inicio';
 $activePage = 'inicio';
 require_once 'includes/head.php';
-require_once '../vid-cms/config/database.php';
+require_once 'config/database.php';
 ?>
 
 <link rel="stylesheet" href="css/buscador.css">
@@ -94,32 +94,46 @@ require_once '../vid-cms/config/database.php';
 </div>
 <!-- ========== FIN CAROUSEL ========== -->
 
-
-<!-- ========== BUSCADOR ========== -->
-<div class="container-fluid search-bar-custom">
+<!-- ========== BENEFICIOS ========== -->
+<div class="container-fluid beneficios-section">
     <div class="container">
-        <div class="search-wrapper position-relative">
-            <div class="row align-items-center g-3">
-                <div class="col-12 col-md-9 position-relative">
-                    <input
-                        class="form-control search-input"
-                        type="text"
-                        id="buscadorDestinos"
-                        placeholder="Busca tu destino... Ej: Brasil, Cancún, Miami"
-                        autocomplete="off"
-                    >
-                    <div id="resultadosBusqueda" class="search-dropdown d-none"></div>
-                </div>
-                <div class="col-12 col-md-3">
-                    <button type="button" class="btn btn-primary search-btn w-100" id="btnBuscar">
-                        <i class="fas fa-search me-2"></i>Buscar
-                    </button>
-                </div>
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-3">
+                <a href="#" class="beneficio-card" target="_blank" rel="noopener">
+                    <div class="beneficio-img">
+                        <img src="img/beneficios/club_vidatur.png" alt="Club Vidatur">
+                    </div>
+                    <h6>Club Vidatur</h6>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="#" class="beneficio-card" target="_blank" rel="noopener">
+                    <div class="beneficio-img">
+                        <img src="img/beneficios/cotizador_online_logo.png" alt="Cotizador Online">
+                    </div>
+                    <h6>Cotizador Online</h6>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="#" class="beneficio-card" target="_blank" rel="noopener">
+                    <div class="beneficio-img">
+                        <img src="img/beneficios/gea_logo.png" alt="GEA">
+                    </div>
+                    <h6>GEA</h6>
+                </a>
+            </div>
+            <div class="col-6 col-md-3">
+                <a href="#" class="beneficio-card" target="_blank" rel="noopener">
+                    <div class="beneficio-img">
+                        <img src="img/beneficios/logo-programa-recompensa.png" alt="Programa Recompensa">
+                    </div>
+                    <h6>Programa Recompensa</h6>
+                </a>
             </div>
         </div>
     </div>
 </div>
-<!-- ========== FIN BUSCADOR ========== -->
+<!-- ========== FIN BENEFICIOS ========== -->
 
 
 <!-- ========== ABOUT ========== -->
@@ -486,6 +500,12 @@ require_once '../vid-cms/config/database.php';
                             'img'    => 'img/images-index/victor_cardenas_atc.jpg',
                             'wa'     => '51999999999',
                         ],
+                        [
+                            'nombre' => 'Rose Damian',
+                            'cargo'  => 'Administración',
+                            'img'    => 'img/images-index/administracion_rouse.jpg',
+                            'wa'     => '51999999999',
+                        ],
                         /* ── Agrega más miembros aquí ── */
                     ];
                     foreach ($equipo as $m): ?>
@@ -685,7 +705,7 @@ function initCarrusel(ids) {
     function goTo(idx) {
         const vs  = visible();
         const max = Math.max(0, total - vs);
-        current   = idx > max ? 0 : Math.max(idx, 0);
+        current   = Math.min(Math.max(idx, 0), max);
 
         // Equipo usa offsetWidth, Xcaret usa porcentaje
         if (ids.usePercent) {
