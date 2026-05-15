@@ -97,7 +97,7 @@ $subir = $subir ?? '';
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <i class="fas fa-copyright me-2"></i>
-                <a class="text-white" href="#"><small>2026 Vidatur, TODOS LOS DERECHOS RESERVADOS</small></a>
+                <a class="text-white" href="#"><small>2026 Vidatur Mayorista de Viajes, Todos los derechos reservados</small></a>
             </div>
         </div>
     </div>

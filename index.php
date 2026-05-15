@@ -198,7 +198,7 @@ require_once 'config/database.php';
             </div>
         </div>
 
-        <BR>
+        <br>
         <!-- Parques SeaWorld -->
         <?php
         $parques = [
@@ -225,7 +225,7 @@ require_once 'config/database.php';
             </div>
         </div>
 
-        <BR>
+        <br>
                     <!-- Parques Xcaret -->
         <?php
         $xcaret = [
@@ -265,7 +265,7 @@ require_once 'config/database.php';
             </div>
         </div>
 
-         <BR>                   
+         <br>                   
 
         <!-- Aliados carrusel -->
         <div class="mb-5">
@@ -400,30 +400,30 @@ require_once 'config/database.php';
             </div>
             <div class="col-lg-6">
                 <div class="booking-modules">
-                    <div class="booking-module">
+                    <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=ONLY_HOTEL" target="_blank">
                         <i class="fas fa-hotel"></i>
                         <span>Alojamiento</span>
-                    </div>
-                    <div class="booking-module">
+                    </a>
+                    <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=ONLY_TICKET" target="_blank">
                         <i class="fas fa-hiking"></i>
                         <span>Actividades</span>
-                    </div>
-                    <div class="booking-module">
+                    </a>
+                    <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=ONLY_TRANSFER" target="_blank">
                         <i class="fas fa-shuttle-van"></i>
                         <span>Traslados</span>
-                    </div>
-                    <div class="booking-module">
+                    </a>
+                    <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=HOLIDAYS" target="_blank">
                         <i class="fas fa-suitcase"></i>
                         <span>Paquetes</span>
-                    </div>
-                    <div class="booking-module">
+                    </a>
+                    <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=MULTI" target="_blank">
                         <i class="fas fa-globe-americas"></i>
                         <span>Multidestinos</span>
-                    </div>
-                    <div class="booking-module">
+                    </a>
+                    <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=ONLY_CAR" target="_blank">
                         <i class="fas fa-car"></i>
                         <span>Alquilar un coche</span>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -583,7 +583,7 @@ require_once 'config/database.php';
 
 
 <!-- ========== TESTIMONIAL ========== -->
-<div class="container-fluid testimonial py-5">
+<!-- <div class="container-fluid testimonial py-5">
     <div class="container py-5">
         <div class="mx-auto text-center mb-5 text-max-900">
             <h2 class="section-title px-3">Agencias que trabajan con Nosotros</h2>
@@ -659,7 +659,7 @@ require_once 'config/database.php';
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- ========== FIN TESTIMONIAL ========== -->
 
 
@@ -702,6 +702,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function initCarrusel(ids) {
     const track    = document.getElementById(ids.track);
     const viewport = document.getElementById(ids.viewport);
+    if (!track || !viewport) return;
     const btnPrev  = document.getElementById(ids.prev);
     const btnNext  = document.getElementById(ids.next);
     const dotsWrap = ids.dots ? document.getElementById(ids.dots) : null;
@@ -748,16 +749,21 @@ function initCarrusel(ids) {
                 d.classList.toggle('active', i === activePage)
             );
         }
-
-        if (btnPrev) btnPrev.disabled = current === 0;
-        if (btnNext) btnNext.disabled = current >= max;
     }
 
-    function startAuto() { timer = setInterval(() => goTo(current + visible()), 3000); }
+    function maxPage() { return Math.max(0, total - visible()); }
+
+    function startAuto() {
+        timer = setInterval(() => {
+            const vs = visible();
+            const max = maxPage();
+            goTo(current >= max ? 0 : current + vs);
+        }, 3000);
+    }
     function stopAuto()  { clearInterval(timer); }
 
-    btnPrev?.addEventListener('click', () => { stopAuto(); goTo(current - visible()); startAuto(); });
-    btnNext?.addEventListener('click', () => { stopAuto(); goTo(current + visible()); startAuto(); });
+    btnPrev?.addEventListener('click', () => { stopAuto(); const vs = visible(); goTo(current <= 0 ? maxPage() : current - vs); startAuto(); });
+    btnNext?.addEventListener('click', () => { stopAuto(); const vs = visible(); goTo(current >= maxPage() ? 0 : current + vs); startAuto(); });
 
     viewport.addEventListener('mouseenter', stopAuto);
     viewport.addEventListener('mouseleave', startAuto);
@@ -771,9 +777,14 @@ function initCarrusel(ids) {
     });
 
     let resizeTimer;
+    let lastV = visible();
     window.addEventListener('resize', () => {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => { buildDots(); goTo(0); }, 150);
+        resizeTimer = setTimeout(() => {
+            const newV = visible();
+            if (newV !== lastV) { buildDots(); lastV = newV; }
+            goTo(current);
+        }, 150);
     });
 
     buildDots();

@@ -446,6 +446,12 @@
     background-position: center center;
 }
 
+.bg-breadcrumb--registro {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+                      url(../img/images-portadas/mod-nostros_registro.png);
+    background-position: center center;
+}
+
 /* Agrega más según necesites */
 
 .bg-breadcrumb .breadcrumb-item a { color: var(--bs-secondary) !important; }
@@ -928,6 +934,7 @@
     transition: background .2s, transform .2s, border-color .2s;
     cursor: pointer;
     text-align: center;
+    text-decoration: none;
 }
 .booking-module:hover {
     background: rgba(255,255,255,.22);

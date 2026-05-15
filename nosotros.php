@@ -79,7 +79,7 @@ require_once 'includes/head.php';
             </div>
 
             <div class="col-md-6 col-lg-4">
-                <a href="https://vidatur.net/vidatur_online_formulario_registro.html" target="_blank" rel="noopener noreferrer"
+                <a href="formularios/vidatur_online_formulario_registro.php" rel="noopener noreferrer"
                    class="service-content-inner text-center border rounded p-4 h-100 shadow-sm hover-white cursor-pointer d-block">
                     <img src="img/formulario.png" class="img-fluid mb-4 img-card-logo">
                     <h5 class="mb-3">REGISTRO ONLINE</h5>

@@ -101,28 +101,4 @@
     initBackToTop();
 
 
-    /* -------------------------------------------------
-       CARRUSELES DESACTIVADOS (OwlCarousel con errores)
-       ------------------------------------------------
-       Si en el futuro necesitas reactivar alguno,
-       copia el bloque correspondiente, quita el bloque
-       de comentario y asegúrate de que la librería carga.
-
-       // InternationalTour-carousel
-       $('.InternationalTour-carousel').owlCarousel({
-           autoplay: true, smartSpeed: 1000,
-           center: false, dots: true, loop: true,
-           margin: 25, nav: false,
-           responsive: { 0:{items:1}, 768:{items:2}, 1200:{items:3} }
-       });
-
-       // packages-carousel
-       $('.packages-carousel').owlCarousel({
-           autoplay: true, smartSpeed: 1000,
-           center: false, dots: false, loop: true,
-           margin: 25, nav: true,
-           responsive: { 0:{items:1}, 768:{items:2}, 1200:{items:3} }
-       });
-    ------------------------------------------------- */
-
 })(jQuery);
