@@ -5,15 +5,33 @@ $subir = '../';
 require_once $subir . 'includes/head.php';
 ?>
 <link rel="stylesheet" href="<?= $subir ?>css/cuentas.css">
+<style>
+.cont-hero {
+    background: #2d7a3a;
+    padding: 110px 20px 40px;
+    text-align: center
+}
+.cont-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 0
+}
+.cont-hero p {
+    color: rgba(255,255,255,.85);
+    max-width: 560px;
+    margin: 8px auto 0;
+    font-size: 1rem
+}
+</style>
 </head>
 <body>
 
 <?php require_once $subir . 'includes/header.php'; ?>
 
-<div class="container-fluid bg-breadcrumb bg-breadcrumb--cuentas">
-    <div class="container text-center py-5 text-max-900">
-        <h3 class="text-white display-3 mb-4">Cuentas Bancarias</h3>
-    </div>
+<div class="cont-hero">
+    <h1>Cuentas Bancarias</h1>
+    <p>Realiza tus depósitos y transferencias a nuestras cuentas oficiales.</p>
 </div>
 
 <section class="container-fluid about service py-5">

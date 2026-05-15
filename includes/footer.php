@@ -13,10 +13,10 @@ $subir = $subir ?? '';
                         <img src="<?= $subir ?>img/images-index/logo.png" alt="Vidatur" height="90">
                     </a>
                     <p class="text-white mb-3"><small>Somos una Agencia Mayorista de Viajes con más de 25 años de experiencia ofreciendo los mejores destinos del mundo.</small></p>
-                    <div class="mt-5">
-                        <a href="https://primesoft-rlatorre-backup-bucket-1.s3.amazonaws.com/ldr/icon-libro-reclamaciones_negro.png" target="_blank" class="d-inline-block text-white">
-                            <img src="https://primesoft-rlatorre-backup-bucket-1.s3.amazonaws.com/ldr/icon-libro-reclamaciones_negro.png" alt="Libro de Reclamaciones" height="45" class="me-2">
-                            <span><small>Libro de Reclamaciones</small></span>
+                    <div class="mt-4">
+                        <a href="javascript:openLdr('vidatur_ope1', '22b16dca854d5ebbe10a6fb8a8a4d56a')" class="d-inline-flex align-items-center gap-2 text-white" style="text-decoration:none;">
+                            <img src="https://primesoft-rlatorre-backup-bucket-1.s3.amazonaws.com/ldr/icon-libro-reclamaciones_negro.png" alt="Libro de Reclamaciones" height="32" style="filter:brightness(0) invert(1);">
+                            <span style="font-weight:600;text-decoration:underline;"><small><small>Libro de Reclamaciones</small></small></span>
                         </a>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ $subir = $subir ?? '';
                                 <div class="footer-item d-flex flex-column">
                                     <h4 class="mb-4 text-white">Compañía</h4>
                                     <a href="<?= $subir ?>nosotros.php"><i class="fas fa-angle-right me-2"></i> Nosotros</a>
-                                    <a href="<?= $subir ?>contacto.php"><i class="fas fa-angle-right me-2"></i> Contacto</a>
+                                    <a href="<?= $subir ?>equipo_vidatur/equipo_vidatur.php"><i class="fas fa-angle-right me-2"></i> Equipo</a>
                                     <a href="<?= $subir ?>eventos.php"><i class="fas fa-angle-right me-2"></i> Eventos</a>
                                 </div>
                             </div>
@@ -106,3 +106,25 @@ $subir = $subir ?? '';
 <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top">
     <i class="fa fa-arrow-up"></i>
 </a>
+
+<script>
+function openLdr(usuario, token){
+    var form = document.createElement("form");
+    form.setAttribute("method", "post");
+    form.setAttribute("action", "https://librodereclamaciones.com.pe/ingresar.php");
+    form.setAttribute("target", "view");
+    var h1 = document.createElement("input");
+    h1.setAttribute("type", "hidden");
+    h1.setAttribute("name", "usuario");
+    h1.setAttribute("value", usuario);
+    var h2 = document.createElement("input");
+    h2.setAttribute("type", "hidden");
+    h2.setAttribute("name", "token");
+    h2.setAttribute("value", token);
+    form.appendChild(h1);
+    form.appendChild(h2);
+    document.body.appendChild(form);
+    window.open('', 'view');
+    form.submit();
+}
+</script>

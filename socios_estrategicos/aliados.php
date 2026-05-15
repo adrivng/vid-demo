@@ -6,6 +6,23 @@ require_once $subir . 'includes/head.php';
 ?>
 <link rel="stylesheet" href="<?= $subir ?>css/style.css">
 <style>
+.cont-hero {
+    background: #2d7a3a;
+    padding: 110px 20px 40px;
+    text-align: center
+}
+.cont-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 0
+}
+.cont-hero p {
+    color: rgba(255,255,255,.85);
+    max-width: 560px;
+    margin: 8px auto 0;
+    font-size: 1rem
+}
 .logo-card {
     background: #fff;
     border: 1px solid #e5e7eb;
@@ -33,17 +50,15 @@ require_once $subir . 'includes/head.php';
     color: #1a7a4a;
     margin-bottom: .25rem;
 }
-.socios-breadcrumb { max-width: 900px; }
 </style>
 </head>
 <body>
 
 <?php require_once $subir . 'includes/header.php'; ?>
 
-<div class="container-fluid bg-breadcrumb">
-    <div class="container text-center py-5 socios-breadcrumb">
-        <h3 class="text-white display-3 mb-4">Socios Estratégicos</h3>
-    </div>
+<div class="cont-hero">
+    <h1>Socios Estratégicos</h1>
+    <p>Conoce a nuestros aliados comerciales que hacen posible cada experiencia de viaje.</p>
 </div>
 
 <div class="container py-5">

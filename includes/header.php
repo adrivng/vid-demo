@@ -57,7 +57,6 @@ $subir = $subir ?? '';
                         <a href="<?= $subir ?>404.php" class="dropdown-item">PROMOCIONES AGENTES</a>
                     </div>
                 </div>
-                <a href="<?= $subir ?>contacto.php" class="nav-item nav-link <?= isActive('contacto') ?>">Contacto</a>
             </div>
             <a href="https://vidatur.paquetedinamico.com/" target="_blank"
                class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4">Online</a>

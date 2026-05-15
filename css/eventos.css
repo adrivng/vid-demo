@@ -14,16 +14,7 @@
     --ev-shadow:     0 4px 24px rgba(0,0,0,.10);
 }
 
-/* ── HERO ── */
-.ev-hero {
-    position: relative;
-    background: #2d7a3a;
-    padding: 100px 20px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
+/* ── HERO ── (replaced by .cont-hero inline) */
 .ev-hero__content {
     position: relative;
     z-index: 2;

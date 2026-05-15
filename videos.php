@@ -17,15 +17,8 @@ require_once 'includes/head.php';
 
 <?php require_once 'includes/header.php'; ?>
 
-<!-- ══════════════════════════════════════
-     HERO
-     ══════════════════════════════════════ -->
-<div class="vid-hero">
-    <div class="vid-hero__overlay"></div>
-    <div class="vid-hero__content">
-        <h1 >Material Multimedia<br>para Agencias</h1>       
-        
-    </div>
+<div class="cont-hero">
+    <h1>Material Multimedia<br>para Agencias</h1>
 </div>
 
 <!-- ══════════════════════════════════════
@@ -209,7 +202,7 @@ require_once 'includes/head.php';
     <div class="vid-cta__left">
         <h3>¿Necesitas material personalizado?</h3>
         <p>Si tu agencia requiere de material específico con tu logo o para un evento especial, nuestro equipo creativo está listo para ayudarte a crear contenido de alto impacto.</p>
-        <a href="contacto.php" class="vid-cta__btn">Contactar Soporte de Ventas</a>
+        <a href="nosotros.php" class="vid-cta__btn">Contactar Soporte de Ventas</a>
     </div>
 </section> -->
 

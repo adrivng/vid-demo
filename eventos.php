@@ -5,6 +5,23 @@ require_once 'includes/head.php';
 ?>
 <link href="css/eventos.css" rel="stylesheet">
 <style>
+.cont-hero {
+    background: #2d7a3a;
+    padding: 110px 20px 40px;
+    text-align: center
+}
+.cont-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 0
+}
+.cont-hero p {
+    color: rgba(255,255,255,.85);
+    max-width: 560px;
+    margin: 8px auto 0;
+    font-size: 1rem
+}
 /* ── 3 CARDS DE ENTRADA ── */
 .ev-cards {
     display: grid;
@@ -76,11 +93,9 @@ require_once 'includes/head.php';
 <?php require_once 'includes/header.php'; ?>
 
 <!-- ── HERO ── -->
-<div class="ev-hero">
-    <div class="ev-hero__content">
-        <h3 class="text-white display-3 mb-4" >Eventos y Experiencias Vidatur</h3>
-        <p>Transformando viajes corporativos en historias de éxito inolvidables.</p>
-    </div>
+<div class="cont-hero">
+    <h1>Eventos y Experiencias Vidatur</h1>
+    <p>Transformando viajes corporativos en historias de éxito inolvidables.</p>
 </div>
 
 <!-- ── INTRO ── -->
@@ -114,7 +129,7 @@ require_once 'includes/head.php';
     <div class="ev-cta__inner">
         <h3>¿Deseas participar en nuestro próximo evento?</h3>
         <p>Únete a nuestra red de agentes y vive la experiencia Vidatur de primera mano. Conoce los destinos antes que nadie.</p>
-        <a href="contacto.php" class="ev-cta__btn">Contactar con Vidatur</a>
+        <a href="nosotros.php" class="ev-cta__btn">Contactar con Vidatur</a>
     </div>
 </section>
 
