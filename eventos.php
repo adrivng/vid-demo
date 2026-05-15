@@ -41,12 +41,15 @@ require_once 'includes/head.php';
     border-radius: 18px;
     text-decoration: none;
     color: #fff;
-    height: 380px;
+    min-height: 400px;
+    height: 45vh;
+    max-height: 500px;
     transition: transform .25s, box-shadow .25s;
     position: relative;
     overflow: hidden;
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 .ev-card::after {
     content: '';
@@ -76,7 +79,7 @@ require_once 'includes/head.php';
     text-shadow: 0 2px 12px rgba(0,0,0,.5);
 }
 .ev-card--conv { background-image: url('eventos/images/convencion_cuba/image__001.jpg'); }
-.ev-card--fam  { background-image: url('eventos/images/fam_cancun_2021/FAM CANCUN 2.jpg'); }
+.ev-card--fam  { background-image: url('eventos/images/fam_cancun_2021/FAM%20CANCUN%202.jpg'); }
 .ev-card--event{ background-image: url('eventos/images/convencion2/foto01.jpg'); }
 </style>
 </head>

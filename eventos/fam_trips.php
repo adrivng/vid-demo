@@ -28,7 +28,7 @@ body { background: #f5f5f5; }
         <?php
         $famTrips = [
             ['year'=>'2025','title'=>'Cuba: Herencia y Sol','desc'=>'Exploración de cadenas hoteleras y destinos emergentes en Varadero y La Habana.','img'=>'images/fam_cuba_2025/fam_cuba_1.jpg','href'=>'fam_trip_cuba_2025.php','gallery'=>true],
-            ['year'=>'2021','title'=>'Cancún All-Inclusive','desc'=>'Inspección técnica de resorts de lujo y protocolos de seguridad post-pandemia.','img'=>'images/fam_cancun_2021/FAM CANCUN 2.jpg','href'=>'fam_cancun_2021.php','gallery'=>true],
+            ['year'=>'2021','title'=>'Cancún All-Inclusive','desc'=>'Inspección técnica de resorts de lujo y protocolos de seguridad post-pandemia.','img'=>'images/fam_cancun_2021/FAM%20CANCUN%202.jpg','href'=>'fam_cancun_2021.php','gallery'=>true],
             ['year'=>'2019','title'=>'Ruta de los Cayos','desc'=>'Descubriendo los secretos de Cayo Santa María y la costa de Varadero.','img'=>'images/VIAJE_CAPACITACION_ANUAL_CANCUN/portada.png','href'=>'viaje_capa_anual_cancun.php','gallery'=>true],
             ['year'=>'2018','title'=>'Panamá — Ciudad y Canal','desc'=>'Conociendo la infraestructura hotelera y circuitos especiales en Panamá.','img'=>'images/fam_panama/foto01.jpg','href'=>'fam_panama.php','gallery'=>true],
             ['year'=>'2017','title'=>'Varadero — Cuba','desc'=>'Familiarización con resorts todo incluido y experiencias locales.','img'=>'images/fam_varadero/foto01.jpg','href'=>'fam_varadero.php','gallery'=>true],
