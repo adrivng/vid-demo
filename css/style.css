@@ -376,11 +376,11 @@
 @media (max-width: 768px) {
     .carousel-header .carousel-inner .carousel-item img,
     .carousel-header .carousel-inner .carousel-item .carousel-caption {
-        height: 700px;
+        height: 650px;
         margin-top: -100px;
     }
 
-    .carousel-header { height: 570px !important; }
+    .carousel-header { height: 620px !important; }
 
     .carousel-header .carousel-control-prev .carousel-control-prev-icon,
     .carousel-header .carousel-control-next .carousel-control-next-icon { opacity: 0; }
@@ -406,13 +406,13 @@
 
 .bg-breadcrumb--nosotros {
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
-                      url(../img/bck-nosotros.jpg);
+                      url(../img/images-portadas/mod-nosotros-portada.png);
     background-position: center center;
 }
 
 .bg-breadcrumb--bloqueos {
     background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
-                      url(../img/bck-bloqueos.png);
+                      url(../img/images-portadas/mod-bloqueos-ciudad.png);
     background-position: center 52%;
 }
 
@@ -872,8 +872,8 @@
    15. TOUR BOOKING
    ===================================================== */
 .booking {
-    background: linear-gradient(rgba(19,53,123,.8), rgba(19,53,123,.8)),
-                url(../img/tour-booking-bg.jpg);
+    background: linear-gradient(rgba(243, 172, 18, 0.7), rgba(10, 115, 63, 0.8)),
+                url(../img/images-portadas/mod-index-cotizador-persona.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -902,6 +902,46 @@
 .booking .container form .btn.btn-primary:hover {
     box-shadow: inset 800px 0 0 0 var(--bs-light) !important;
     color: var(--bs-primary) !important;
+}
+
+/* ── Booking Modules ── */
+.booking-modules {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.booking-module {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 24px 12px;
+    background: rgba(255,255,255,.12);
+    border: 1.5px solid rgba(255,255,255,.2);
+    border-radius: 16px;
+    color: #fff;
+    font-size: .85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    transition: background .2s, transform .2s, border-color .2s;
+    cursor: pointer;
+    text-align: center;
+}
+.booking-module:hover {
+    background: rgba(255,255,255,.22);
+    border-color: rgba(255,255,255,.4);
+    transform: translateY(-3px);
+}
+.booking-module i {
+    font-size: 1.8rem;
+    opacity: .9;
+}
+@media (max-width: 575.98px) {
+    .booking-modules { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .booking-module { padding: 18px 10px; font-size: .75rem; }
+    .booking-module i { font-size: 1.4rem; }
 }
 
 
@@ -1071,8 +1111,8 @@
    18. SUBSCRIBE
    ===================================================== */
 .subscribe {
-    background: linear-gradient(rgba(19,53,123,.6), rgba(19,53,123,.6)),
-                url(../img/subscribe-img.jpg);
+    background: linear-gradient(rgba(243, 172, 18, 0.7), rgba(10, 115, 63, 0.8)),
+                url(../img/images-portadas/mod-index-mail-section.png);
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;

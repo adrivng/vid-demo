@@ -23,17 +23,8 @@ require_once 'includes/head.php';
 <div class="vid-hero">
     <div class="vid-hero__overlay"></div>
     <div class="vid-hero__content">
-        <h1 >Material Multimedia<br>para Agencias</h1>
-        <p>Descarga recursos visuales de alta calidad diseñados para impulsar tus ventas.<br>
-           Videos optimizados para redes sociales y presentaciones premium.</p>
-        <div class="vid-hero__actions">
-            <a href="#catalogo" class="vid-hero__btn vid-hero__btn--gold">
-                <i class="fa fa-download"></i> Descargar material
-            </a>
-            <a href="#catalogo" class="vid-hero__btn vid-hero__btn--outline">
-                <i class="fa fa-play"></i> Ver catálogo
-            </a>
-        </div>
+        <h1 >Material Multimedia<br>para Agencias</h1>       
+        
     </div>
 </div>
 
@@ -43,7 +34,7 @@ require_once 'includes/head.php';
 <section class="vid-catalog" id="catalogo">
     <div class="container">
 
-        <h2 class="vid-catalog__title">Catálogo de Destinos</h2>
+        
 
         <!-- Filtros -->
         <div class="vid-tabs" role="tablist">
@@ -54,177 +45,136 @@ require_once 'includes/head.php';
         </div>
 
         <?php
-        /*
-         * ── DATOS ──────────────────────────────────────────────────
-         * Para agregar un video: añade un elemento al array.
-         * tags: array de categorías para filtrado.
-         * badge: etiqueta visible en la card (opcional).
-         * ────────────────────────────────────────────────────────── */
+         /*
+          * ── DATOS ──────────────────────────────────────────────────
+          * Para agregar un video: añade un elemento al array.
+          * tags: array de categorías para filtrado.
+          * ────────────────────────────────────────────────────────── */
         $videos = [
             /* ── DESTINOS ── */
             [
                 'title'   => 'Dubai Luxury',
-                'desc'    => 'Recorrido por los hoteles más lujosos y experiencias únicas en el desierto.',
                 'src'     => 'videos/destino_dubai_mc_v1.mp4',
                 'poster'  => 'videos/destino_dubai_mc_f1.jpg',
                 'tags'    => ['all','destino'],
-                'badge'   => 'REEL',
             ],
             [
                 'title'   => 'Curaçao Beaches',
-                'desc'    => 'Selección de las mejores calas y playas turquesas del Caribe holandés.',
                 'src'     => 'videos/curacao_marca_de_agua_v1.mp4',
                 'poster'  => 'videos/curacao_marca_de_agua_f1.jpg',
                 'tags'    => ['all','destino'],
-                'badge'   => '4K',
             ],
             [
                 'title'   => 'Iguazú Falls',
-                'desc'    => 'Tomas aéreas impactantes de una de las siete maravillas naturales del mundo.',
                 'src'     => 'videos/iguazu_marca_agua_v1.mp4',
                 'poster'  => 'videos/iguazu_marca_agua_f1.jpg',
                 'tags'    => ['all','destino'],
-                'badge'   => 'DRONE',
             ],
             [
                 'title'   => 'Rio de Janeiro',
-                'desc'    => 'Vistas espectaculares desde el Corcovado y vida urbana carioca.',
                 'src'     => 'videos/rio_destino_ma_v1.mp4',
                 'poster'  => 'videos/rio_destino_ma_f1.jpg',
                 'tags'    => ['all','destino'],
-                'badge'   => 'PROMO',
             ],
             [
                 'title'   => 'Cuba — Varadero',
-                'desc'    => 'Playas de arena blanca, música y cultura caribeña auténtica.',
                 'src'     => 'videos/varadero_cuba_marca_agua_v1.mp4',
                 'poster'  => 'videos/varadero_cuba_marca_agua_f1.jpg',
                 'tags'    => ['all','destino'],
-                'badge'   => 'REEL',
             ],
             [
                 'title'   => 'Punta Cana',
-                'desc'    => 'Los mejores resorts all-inclusive del Caribe dominicano.',
                 'src'     => 'videos/punta_cana_marca_agua_v1.mp4',
                 'poster'  => 'videos/punta_cana_marca_agua_f1.jpg',
                 'tags'    => ['all','destino'],
-                'badge'   => 'REEL',
             ],
             [
                 'title'   => 'Camboriú',
-                'desc'    => 'La joya del litoral catarinense con playas urbanas de clase mundial.',
                 'src'     => 'videos/camboriu_marca_agua_v1.mp4',
                 'poster'  => 'videos/camboriu_marca_agua_f1.jpg',
                 'tags'    => ['all','destino'],
-                'badge'   => '4K',
             ],
             [
                 'title'   => 'Jamaica',
-                'desc'    => 'Reggae, cascadas y playas de arena dorada en el corazón del Caribe.',
                 'src'     => 'videos/jamaica_11_03_2026_v1.mp4',
                 'poster'  => 'videos/jamaica_11_03_2026_f1.jpg',
                 'tags'    => ['all','destino'],
-                'badge'   => 'NUEVO',
             ],
 
             /* ── HOTELES INTERNACIONALES ── */
             [
                 'title'   => 'Hotel Nickelodeon',
-                'desc'    => 'El resort temático más divertido del Caribe para toda la familia.',
                 'src'     => 'videos/nickelodeon_11_03_2026_v1.mp4',
                 'poster'  => 'videos/nickelodeon_11_03_2026_f1.jpg',
                 'tags'    => ['all','hotel-int'],
-                'badge'   => 'NUEVO',
             ],
             [
                 'title'   => 'Hotel Cartagena Plaza',
-                'desc'    => 'Elegancia colonial en el corazón de la Ciudad Amurallada.',
                 'src'     => 'videos/cartagena_plaza_v1.mp4',
                 'poster'  => 'videos/cartagena_plaza_f1.jpg',
                 'tags'    => ['all','hotel-int'],
-                'badge'   => 'REEL',
             ],
             [
                 'title'   => 'Radisson Cartagena Ocean Pavillion',
-                'desc'    => 'Vista al mar, lujo y gastronomía premium en Cartagena de Indias.',
                 'src'     => 'videos/raddison_3.mp4',
                 'poster'  => 'videos/raddison_2.jpg',
                 'tags'    => ['all','hotel-int'],
-                'badge'   => '4K',
             ],
             [
                 'title'   => 'Mangrove Beach Corendon Curaçao',
-                'desc'    => 'Un resort boutique único rodeado de manglares y aguas cristalinas.',
                 'src'     => 'videos/corendon_curazao.mp4',
                 'poster'  => 'videos/corendon_curazao.jpg',
                 'tags'    => ['all','hotel-int'],
-                'badge'   => 'REEL',
             ],
             [
                 'title'   => 'Bahia Principe Grand Punta Cana',
-                'desc'    => 'Todo incluido de lujo con playa privada en el Caribe dominicano.',
                 'src'     => 'videos/bahia_principe_punta_cana_2.mp4',
                 'poster'  => 'videos/bahia_principe_punta_cana.jpg',
                 'tags'    => ['all','hotel-int'],
-                'badge'   => 'PROMO',
             ],
             [
                 'title'   => 'Coral Costa Caribe Beach Resort',
-                'desc'    => 'Frente al mar en Juan Dolio con instalaciones todo incluido.',
                 'src'     => 'videos/coral_costa_caribe.mp4',
                 'poster'  => 'videos/coral_costa_caribe.jpg',
                 'tags'    => ['all','hotel-int'],
-                'badge'   => 'REEL',
             ],
             [
                 'title'   => 'Dorado Plaza Cartagena',
-                'desc'    => 'Hotel de negocios y placer en la Bocagrande de Cartagena.',
                 'src'     => 'videos/dorado_plaza.mp4',
                 'poster'  => 'videos/dorado_plaza.jpg',
                 'tags'    => ['all','hotel-int'],
-                'badge'   => '4K',
             ],
             [
                 'title'   => 'Meliá Orlando Celebration',
-                'desc'    => 'A minutos de los parques temáticos más famosos de Florida.',
                 'src'     => 'videos/melia_orlando.mp4',
                 'poster'  => 'videos/melia_orlando.jpg',
                 'tags'    => ['all','hotel-int'],
-                'badge'   => 'REEL',
             ],
 
             /* ── HOTELES NACIONALES ── */
             [
                 'title'   => 'Hotel Hacienda San Juan — Ica',
-                'desc'    => 'Entre viñedos y dunas, una experiencia única en el sur peruano.',
                 'src'     => 'videos/hotel_hacienda_san_juan_ica.mp4',
                 'poster'  => 'videos/hotel_hacienda_san_juan_ica.png',
                 'tags'    => ['all','hotel-nac'],
-                'badge'   => 'PERU',
             ],
             [
                 'title'   => 'Hotel Irapay Amazon Lodge',
-                'desc'    => 'Naturaleza pura en el corazón de la Amazonía peruana.',
                 'src'     => 'videos/hotel_irapay_lodge_vidatur_2.mp4',
                 'poster'  => 'videos/hotel_las_dunas_ica.png',
                 'tags'    => ['all','hotel-nac'],
-                'badge'   => 'PERU',
             ],
             [
                 'title'   => 'Hotel Aranwa Paracas',
-                'desc'    => 'Diseño colonial frente a la Reserva de Paracas y sus islas.',
                 'src'     => 'videos/hotel_aranwa_paracas_vidatur.mp4',
                 'poster'  => 'videos/hotel_aranwa_paracas_vidatur_2.png',
                 'tags'    => ['all','hotel-nac'],
-                'badge'   => 'PERU',
             ],
             [
                 'title'   => 'Hotel Viñas Queirolo',
-                'desc'    => 'Enoturismo y gastronomía en los viñedos de Ica.',
                 'src'     => 'videos/hotel_vinas_queirolo.mp4',
                 'poster'  => 'videos/hotel_vinas_queirolo.jpg',
                 'tags'    => ['all','hotel-nac'],
-                'badge'   => 'PERU',
             ],
         ];
         ?>
@@ -233,22 +183,11 @@ require_once 'includes/head.php';
         <div class="vid-grid" id="vidGrid">
             <?php foreach ($videos as $v): ?>
             <div class="vid-card" data-tags="<?= implode(' ', $v['tags']) ?>">
+                <strong class="vid-card__title"><?= $v['title'] ?></strong>
                 <div class="vid-card__media">
-                    <?php if (!empty($v['badge'])): ?>
-                    <span class="vid-card__badge"><?= $v['badge'] ?></span>
-                    <?php endif; ?>
-                    <video
-                        src="<?= $v['src'] ?>"
-                        poster="<?= $v['poster'] ?>"
-                        preload="none"
-                        controls
-                        playsinline>
-                        Tu navegador no soporta video HTML5.
-                    </video>
+                    <img src="<?= $v['poster'] ?>" alt="<?= $v['title'] ?>">
                 </div>
                 <div class="vid-card__body">
-                    <strong class="vid-card__title"><?= $v['title'] ?></strong>
-                    <p class="vid-card__desc"><?= $v['desc'] ?></p>
                     <a class="vid-card__dl" href="<?= $v['src'] ?>" download>
                         <i class="fa fa-download"></i> Descargar
                     </a>
@@ -266,13 +205,13 @@ require_once 'includes/head.php';
 <!-- ══════════════════════════════════════
      CTA — Material personalizado
      ══════════════════════════════════════ -->
-<section class="vid-cta">
+<!-- <section class="vid-cta">
     <div class="vid-cta__left">
         <h3>¿Necesitas material personalizado?</h3>
         <p>Si tu agencia requiere de material específico con tu logo o para un evento especial, nuestro equipo creativo está listo para ayudarte a crear contenido de alto impacto.</p>
         <a href="contacto.php" class="vid-cta__btn">Contactar Soporte de Ventas</a>
     </div>
-</section>
+</section> -->
 
 <?php require_once 'includes/scripts.php'; ?>
 

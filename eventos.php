@@ -78,7 +78,7 @@ require_once 'includes/head.php';
 <!-- ── HERO ── -->
 <div class="ev-hero">
     <div class="ev-hero__content">
-        <h1>Eventos y Experiencias Vidatur</h1>
+        <h3 class="text-white display-3 mb-4" >Eventos y Experiencias Vidatur</h3>
         <p>Transformando viajes corporativos en historias de éxito inolvidables.</p>
     </div>
 </div>

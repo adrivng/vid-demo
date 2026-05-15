@@ -36,6 +36,10 @@ $subir = $subir ?? '';
                                 <i class="fas fa-share fa-2x text-white me-2"></i>
                                 <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
                                 <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-youtube fw-normal"></i></a>
+                                <a class="btn-square btn btn-primary rounded-circle" href="https://www.tiktok.com/@vidatur" target="_blank">
+                                    <i class="fab fa-tiktok fw-normal"></i>
+                                </a>
                             </div>
                         </div>
                     </div>

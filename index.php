@@ -137,7 +137,7 @@ require_once 'config/database.php';
 
 
 <!-- ========== ABOUT ========== -->
-<div class="container-fluid about py-5">
+<!-- <div class="container-fluid about py-5">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
             <div class="col-lg-5">
@@ -162,7 +162,7 @@ require_once 'config/database.php';
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- ========== FIN ABOUT ========== -->
 
 
@@ -392,11 +392,39 @@ require_once 'config/database.php';
     <div class="container py-5">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6">
-                <h5 class="section-booking-title pe-3">COTIZADOR ONLINE 2.0</h5>
+                <h5 class="section-booking-title pe-3">COTIZADOR VIDATUR ONLINE 2.0</h5>
                 <h1 class="text-white mb-4">Online</h1>
                 <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium?</p>
                 <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium?</p>
-                <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Registro directo</a>
+                <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Registrarse</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="booking-modules">
+                    <div class="booking-module">
+                        <i class="fas fa-hotel"></i>
+                        <span>Alojamiento</span>
+                    </div>
+                    <div class="booking-module">
+                        <i class="fas fa-hiking"></i>
+                        <span>Actividades</span>
+                    </div>
+                    <div class="booking-module">
+                        <i class="fas fa-shuttle-van"></i>
+                        <span>Traslados</span>
+                    </div>
+                    <div class="booking-module">
+                        <i class="fas fa-suitcase"></i>
+                        <span>Paquetes</span>
+                    </div>
+                    <div class="booking-module">
+                        <i class="fas fa-globe-americas"></i>
+                        <span>Multidestinos</span>
+                    </div>
+                    <div class="booking-module">
+                        <i class="fas fa-car"></i>
+                        <span>Alquilar un coche</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -639,7 +667,7 @@ require_once 'config/database.php';
 <div class="container-fluid subscribe py-5">
     <div class="container text-center py-5">
         <div class="mx-auto text-center text-max-900">
-            <h5 class="subscribe-title px-3">Subscribe</h5>
+            <!-- <h5 class="subscribe-title px-3">Subscribe</h5> -->
             <h1 class="text-white mb-4">Nuestro Boletín</h1>
             <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo?</p>
             <div class="position-relative mx-auto">

@@ -62,10 +62,10 @@ require_once 'includes/head.php';
 <div class="container-fluid about service py-5">
     <div class="container py-5">
 
-        <div class="text-center mx-auto mb-5 text-max-800">
-            <h1 class="mb-4">Explora nuestros <span class="text-primary">servicios</span></h1>
-            <p class="mb-0">Descubre nuestras plataformas, promociones, representaciones y servicios exclusivos diseñados para agencias y viajeros.</p>
-        </div>
+        <!-- <div class="text-center mx-auto mb-5 text-max-800">
+            <h1 class="mb-4">Explora nuestros servicios</h1>
+            
+        </div> --> <br><br>
 
         <div class="row g-4">
 
