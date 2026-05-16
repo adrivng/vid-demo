@@ -18,7 +18,7 @@
     transition: color .5s;
 }
 .team-page .email-wrap i {
-    color: var(--bs-primary);
+    
     margin-right: 4px;
 }
 .team-page .guide-item:hover .email-wrap {

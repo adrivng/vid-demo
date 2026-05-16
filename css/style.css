@@ -1405,6 +1405,25 @@
 .bg-404 { background: linear-gradient(rgba(19, 53, 123, 0.3), rgba(19, 53, 153, 0.3)); object-fit: cover; }
 .intl-explorer-wrap { margin-top: -40px; position: relative; z-index: 10; }
 
+/* ── Hero unificado (páginas internas) ── */
+.cont-hero {
+    background: #2d7a3a;
+    padding: 110px 20px 40px;
+    text-align: center;
+}
+.cont-hero h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #fff;
+    margin: 0;
+}
+.cont-hero p {
+    color: rgba(255,255,255,.85);
+    max-width: 560px;
+    margin: 8px auto 0;
+    font-size: 1rem;
+}
+
 @media (max-width: 767.98px) {
     .beneficios-section { padding: 16px 0 24px; }
     .beneficio-card { padding: 16px 10px 12px; }

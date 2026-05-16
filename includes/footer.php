@@ -16,7 +16,7 @@ $subir = $subir ?? '';
                     <div class="mt-4">
                         <a href="javascript:openLdr('vidatur_ope1', '22b16dca854d5ebbe10a6fb8a8a4d56a')" class="d-inline-flex align-items-center gap-2 text-white" style="text-decoration:none;">
                             <img src="https://primesoft-rlatorre-backup-bucket-1.s3.amazonaws.com/ldr/icon-libro-reclamaciones_negro.png" alt="Libro de Reclamaciones" height="32" style="filter:brightness(0) invert(1);">
-                            <span style="font-weight:600;text-decoration:underline;"><small><small>Libro de Reclamaciones</small></small></span>
+                            <span style="font-weight:599;text-decoration:underline;"><small><small>Libro de Reclamaciones</small></small></span>
                         </a>
                     </div>
                 </div>
@@ -51,7 +51,7 @@ $subir = $subir ?? '';
                                 <div class="footer-item d-flex flex-column">
                                     <h4 class="mb-4 text-white">Compañía</h4>
                                     <a href="<?= $subir ?>nosotros.php"><i class="fas fa-angle-right me-2"></i> Nosotros</a>
-                                    <a href="<?= $subir ?>equipo_vidatur/equipo_vidatur.php"><i class="fas fa-angle-right me-2"></i> Equipo</a>
+                                    <a href="<?= $subir ?>contacto.php"><i class="fas fa-angle-right me-2"></i> Contacto</a>
                                     <a href="<?= $subir ?>eventos.php"><i class="fas fa-angle-right me-2"></i> Eventos</a>
                                 </div>
                             </div>

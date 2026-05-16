@@ -51,7 +51,7 @@ require_once 'includes/head.php';
         ?>
 
         <?php foreach ($destinos as $d): ?>
-        <a class="destino-card" href="<?= $d['slug'] ?>.php">
+        <a class="destino-card" href="nacional/<?= $d['slug'] ?>.php">
             <img src="img/images-paises/pe.png" alt="Perú">
             <span><?= $d['nombre'] ?></span>
         </a>
