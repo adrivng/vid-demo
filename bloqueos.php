@@ -203,24 +203,31 @@ ksort($categoriasUnicas);
                             </a>
 
                             
+                            <?php if ($programa['fecha_limite_texto']): ?>
                             <div class="pkg-card__urgency">
 
                                 Para comprar hasta
 
                                 <span>
-                                    <?= $programa['fecha_limite_texto'] ?>
+                                    <?= htmlspecialchars($programa['fecha_limite_texto']) ?>
                                 </span>
 
                             </div>
+                            <?php endif; ?>
 
                             
                             <div class="pkg-card__meta">
 
-                                <span class="pkg-card__airline">                                   
-
-                                    <?= $programa['aerolinea'] ?>
-
+                                <?php if ($programa['aerolinea']): ?>
+                                <span class="pkg-card__airline">
+                                    <?= htmlspecialchars($programa['aerolinea']) ?>
                                 </span>
+                                <?php endif; ?>
+                                <?php if (!empty($programa['etiqueta'])): ?>
+                                <span class="pkg-card__tag">
+                                    <?= htmlspecialchars($programa['etiqueta']) ?>
+                                </span>
+                                <?php endif; ?>
 
                             </div>
 

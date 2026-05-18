@@ -6,6 +6,8 @@ require_once 'config/database.php';
 ?>
 
 <link rel="stylesheet" href="css/buscador.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link href="css/map.css" rel="stylesheet">
 </head>
 <body>
 
@@ -668,21 +670,56 @@ require_once 'config/database.php';
 <!-- ========== FIN TESTIMONIAL ========== -->
 
 
-<!-- ========== SUBSCRIBE ========== -->
-<div class="container-fluid subscribe py-5">
-    <div class="container text-center py-5">
-        <div class="mx-auto text-center text-max-900">
-            <!-- <h5 class="subscribe-title px-3">Subscribe</h5> -->
-            <h1 class="text-white mb-4">Nuestro Boletín</h1>
-            <p class="text-white mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum tempore nam, architecto doloremque velit explicabo?</p>
-            <div class="position-relative mx-auto">
-                <input class="form-control border-primary rounded-pill w-100 py-3 ps-4 pe-5" type="text" placeholder="Tu email">
-                <button type="button" class="btn btn-primary rounded-pill position-absolute top-0 end-0 py-2 px-4 mt-2 me-2">Enviar</button>
-            </div>
+<!-- ========== MAPA ========== -->
+<section class="map-section">
+    <div class="mx-auto text-center mb-5 text-max-900">
+            <h3 class="section-title px-3">Nos ubicamos en Lima, Miraflores</h2>
+    </div>
+    <div class="map-wrapper">
+        <div id="map"></div>
+        <div class="map-buttons">
+            <a href="https://maps.google.com/?cid=8264799368917875574&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=es&gl=PE&source=embed" target="_blank" class="map-btn"><i class="fas fa-map"></i> Ver mapa</a>
+            <a href="https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x9105c81ef0cb0b89:0x72b2773cbc38fb76!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA" target="_blank" class="map-btn"><i class="fas fa-route"></i> Cómo llegar</a>
         </div>
     </div>
-</div>
-<!-- ========== FIN SUBSCRIBE ========== -->
+</section>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+var lat = -12.127150693828842;
+var lng = -77.02968359456422;
+
+var map = L.map('map', {
+    scrollWheelZoom: false,
+    zoomControl: true,
+    attributionControl: false
+}).setView([lat, lng], 16);
+
+map.on('zoomstart', function () {
+    map.closePopup();
+});
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png').addTo(map);
+
+var mapEl = document.getElementById('map');
+mapEl.addEventListener('mouseenter', function () {
+    map.scrollWheelZoom.enable();
+});
+mapEl.addEventListener('mouseleave', function () {
+    map.scrollWheelZoom.disable();
+});
+
+var icon = L.divIcon({
+    className: 'custom-div-icon',
+    html: '<div class="text-align-center"><i class="fas fa-map-marker-alt custom-marker"></i><div class="marker-shadow"></div></div>',
+    iconSize: [30, 38],
+    iconAnchor: [15, 38],
+    popupAnchor: [0, -38]
+});
+
+L.marker([lat, lng], { icon: icon }).addTo(map);
+</script>
+<!-- ========== FIN MAPA ========== -->
 
 
 <?php require_once 'includes/footer.php'; ?>
