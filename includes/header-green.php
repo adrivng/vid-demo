@@ -21,6 +21,15 @@ $subir = $subir ?? '';
             <div class="d-inline-flex align-items-center topbar-height">
                 <a href="#"><small class="me-3 text-light"><i class="fa fa-user me-2"></i>Afiliate - Online 2.0</small></a>
                 <a href="#"><small class="text-light"><i class="fa fa-sign-in-alt me-2"></i>Club Vidatur</small></a>
+                <div class="lang-switcher ms-3">
+                    <button class="btn btn-language-top" type="button" id="langBtn">
+                        <i class="fas fa-globe"></i> <span class="lang-label">Español</span> <i class="fas fa-chevron-down" style="font-size:10px;margin-left:2px;"></i>
+                    </button>
+                    <ul class="lang-menu" id="langMenu">
+                        <li><a class="lang-option active" data-lang="es" href="#">Español</a></li>
+                        <li><a class="lang-option" data-lang="en" href="#">English</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -29,7 +38,7 @@ $subir = $subir ?? '';
 <div class="container-fluid position-relative p-0">
     <nav class="navbar navbar-expand-lg navbar-light bg-primary px-4 px-lg-5 py-3 py-lg-0">
         <a href="<?= $subir ?>index.php" class="navbar-brand p-0">
-            <h1 class="m-0"><img src="<?= $subir ?>img/images-index/logo.png" alt=""></h1>
+            <h1 class="m-0"><img src="<?= $subir ?>img/images-index/logo.svg" alt="" height="90"></h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="fa fa-bars"></span>

@@ -10,7 +10,7 @@ $subir = $subir ?? '';
             <div class="col-lg-4">
                 <div class="footer-item d-flex flex-column">
                     <a href="<?= $subir ?>index.php" class="mb-3">
-                        <img src="<?= $subir ?>img/images-index/logo.png" alt="Vidatur" height="90">
+                        <img src="<?= $subir ?>img/images-index/logo.svg" alt="Vidatur" height="90">
                     </a>
                     <p class="text-white mb-3"><small>Somos una Agencia Mayorista de Viajes con más de 25 años de experiencia ofreciendo los mejores destinos del mundo.</small></p>
                     <div class="mt-4">

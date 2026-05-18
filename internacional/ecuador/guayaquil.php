@@ -5,13 +5,12 @@ $activePage = 'internacional';
 require_once $subir . 'includes/head.php';
 ?>
 <link rel="stylesheet" href="<?= $subir ?>css/internacional.css">
+<link rel="stylesheet" href="<?= $subir ?>css/bloqueos.css">
 </head>
 <body>
 
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary custom-spinner" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
+    <img class="spinner-logo" src="../../img/images-index/logo.png" alt="Cargando...">
 </div>
 
 <?php require_once $subir . 'includes/header.php'; ?>
@@ -29,35 +28,11 @@ require_once $subir . 'includes/head.php';
     <h1 class="intl-ciudad__title">Guayaquil, Ecuador</h1>
     <p class="intl-ciudad__subtitle">Encuentra los mejores paquetes y programas para tu viaje</p>
 
-    <div class="intl-ciudad-section">
-        <h2 class="intl-ciudad-section__title">
-            <i class="fa fa-plane"></i> Programas con aéreo
-        </h2>
-        <div class="intl-ciudad-card">
-            <i class="fa fa-suitcase-rolling"></i>
-            <p>Próximamente encontrarás aquí los paquetes con vuelo incluido.</p>
-        </div>
-    </div>
-
-    <div class="intl-ciudad-section">
-        <h2 class="intl-ciudad-section__title">
-            <i class="fa fa-map-marked-alt"></i> Programas sin aéreo
-        </h2>
-        <div class="intl-ciudad-card">
-            <i class="fa fa-map"></i>
-            <p>Próximamente encontrarás aquí los paquetes terrestres.</p>
-        </div>
-    </div>
-
-    <div class="intl-ciudad-section">
-        <h2 class="intl-ciudad-section__title">
-            <i class="fa fa-hotel"></i> Tours opcionales y Solo hotelería
-        </h2>
-        <div class="intl-ciudad-card">
-            <i class="fa fa-bed"></i>
-            <p>Próximamente encontrarás aquí los tours opcionales y alojamiento.</p>
-        </div>
-    </div>
+        <?php
+        $paisSlug   = 'ecuador';
+        $ciudadSlug = 'guayaquil';
+        require_once $subir . 'includes/ciudad-programas.php';
+        ?>
 </div>
 
 <?php require_once $subir . 'includes/footer.php'; ?>

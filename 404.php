@@ -9,9 +9,7 @@ require_once 'includes/head.php';
 
 <!-- Spinner -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary custom-spinner" role="status">
-        <span class="sr-only">Cargando...</span>
-    </div>
+    <img class="spinner-logo" src="img/images-index/logo.png" alt="Cargando...">
 </div>
 
 <?php require_once 'includes/header.php'; ?>   

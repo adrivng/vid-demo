@@ -11,9 +11,7 @@ require_once 'config/database.php';
 
 
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary custom-spinner" role="status">
-        <span class="sr-only">Cargando...</span>
-    </div>
+    <img class="spinner-logo" src="img/images-index/logo.svg" alt="Cargando...">
 </div>
 
 <?php require_once 'includes/header.php'; ?>
@@ -97,6 +95,12 @@ require_once 'config/database.php';
 <!-- ========== BENEFICIOS ========== -->
 <div class="container-fluid beneficios-section">
     <div class="container">
+        <div class="mx-auto text-center mb-5 text-max-900">
+            <h1 class="section-title px-3">Beneficios Exlusivos</h1>
+            <hr class="section-divider">
+            
+        </div>
+
         <div class="row g-4 justify-content-center">
             <div class="col-6 col-md-3">
                 <a href="#" class="beneficio-card" target="_blank" rel="noopener">
@@ -172,8 +176,9 @@ require_once 'config/database.php';
 
         <div class="mx-auto text-center mb-5 text-max-900">
             <h1 class="section-title px-3">Nuestras Fortalezas</h1>
-            <hr class="section-divider">
+            <!-- <hr class="section-divider"> -->
             <h2 class="fw-bold color-primary-green">Representaciones</h2>
+            <hr class="w-25 mx-auto border-primary border-2">
         </div>
 
         <!-- Cards de representaciones -->
@@ -393,7 +398,7 @@ require_once 'config/database.php';
         <div class="row g-5 align-items-center">
             <div class="col-lg-6">
                 <h5 class="section-booking-title pe-3">COTIZADOR VIDATUR ONLINE 2.0</h5>
-                <h1 class="text-white mb-4">Online</h1>
+                <h1 class="text-white mb-4">Online 2.0</h1>
                 <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium?</p>
                 <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium?</p>
                 <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Registrarse</a>

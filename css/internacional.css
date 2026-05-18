@@ -228,6 +228,10 @@
 .intl-ciudad {
     padding: 40px 0 60px;
 }
+@media (max-width: 600px) {
+    .intl-ciudad { padding: 24px 0 40px; }
+    .intl-ciudad__subtitle { margin-bottom: 24px; font-size: .9rem; }
+}
 
 .intl-ciudad__back {
     display: inline-flex;
@@ -263,6 +267,13 @@
 .intl-ciudad-section {
     margin-bottom: 40px;
 }
+@media (max-width: 600px) {
+    .intl-ciudad-section { margin-bottom: 28px; }
+}
+
+.intl-ciudad-section .pkg-card__img-link img {
+    height: auto;
+}
 
 .intl-ciudad-section__title {
     font-size: 1.25rem;
@@ -274,6 +285,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+@media (max-width: 600px) {
+    .intl-ciudad-section__title { font-size: 1.05rem; }
 }
 
 .intl-ciudad-section__title i {

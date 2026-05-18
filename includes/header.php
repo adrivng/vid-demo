@@ -26,6 +26,15 @@ $subir = $subir ?? '';
                     <small class="me-3 text-light"><i class="fa fa-users me-2"></i>Afiliate - Online 2.0</small>
                 </a>
                 <a href="#"><small class="text-light"><i class="fa fa-gift me-2"></i>VPR</small></a>
+                <div class="lang-switcher ms-3">
+                    <button class="btn btn-language-top" type="button" id="langBtn">
+                        <i class="fas fa-globe"></i> <span class="lang-label">Español</span> <i class="fas fa-chevron-down" style="font-size:10px;margin-left:2px;"></i>
+                    </button>
+                    <ul class="lang-menu" id="langMenu">
+                        <li><a class="lang-option active" data-lang="es" href="#">Español</a></li>
+                        <li><a class="lang-option" data-lang="en" href="#">English</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

@@ -42,6 +42,21 @@
     opacity: 1;
 }
 
+.spinner-logo {
+    width: 340px;
+    max-width: 80vw;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    animation: spinnerLoad 1.2s ease-in-out infinite;
+}
+
+@keyframes spinnerLoad {
+    0%   { transform: scale(0.92); opacity: .6; }
+    50%  { transform: scale(1.06); opacity: 1; }
+    100% { transform: scale(0.92); opacity: .6; }
+}
+
 
 /* =====================================================
    2. BACK TO TOP
@@ -166,11 +181,15 @@
     font-family: 'Roboto', sans-serif;
     position: relative;
     padding: 35px 15px;
-    color: var(--bs-white) !important;
+    color: var(--bs-green) !important;
     font-size: 17px;
     font-weight: 400;
     outline: none;
     transition: .5s;
+}
+
+.navbar-light.bg-primary .navbar-nav .nav-link {
+    color: var(--bs-white) !important;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
@@ -282,8 +301,13 @@
         width: 100%;
         top: 0;
         left: 0;
-        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        background: var(--bs-light);
+        border-bottom: 1px solid rgba(0, 0, 0, .08);
         z-index: 1200;
+    }
+
+    .navbar-light.bg-primary {
+        border-bottom-color: rgba(255, 255, 255, .1);
     }
 
     .sticky-top.navbar-light {
@@ -1384,8 +1408,65 @@
 /* =====================================================
    UTILITIES — reemplazan inline styles
    ===================================================== */
-.custom-spinner { width: 3rem; height: 3rem; }
+
 .topbar-height { height: 45px; }
+
+.lang-switcher {
+    position: relative;
+    display: inline-block;
+}
+.btn-language-top {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,.4);
+    color: #fff;
+    font-size: .78rem;
+    padding: 2px 10px;
+    border-radius: 4px;
+    line-height: 1.6;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+.btn-language-top:hover,
+.btn-language-top:focus {
+    background: rgba(255,255,255,.1);
+    color: #fff;
+    border-color: rgba(255,255,255,.7);
+}
+.lang-menu {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    min-width: 130px;
+    padding: 4px 0;
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.12);
+    border-radius: 6px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    list-style: none;
+}
+.lang-menu.open {
+    display: block;
+}
+.lang-menu a {
+    display: block;
+    padding: 6px 16px;
+    font-size: .82rem;
+    color: #333;
+    text-decoration: none;
+    white-space: nowrap;
+    text-align: left;
+}
+.lang-menu a:hover {
+    background: #f0f2f5;
+    color: #111;
+}
+.lang-menu a.active {
+    background: #e8f0fe;
+    color: #1a7a4a;
+    font-weight: 600;
+}
 .text-max-900 { max-width: 900px; }
 .text-max-800 { max-width: 800px; }
 .carousel-caption-max { max-width: 900px; }

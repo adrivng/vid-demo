@@ -5,13 +5,12 @@ $activePage = 'internacional';
 require_once $subir . 'includes/head.php';
 ?>
 <link rel="stylesheet" href="<?= $subir ?>css/internacional.css">
+<link rel="stylesheet" href="<?= $subir ?>css/bloqueos.css">
 </head>
 <body>
 
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <div class="spinner-border text-primary custom-spinner" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
+    <img class="spinner-logo" src="../img/images-index/logo.png" alt="Cargando...">
 </div>
 
 <?php require_once $subir . 'includes/header.php'; ?>
@@ -28,15 +27,11 @@ require_once $subir . 'includes/head.php';
     </a>
     <h1 class="intl-ciudad__title"><?= $pageTitle ?></h1>
     <p class="intl-ciudad__subtitle">Explora nuestros paquetes y programas</p>
-    <div class="intl-ciudad-section">
-        <h2 class="intl-ciudad-section__title">
-            <i class="fa fa-globe-africa"></i> Programas disponibles
-        </h2>
-        <div class="intl-ciudad-card">
-            <i class="fa fa-globe-africa"></i>
-            <p>Próximamente encontrarás aquí los programas disponibles para África.</p>
-        </div>
-    </div>
+
+        <?php
+        $continenteSlug = 'africa';
+        require_once $subir . 'includes/ciudad-programas.php';
+        ?>
 </div>
 
 <?php require_once $subir . 'includes/footer.php'; ?>
