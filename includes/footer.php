@@ -12,11 +12,11 @@ $subir = $subir ?? '';
                     <a href="<?= $subir ?>index.php" class="mb-3">
                         <img src="<?= $subir ?>img/images-index/logo.svg" alt="Vidatur" height="90">
                     </a>
-                    <p class="text-white mb-3"><small>Somos una Agencia Mayorista de Viajes con más de 25 años de experiencia ofreciendo los mejores destinos del mundo.</small></p>
+                    <p class="text-white mb-3"><small><?= __('footer_desc') ?></small></p>
                     <div class="mt-4">
                         <a href="javascript:openLdr('vidatur_ope1', '22b16dca854d5ebbe10a6fb8a8a4d56a')" class="d-inline-flex align-items-center gap-2 text-white" style="text-decoration:none;">
                             <img src="https://primesoft-rlatorre-backup-bucket-1.s3.amazonaws.com/ldr/icon-libro-reclamaciones_negro.png" alt="Libro de Reclamaciones" height="32" style="filter:brightness(0) invert(1);">
-                            <span style="font-weight:599;text-decoration:underline;"><small><small>Libro de Reclamaciones</small></small></span>
+                            <span style="font-weight:599;text-decoration:underline;"><small><small><?= __('footer_libro') ?></small></small></span>
                         </a>
                     </div>
                 </div>
@@ -27,7 +27,7 @@ $subir = $subir ?? '';
 
                     <div class="col-md-5">
                         <div class="footer-item d-flex flex-column">
-                            <h4 class="mb-4 text-white">Lima</h4>
+                            <h4 class="mb-4 text-white"><?= __('footer_lima') ?></h4>
                             <a href="#"><i class="fas fa-home me-2"></i><small>Av. José Larco 930, Miraflores 15074</small></a>
                             <a href="mailto:soporte@vidatur.net"><i class="fas fa-envelope me-2"></i><small>soporte@vidatur.net</small></a>
                             <a href="tel:+51999999999"><i class="fas fa-phone me-2"></i><small>+51 999 999 999</small></a>
@@ -49,19 +49,19 @@ $subir = $subir ?? '';
 
                             <div class="col-6">
                                 <div class="footer-item d-flex flex-column">
-                                    <h4 class="mb-4 text-white">Compañía</h4>
-                                    <a href="<?= $subir ?>nosotros.php"><i class="fas fa-angle-right me-2"></i> Nosotros</a>
-                                    <a href="<?= $subir ?>contacto.php"><i class="fas fa-angle-right me-2"></i> Contacto</a>
-                                    <a href="<?= $subir ?>eventos.php"><i class="fas fa-angle-right me-2"></i> Eventos</a>
+                                    <h4 class="mb-4 text-white"><?= __('footer_compania') ?></h4>
+                                    <a href="<?= $subir ?>nosotros.php"><i class="fas fa-angle-right me-2"></i> <?= __('footer_nosotros') ?></a>
+                                    <a href="<?= $subir ?>contacto.php"><i class="fas fa-angle-right me-2"></i> <?= __('footer_contacto') ?></a>
+                                    <a href="<?= $subir ?>eventos.php"><i class="fas fa-angle-right me-2"></i> <?= __('footer_eventos') ?></a>
                                 </div>
                             </div>
 
                             <div class="col-6">
                                 <div class="footer-item d-flex flex-column">
-                                    <h4 class="mb-4 text-white">Servicios</h4>
-                                    <a href="<?= $subir ?>bloqueos.php"><i class="fas fa-angle-right me-2"></i> Bloqueos</a>
-                                    <a href="#"><i class="fas fa-angle-right me-2"></i> Salidas Confirmadas</a>
-                                    <a href="https://vidatur.paquetedinamico.com/" target="_blank"><i class="fas fa-angle-right me-2"></i> Online</a>
+                                    <h4 class="mb-4 text-white"><?= __('footer_servicios') ?></h4>
+                                    <a href="<?= $subir ?>bloqueos.php"><i class="fas fa-angle-right me-2"></i> <?= __('footer_bloqueos') ?></a>
+                                    <a href="#"><i class="fas fa-angle-right me-2"></i> <?= __('footer_salidas') ?></a>
+                                    <a href="https://vidatur.paquetedinamico.com/" target="_blank"><i class="fas fa-angle-right me-2"></i> <?= __('footer_online') ?></a>
                                 </div>
                             </div>
 
@@ -92,12 +92,12 @@ $subir = $subir ?? '';
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                <a href="#" class="text-white me-3"><small>Política de Privacidad</small></a>
-                <a href="#" class="text-white"><small>Términos y Condiciones</small></a>
+                <a href="politicas-de-privacidad.php" class="text-white me-3"><small>Política de Privacidad</small></a>
+                <a href="terminos-condiciones.php" class="text-white"><small>Términos y Condiciones</small></a>
             </div>
             <div class="col-md-6 text-center text-md-end">
                 <i class="fas fa-copyright me-2"></i>
-                <a class="text-white" href="#"><small>2026 Vidatur Mayorista de Viajes, Todos los derechos reservados</small></a>
+                <a class="text-white" href="#"><small>2026 <?= __('footer_copyright') ?></small></a>
             </div>
         </div>
     </div>

@@ -1,0 +1,8 @@
+# =====================================================
+# robots.txt — Vidatur
+# =====================================================
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.vidatur.net/sitemap.xml

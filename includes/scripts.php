@@ -26,11 +26,10 @@ $subir = $subir ?? '';
             var item = e.target.closest('.lang-option');
             if (!item) return;
             e.preventDefault();
-            menu.querySelectorAll('.lang-option').forEach(function(o) { o.classList.remove('active'); });
-            item.classList.add('active');
-            var label = document.querySelector('.lang-label');
-            if (label) label.textContent = item.textContent;
-            menu.classList.remove('open');
+            var lang = item.getAttribute('data-lang');
+            if (!lang) return;
+            document.cookie = 'lang=' + lang + ';path=/;max-age=31536000';
+            location.reload();
         });
         function closeLang() { menu.classList.remove('open'); }
         document.addEventListener('click', closeLang);

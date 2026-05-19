@@ -1,6 +1,24 @@
 .map-section {
     background: #f8f9fa;
-    padding: 2px 0px 80px 0px;
+    padding: 0px 2px 85px 0px;
+}
+
+.map-section .section-title {
+    font-size: 1.5rem;
+}
+
+@media (max-width: 576px) {
+    .map-section {
+        padding: 40px 15px;
+    }
+    .map-section .section-title {
+        font-size: 1.1rem;
+        white-space: normal;
+    }
+    .map-section .section-title::before,
+    .map-section .section-title::after {
+        display: none;
+    }
 }
 
 .map-wrapper {

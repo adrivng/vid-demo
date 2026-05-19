@@ -87,7 +87,7 @@ require_once 'includes/head.php';
 
 <!-- Spinner Start -->
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <img class="spinner-logo" src="img/images-index/logo.png" alt="Cargando...">
+    <img class="spinner-logo" src="img/images-index/logo.svg" alt="Cargando...">
 </div>
 <!-- Spinner End -->
 

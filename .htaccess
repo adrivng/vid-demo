@@ -1,0 +1,22 @@
+# =====================================================
+# .htaccess — Vidatur
+# =====================================================
+# Propósito: reglas de reescritura y SEO
+# Al subir a cPanel, verificar que mod_rewrite está activo
+# =====================================================
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # ── Sitemap dinámico ──
+    # sitemap.xml ejecuta sitemap.php (sin redirección visible)
+    RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+    # ── Redirigir www a non-www (descomentar en producción) ──
+    # RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    # RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+
+    # ── Redirigir HTTP a HTTPS (descomentar si hay SSL) ──
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+</IfModule>

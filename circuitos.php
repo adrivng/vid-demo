@@ -1,6 +1,7 @@
 <?php
 $pageTitle  = 'Circuitos Perú';
 $activePage = 'circuitos';
+$lang = 'en';
 require_once 'includes/head.php';
 ?>
 <style>
@@ -28,13 +29,13 @@ require_once 'includes/head.php';
 <?php require_once 'includes/header.php'; ?>
 
 <div class="cont-hero">
-    <h1>Circuitos Perú</h1>
-    <p>Recorre los mejores circuitos turísticos del Perú</p>
+    <h1><?= __('circuitos_title') ?></h1>
+    <p><?= __('circuitos_desc') ?></p>
 </div>
 
 <section style="padding: 4rem 0;">
     <div class="container">
-        <p class="text-center text-muted" style="font-size: 1.1rem;">Contenido próximamente.</p>
+        <p class="text-center text-muted" style="font-size: 1.1rem;"><?= __('circuitos_empty') ?></p>
     </div>
 </section>
 

@@ -1,6 +1,7 @@
 <?php
 $pageTitle  = 'Inicio';
 $activePage = 'inicio';
+$lang = 'en';
 require_once 'includes/head.php';
 require_once 'config/database.php';
 ?>
@@ -13,7 +14,7 @@ require_once 'config/database.php';
 
 
 <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-    <img class="spinner-logo" src="img/images-index/logo.svg" alt="Cargando...">
+    <img class="spinner-logo" src="img/images-index/logo.svg" alt="<?= __('spinner_alt') ?>">
 </div>
 
 <?php require_once 'includes/header.php'; ?>
@@ -33,10 +34,10 @@ require_once 'config/database.php';
                 <img src="img/images-portadas/mod-index-carrusel-avion-nubes.png" class="img-fluid" alt="Club Vidatur" loading="lazy">
                 <div class="carousel-caption">
                     <div class="p-3 text-max-900">
-                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3">Programa De Lealtad</h4>
-                        <h1 class="display-2 text-capitalize text-white mb-4">CLUB VIDATUR</h1>
+                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3"><?= __('carrusel_1_sub') ?></h4>
+                        <h1 class="display-2 text-capitalize text-white mb-4"><?= __('carrusel_1_title') ?></h1>
                         <div class="d-flex align-items-center justify-content-center">
-                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
+                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#"><?= __('carrusel_1_btn') ?></a>
                         </div>
                     </div>
                 </div>
@@ -46,10 +47,10 @@ require_once 'config/database.php';
                 <img src="img/images-portadas/mod-index-carrusel-crucero.png" class="img-fluid" alt="Vidatur Online" loading="lazy">
                 <div class="carousel-caption">
                     <div class="p-3 text-max-900">
-                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3">Registro del Cotizador Online</h4>
-                        <h1 class="display-2 text-capitalize text-white mb-4">VIDATUR ONLINE</h1>
+                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3"><?= __('carrusel_2_sub') ?></h4>
+                        <h1 class="display-2 text-capitalize text-white mb-4"><?= __('carrusel_2_title') ?></h1>
                         <div class="d-flex align-items-center justify-content-center">
-                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
+                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#"><?= __('carrusel_2_btn') ?></a>
                         </div>
                     </div>
                 </div>
@@ -59,23 +60,23 @@ require_once 'config/database.php';
                 <img src="img/images-portadas/mod-index-carrusel-playas.png" class="img-fluid" alt="GEA" loading="lazy">
                 <div class="carousel-caption">
                     <div class="p-3 text-max-900">
-                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3">Beneficios GEA</h4>
-                        <h1 class="display-2 text-capitalize text-white mb-4">GEA</h1>
+                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3"><?= __('carrusel_3_sub') ?></h4>
+                        <h1 class="display-2 text-capitalize text-white mb-4"><?= __('carrusel_3_title') ?></h1>
                         <div class="d-flex align-items-center justify-content-center">
-                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
+                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#"><?= __('carrusel_3_btn') ?></a>
                         </div>
                     </div>
                 </div>
             </div>
 
             <div class="carousel-item">
-                <img src="img/carousel-3.jpg" class="img-fluid" alt="VPR" loading="lazy">
+                <img src="img/images-portadas/mod-index-carrusel-playas2.png" class="img-fluid" alt="VPR" loading="lazy">
                 <div class="carousel-caption">
                     <div class="p-3 text-max-900">
-                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3">VPR</h4>
-                        <h1 class="display-2 text-capitalize text-white mb-4">PROGRAMA DE RECOMPENSA</h1>
+                        <h4 class="text-white text-uppercase fw-bold mb-4 letter-spacing-3"><?= __('carrusel_4_sub') ?></h4>
+                        <h1 class="display-2 text-capitalize text-white mb-4"><?= __('carrusel_4_title') ?></h1>
                         <div class="d-flex align-items-center justify-content-center">
-                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#">Conocer más</a>
+                            <a class="btn btn-primary rounded-pill text-white py-3 px-5" href="#"><?= __('carrusel_4_btn') ?></a>
                         </div>
                     </div>
                 </div>
@@ -84,11 +85,11 @@ require_once 'config/database.php';
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
             <span class="carousel-control-prev-icon btn bg-primary" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
+            <span class="visually-hidden"><?= __('carrusel_prev') ?></span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
             <span class="carousel-control-next-icon btn bg-primary" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
+            <span class="visually-hidden"><?= __('carrusel_next') ?></span>
         </button>
     </div>
 </div>
@@ -98,7 +99,7 @@ require_once 'config/database.php';
 <div class="container-fluid beneficios-section">
     <div class="container">
         <div class="mx-auto text-center mb-5 text-max-900">
-            <h1 class="section-title px-3">Beneficios Exlusivos</h1>
+            <h1 class="section-title px-3"><?= __('beneficios_title') ?></h1>
             <hr class="section-divider">
             
         </div>
@@ -109,7 +110,7 @@ require_once 'config/database.php';
                     <div class="beneficio-img">
                         <img src="img/beneficios/club_vidatur.png" alt="Club Vidatur">
                     </div>
-                    <h6>Club Vidatur</h6>
+                    <h6><?= __('beneficio_1') ?></h6>
                 </a>
             </div>
             <div class="col-6 col-md-3">
@@ -117,7 +118,7 @@ require_once 'config/database.php';
                     <div class="beneficio-img">
                         <img src="img/beneficios/cotizador_online_logo.png" alt="Cotizador Online">
                     </div>
-                    <h6>Cotizador Online</h6>
+                    <h6><?= __('beneficio_2') ?></h6>
                 </a>
             </div>
             <div class="col-6 col-md-3">
@@ -125,7 +126,7 @@ require_once 'config/database.php';
                     <div class="beneficio-img">
                         <img src="img/beneficios/gea_logo.png" alt="GEA">
                     </div>
-                    <h6>GEA</h6>
+                    <h6><?= __('beneficio_3') ?></h6>
                 </a>
             </div>
             <div class="col-6 col-md-3">
@@ -133,7 +134,7 @@ require_once 'config/database.php';
                     <div class="beneficio-img">
                         <img src="img/beneficios/logo-programa-recompensa.png" alt="Programa Recompensa">
                     </div>
-                    <h6>Programa Recompensa</h6>
+                    <h6><?= __('beneficio_4') ?></h6>
                 </a>
             </div>
         </div>
@@ -177,9 +178,9 @@ require_once 'config/database.php';
     <div class="container py-5">
 
         <div class="mx-auto text-center mb-5 text-max-900">
-            <h1 class="section-title px-3">Nuestras Fortalezas</h1>
+            <h1 class="section-title px-3"><?= __('fortalezas_title') ?></h1>
             <!-- <hr class="section-divider"> -->
-            <h2 class="fw-bold color-primary-green">Representaciones</h2>
+            <h2 class="fw-bold color-primary-green"><?= __('fortalezas_sub') ?></h2>
             <hr class="w-25 mx-auto border-primary border-2">
         </div>
 
@@ -218,7 +219,7 @@ require_once 'config/database.php';
 
         <div class="mb-5">
             <div class="text-center mb-4">
-                <h3 class="fw-bold color-primary-green">PARQUES DE SEAWORLD</h3>
+                <h3 class="fw-bold color-primary-green"><?= __('parques_sw') ?></h3>
                 <hr class="w-25 mx-auto border-primary border-2">
             </div>
             <div class="row g-3">
@@ -250,7 +251,7 @@ require_once 'config/database.php';
 
         <div class="mb-5">
             <div class="text-center mb-4">
-                <h3 class="fw-bold color-primary-green">PARQUES XCARET</h3>
+                <h3 class="fw-bold color-primary-green"><?= __('parques_xc') ?></h3>
                 <hr class="w-25 mx-auto border-2 border-primary-green">
             </div>
 
@@ -277,7 +278,7 @@ require_once 'config/database.php';
         <!-- Aliados carrusel -->
         <div class="mb-5">
             <div class="text-center mb-4">
-                <h3 class="fw-bold color-primary-green">ALIADOS</h3>
+                <h3 class="fw-bold color-primary-green"><?= __('aliados_title') ?></h3>
                 <hr class="w-25 mx-auto border-primary border-2">
             </div>
             <div class="aliados-carousel-wrapper">
@@ -381,7 +382,7 @@ require_once 'config/database.php';
         </div>
 
         <div class="text-center mt-4">
-            <a class="btn btn-primary rounded-pill py-3 px-5" href="socios_estrategicos/aliados.php">Ver Socios Estratégicos</a>
+            <a class="btn btn-primary rounded-pill py-3 px-5" href="socios_estrategicos/aliados.php"><?= __('aliados_btn') ?></a>
         </div>
 
     </div>
@@ -399,37 +400,36 @@ require_once 'config/database.php';
     <div class="container py-5">
         <div class="row g-5 align-items-center">
             <div class="col-lg-6">
-                <h5 class="section-booking-title pe-3">COTIZADOR VIDATUR ONLINE 2.0</h5>
-                <h1 class="text-white mb-4">Online 2.0</h1>
-                <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium?</p>
-                <p class="text-white mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur maxime ullam esse fuga blanditiis accusantium pariatur quis sapiente, veniam doloribus praesentium?</p>
-                <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2">Registrarse</a>
+                <h5 class="section-booking-title pe-3"><?= __('booking_title') ?></h5>
+                <h1 class="text-white mb-4"><?= __('booking_sub') ?></h1>
+                <p class="text-white mb-4"><?= __('booking_desc') ?></p>
+                <a href="#" class="btn btn-light text-primary rounded-pill py-3 px-5 mt-2"><?= __('booking_btn') ?></a>
             </div>
             <div class="col-lg-6">
                 <div class="booking-modules">
                     <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=ONLY_HOTEL" target="_blank">
                         <i class="fas fa-hotel"></i>
-                        <span>Alojamiento</span>
+                        <span><?= __('booking_aloj') ?></span>
                     </a>
                     <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=ONLY_TICKET" target="_blank">
                         <i class="fas fa-hiking"></i>
-                        <span>Actividades</span>
+                        <span><?= __('booking_act') ?></span>
                     </a>
                     <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=ONLY_TRANSFER" target="_blank">
                         <i class="fas fa-shuttle-van"></i>
-                        <span>Traslados</span>
+                        <span><?= __('booking_trasl') ?></span>
                     </a>
                     <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=HOLIDAYS" target="_blank">
                         <i class="fas fa-suitcase"></i>
-                        <span>Paquetes</span>
+                        <span><?= __('booking_paq') ?></span>
                     </a>
                     <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=MULTI" target="_blank">
                         <i class="fas fa-globe-americas"></i>
-                        <span>Multidestinos</span>
+                        <span><?= __('booking_multi') ?></span>
                     </a>
                     <a class="booking-module" href="https://vidatur.paquetedinamico.com/?tripType=ONLY_CAR" target="_blank">
                         <i class="fas fa-car"></i>
-                        <span>Alquilar un coche</span>
+                        <span><?= __('booking_coche') ?></span>
                     </a>
                 </div>
             </div>
@@ -443,14 +443,14 @@ require_once 'config/database.php';
 <div class="container-fluid guide py-5">
     <div class="container py-5">
         <div class="mx-auto text-center mb-5 text-max-900">
-            <h1 class="section-title px-3">EQUIPO VIDATUR</h1>
+            <h1 class="section-title px-3"><?= __('equipo_title') ?></h1>
         </div>
 
         <!-- Carrusel wrapper -->
         <div class="team-carousel-wrapper">
 
             <!-- Flecha izquierda -->
-            <button class="team-arrow team-arrow--prev" id="teamPrev" aria-label="Anterior">
+            <button class="team-arrow team-arrow--prev" id="teamPrev" aria-label="<?= __('equipo_prev') ?>">
                 <i class="fa fa-chevron-left"></i>
             </button>
 
@@ -555,7 +555,7 @@ require_once 'config/database.php';
                                     <a class="btn-wa-team"
                                     href="https://wa.me/<?= $m['wa'] ?>?text=Hola+<?= urlencode($m['nombre']) ?>%2C+me+comunico+desde+la+web+de+Vidatur"
                                     target="_blank" rel="noopener">
-                                        <i class="fab fa-whatsapp"></i> Contactar
+                                        <i class="fab fa-whatsapp"></i> <?= __('equipo_contactar') ?>
                                     </a>
                                 </div>
                             </div>
@@ -574,7 +574,7 @@ require_once 'config/database.php';
             </div>
 
             <!-- Flecha derecha -->
-            <button class="team-arrow team-arrow--next" id="teamNext" aria-label="Siguiente">
+            <button class="team-arrow team-arrow--next" id="teamNext" aria-label="<?= __('equipo_next') ?>">
                 <i class="fa fa-chevron-right"></i>
             </button>
 
@@ -673,13 +673,13 @@ require_once 'config/database.php';
 <!-- ========== MAPA ========== -->
 <section class="map-section">
     <div class="mx-auto text-center mb-5 text-max-900">
-            <h3 class="section-title px-3">Nos ubicamos en Lima, Miraflores</h2>
+            <h3 class="section-title px-3"><?= __('mapa_title') ?></h3>
     </div>
     <div class="map-wrapper">
         <div id="map"></div>
         <div class="map-buttons">
-            <a href="https://maps.google.com/?cid=8264799368917875574&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=es&gl=PE&source=embed" target="_blank" class="map-btn"><i class="fas fa-map"></i> Ver mapa</a>
-            <a href="https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x9105c81ef0cb0b89:0x72b2773cbc38fb76!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA" target="_blank" class="map-btn"><i class="fas fa-route"></i> Cómo llegar</a>
+            <a href="https://maps.google.com/?cid=8264799368917875574&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA&hl=es&gl=PE&source=embed" target="_blank" class="map-btn"><i class="fas fa-map"></i> <?= __('mapa_ver') ?></a>
+            <a href="https://www.google.com/maps/dir//''/data=!4m7!4m6!1m1!4e2!1m2!1m1!1s0x9105c81ef0cb0b89:0x72b2773cbc38fb76!3e0?g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYASAA" target="_blank" class="map-btn"><i class="fas fa-route"></i> <?= __('mapa_como') ?></a>
         </div>
     </div>
 </section>

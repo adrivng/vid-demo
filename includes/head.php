@@ -2,9 +2,15 @@
 
 $pageTitle = $pageTitle ?? 'Vidatur';
 $subir = $subir ?? '';
+require_once __DIR__ . '/lang.php';
+
+// La cookie del selector sobreescribe el idioma en cualquier página
+if (isset($_COOKIE['lang']) && in_array($_COOKIE['lang'], ['es', 'en'], true)) {
+    $lang = $_COOKIE['lang'];
+}
 ?>
 <!DOCTYPE html>
-<html lang="es">
+<html lang="<?= $lang === 'en' ? 'en' : 'es' ?>">
 <head>
     <meta charset="utf-8">
     <title>Vidatur — <?= htmlspecialchars($pageTitle) ?></title>
@@ -21,4 +27,5 @@ $subir = $subir ?? '';
     <link href="<?= $subir ?>lib/lightbox/css/lightbox.min.css" rel="stylesheet">
     <link href="<?= $subir ?>css/bootstrap.min.css" rel="stylesheet">
     <link href="<?= $subir ?>css/style.css" rel="stylesheet">
+    <?php require_once __DIR__ . '/seo.php'; ?>
     
