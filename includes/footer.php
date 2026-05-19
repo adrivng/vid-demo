@@ -51,7 +51,7 @@ $subir = $subir ?? '';
                                 <div class="footer-item d-flex flex-column">
                                     <h4 class="mb-4 text-white"><?= __('footer_compania') ?></h4>
                                     <a href="<?= $subir ?>nosotros.php"><i class="fas fa-angle-right me-2"></i> <?= __('footer_nosotros') ?></a>
-                                    <a href="<?= $subir ?>contacto.php"><i class="fas fa-angle-right me-2"></i> <?= __('footer_contacto') ?></a>
+                                    <a href="<?= $subir ?>equipo_vidatur/equipo_vidatur.php"><i class="fas fa-angle-right me-2"></i> <?= __('footer_contacto') ?></a>
                                     <a href="<?= $subir ?>eventos.php"><i class="fas fa-angle-right me-2"></i> <?= __('footer_eventos') ?></a>
                                 </div>
                             </div>

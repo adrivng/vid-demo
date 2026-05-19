@@ -1516,6 +1516,40 @@
     color: #1a7a4a;
     font-weight: 600;
 }
+.lang-mobile-toggle {
+    display: inline-flex;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid var(--bs-primary);
+}
+.lang-mobile-opt {
+    color: var(--bs-primary);
+    text-decoration: none;
+    font-size: .82rem;
+    font-weight: 500;
+    padding: 5px 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    transition: background .15s, color .15s;
+}
+.lang-mobile-opt.active {
+    background: var(--bs-primary);
+    color: #fff;
+}
+.lang-mobile-opt i {
+    font-size: .72rem;
+}
+.bg-primary .lang-mobile-toggle {
+    border-color: rgba(255,255,255,.6);
+}
+.bg-primary .lang-mobile-opt {
+    color: rgba(255,255,255,.85);
+}
+.bg-primary .lang-mobile-opt.active {
+    background: rgba(255,255,255,.2);
+    color: #fff;
+}
 .text-max-900 { max-width: 900px; }
 .text-max-800 { max-width: 800px; }
 .carousel-caption-max { max-width: 900px; }

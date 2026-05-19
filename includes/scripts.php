@@ -26,14 +26,23 @@ $subir = $subir ?? '';
             var item = e.target.closest('.lang-option');
             if (!item) return;
             e.preventDefault();
-            var lang = item.getAttribute('data-lang');
-            if (!lang) return;
-            document.cookie = 'lang=' + lang + ';path=/;max-age=31536000';
-            location.reload();
+            switchLang(item.getAttribute('data-lang'));
         });
         function closeLang() { menu.classList.remove('open'); }
         document.addEventListener('click', closeLang);
         window.addEventListener('scroll', closeLang, { passive: true });
+    }
+    // Mobile language toggle
+    document.querySelectorAll('.lang-mobile-opt').forEach(function(el) {
+        el.addEventListener('click', function(e) {
+            e.preventDefault();
+            switchLang(this.getAttribute('data-lang'));
+        });
+    });
+    function switchLang(lang) {
+        if (!lang) return;
+        document.cookie = 'lang=' + lang + ';path=/;max-age=31536000';
+        location.reload();
     }
 })();
 </script>

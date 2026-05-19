@@ -60,8 +60,8 @@ $destinos = [
 <div class="container-fluid destination py-5">
     <div class="container py-5">
         <div class="mx-auto text-center mb-5" style="max-width:900px;">
-            <h5 class="section-title px-3">Destinos</h5>
-            <h1 class="mb-0">Destinos del Caribe</h1>
+            <h5 class="section-title px-3"> <?= __('index_titulo_destinos') ?></h5>
+            <h1 class="mb-0"><?= __('index_desc_destinos')?></h1>
         </div>
 
         <div class="team-carousel-wrapper">
@@ -88,7 +88,7 @@ $destinos = [
                                 </p>
                                 <a href="<?= $d['link'] ?>"
                                    class="btn-hover text-white">
-                                    Ver programa <i class="fa fa-arrow-right ms-2"></i>
+                                    <?=  __('index_destinos_ver_programas') ?><i class="fa fa-arrow-right ms-2"></i>
                                 </a>
                             </div>
                         </div>

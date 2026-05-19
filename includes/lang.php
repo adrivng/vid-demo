@@ -56,7 +56,7 @@ $t = [
     'footer_libro'      => 'Libro de Reclamaciones',
     'footer_compania'   => 'Compañía',
     'footer_nosotros'   => 'Nosotros',
-    'footer_contacto'   => 'Contacto',
+    'footer_contacto'   => 'Equipo Vidatur',
     'footer_eventos'    => 'Eventos',
     'footer_servicios'  => 'Servicios',
     'footer_bloqueos'   => 'Bloqueos',
@@ -112,6 +112,11 @@ $t = [
     'booking_multi'     => 'Multidestinos',
     'booking_coche'     => 'Alquilar un coche',
 
+    // index — destinos
+    'index_titulo_destinos' => 'Destinos',
+    'index_desc_destinos'   => 'Explora Nuestros Destinos Nacionales e Internacionales',
+    'index_destinos_ver_programas' => 'Ver programas',
+
     // Index — equipo
     'equipo_title'      => 'EQUIPO VIDATUR',
     'equipo_contactar'  => 'Contactar',
@@ -141,12 +146,12 @@ $t = [
     'nav_nosotros'       => 'About Us',
     'nav_peru'           => 'Peru',
     'nav_internacional'  => 'International',
-    'nav_bloqueos'       => 'Blockages & Programs',
+    'nav_bloqueos'       => 'Group Dates & Programs',
     'nav_mas'            => 'More',
     'nav_eventos'        => 'EVENTS',
     'nav_videos'         => 'VIDEOS',
     'nav_lgbt'           => 'LGBT',
-    'nav_circuitos'      => 'PERU CIRCUITS',
+    'nav_circuitos'      => 'INBOUND PERU',
     'nav_convencion'     => 'CONVENTION',
     'nav_promo_agentes'  => 'AGENT PROMOTIONS',
     'nav_online'         => 'Online',
@@ -162,10 +167,10 @@ $t = [
     'footer_libro'      => 'Complaints Book',
     'footer_compania'   => 'Company',
     'footer_nosotros'   => 'About Us',
-    'footer_contacto'   => 'Contact',
+    'footer_contacto'   => 'Team Vidatur',
     'footer_eventos'    => 'Events',
     'footer_servicios'  => 'Services',
-    'footer_bloqueos'   => 'Blockages',
+    'footer_bloqueos'   => 'Group Dates & Programs',
     'footer_salidas'    => 'Confirmed Departures',
     'footer_online'     => 'Online',
     'footer_politicas'  => 'Privacy Policy',
@@ -205,6 +210,11 @@ $t = [
     'parques_xc'        => 'XCARET PARKS',
     'aliados_title'     => 'ALLIES',
     'aliados_btn'       => 'View Strategic Partners',
+
+    // index — destinos
+    'index_titulo_destinos' => 'Destinations',
+    'index_desc_destinos'  => 'Explore Our National And International Destinations',
+    'index_destinos_ver_programas' => 'View programs',
 
     // Index — booking
     'booking_title'     => 'VIDATUR ONLINE 2.0 QUOTER',

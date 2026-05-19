@@ -466,78 +466,91 @@ require_once 'config/database.php';
                         [
                             'nombre' => 'Miguel Portugal',
                             'cargo'  => 'Gerente General',
+                            'email'  => 'gerencia@vidatur.net',
                             'img'    => 'img/images-index/miguel_angel_gerente_4.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Mirko',
-                            'cargo'  => 'Ventas',
+                            'cargo'  => 'Gerente de Operaciones',
+                            'email'  => 'ventas@vidatur.net',
                             'img'    => 'img/images-index/mirko_producto.png',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Naomi',
-                            'cargo'  => 'Producto',
+                            'cargo'  => 'Producto Nacional',
+                            'email'  => 'producto2@vidatur.net',
                             'img'    => 'img/images-index/naomi_producto_2.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Yulieth',
-                            'cargo'  => 'Producto',
+                            'cargo'  => 'Producto Internacional',
+                            'email'  => 'producto@vidatur.net',
                             'img'    => 'img/images-index/yulieth_producto_2.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Miluska',
-                            'cargo'  => 'Ventas',
+                            'cargo'  => 'Ejecutivo Comercial Arequipa',
+                            'email'  => 'ventas3@vidatur.net',
                             'img'    => 'img/images-index/milureduc.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Daniel',
-                            'cargo'  => 'Ventas',
+                            'cargo'  => 'Ejecutivo Comercial Lima',
+                            'email'  => 'ventaslim@vidatur.net',
                             'img'    => 'img/images-index/Daniel_campo_verde_ventas_3.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Brenda',
                             'cargo'  => 'Counter',
+                            'email'  => 'reservas3@vidatur.net',
                             'img'    => 'img/images-index/brenda_cornejo_counter_2.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Giuliana',
                             'cargo'  => 'Counter',
+                            'email'  => 'reservas@vidatur.net',
                             'img'    => 'img/images-index/giuliana_portugal_2.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Liz',
                             'cargo'  => 'Counter',
+                            'email'  => 'reservas8@vidatur.net',
                             'img'    => 'img/images-index/liz_tavera_counter.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Brendha',
                             'cargo'  => 'Counter',
+                            'email'  => 'reservas4@vidatur.net',
                             'img'    => 'img/images-index/brendha_juarez_counter.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Lady',
                             'cargo'  => 'Atencion Al Cliente',
+                            'email'  => 'atencionalcliente@vidatur.net',
                             'img'    => 'img/images-index/lady_guillen_3.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Victor',
                             'cargo'  => 'Atencion Al Cliente',
+                            'email'  => 'atencionalcliente@vidatur.net',
                             'img'    => 'img/images-index/victor_cardenas_atc.jpg',
                             'wa'     => '51999999999',
                         ],
                         [
                             'nombre' => 'Rose Damian',
                             'cargo'  => 'Administración',
+                            'email'  => 'contabilidad@vidatur.net',
                             'img'    => 'img/images-index/administracion_rouse.jpg',
                             'wa'     => '51999999999',
                         ],
@@ -563,6 +576,7 @@ require_once 'config/database.php';
                                 <div class="guide-title-inner">
                                     <h4 class="mt-3"><?= $m['nombre'] ?></h4>
                                     <p class="mb-0"><?= $m['cargo'] ?></p>
+                                    <p class="mb-0" ><?= $m['email'] ?></p>
                                 </div>
                             </div>
                         </div>

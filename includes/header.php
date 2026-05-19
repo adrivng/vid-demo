@@ -69,6 +69,16 @@ $subir = $subir ?? '';
             </div>
             <a href="https://vidatur.paquetedinamico.com/" target="_blank"
                class="btn btn-primary rounded-pill py-2 px-4 ms-lg-4"><?= __('nav_online') ?></a>
+            <div class="d-lg-none text-center mt-3 pb-2">
+                <div class="lang-mobile-toggle">
+                    <a class="lang-mobile-opt<?= $lang === 'es' ? ' active' : '' ?>" href="#" data-lang="es">
+                        <i class="fas fa-globe"></i> Español
+                    </a>
+                    <a class="lang-mobile-opt<?= $lang === 'en' ? ' active' : '' ?>" href="#" data-lang="en">
+                        <i class="fas fa-globe"></i> English
+                    </a>
+                </div>
+            </div>
         </div>
     </nav>
 </div>
