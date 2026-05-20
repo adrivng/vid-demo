@@ -99,7 +99,7 @@ $titulos = [
                 </a>
                 <?php if ($p['fecha_limite_texto']): ?>
                 <div class="pkg-card__urgency">
-                    Para comprar hasta <span><?= htmlspecialchars($p['fecha_limite_texto']) ?></span>
+                    <span><?= htmlspecialchars($p['fecha_limite_texto']) ?></span>
                 </div>
                 <?php endif; ?>
                 <div class="pkg-card__meta">

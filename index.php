@@ -179,6 +179,7 @@ require_once 'config/database.php';
 
         <div class="mx-auto text-center mb-5 text-max-900">
             <h1 class="section-title px-3"><?= __('fortalezas_title') ?></h1>
+            <hr class="section-divider">
             <!-- <hr class="section-divider"> -->
             <h2 class="fw-bold color-primary-green"><?= __('fortalezas_sub') ?></h2>
             <hr class="w-25 mx-auto border-primary border-2">

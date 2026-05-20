@@ -206,8 +206,6 @@ ksort($categoriasUnicas);
                             <?php if ($programa['fecha_limite_texto']): ?>
                             <div class="pkg-card__urgency">
 
-                                Para comprar hasta
-
                                 <span>
                                     <?= htmlspecialchars($programa['fecha_limite_texto']) ?>
                                 </span>

@@ -21,11 +21,10 @@ require_once 'includes/head.php';
     </div>
 </div>
 
-<br><br><br><br>
 
-
-<div class="container py-5">
-    <div class="destinos-grid">
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="destinos-grid">
 
         <?php
         $destinos = [
@@ -57,7 +56,7 @@ require_once 'includes/head.php';
 
     </div>
 </div>
-<br><br><br><br>
+</div>
 
 <?php require_once 'includes/footer.php'; ?>
 <?php require_once 'includes/scripts.php'; ?>

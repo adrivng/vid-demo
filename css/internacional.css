@@ -226,11 +226,11 @@
    ===================================================== */
 
 .intl-ciudad {
-    padding: 40px 0 60px;
+    padding: 24px 0 48px;
 }
 @media (max-width: 600px) {
-    .intl-ciudad { padding: 24px 0 40px; }
-    .intl-ciudad__subtitle { margin-bottom: 24px; font-size: .9rem; }
+    .intl-ciudad { padding: 16px 0 32px; }
+    .intl-ciudad__subtitle { margin-bottom: 16px; font-size: .9rem; }
 }
 
 .intl-ciudad__back {
@@ -261,18 +261,21 @@
 .intl-ciudad__subtitle {
     font-size: 1rem;
     color: #666;
-    margin-bottom: 36px;
+    margin-bottom: 24px;
 }
 
 .intl-ciudad-section {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 }
 @media (max-width: 600px) {
-    .intl-ciudad-section { margin-bottom: 28px; }
+    .intl-ciudad-section { margin-bottom: 20px; }
 }
 
-.intl-ciudad-section .pkg-card__img-link img {
-    height: auto;
+@media (max-width: 600px) {
+    .intl-ciudad-section .pkg-card__img-link img {
+        height: auto;
+        object-fit: contain;
+    }
 }
 
 .intl-ciudad-section__title {

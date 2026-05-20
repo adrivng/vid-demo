@@ -61,7 +61,7 @@ $destinos = [
     <div class="container py-5">
         <div class="mx-auto text-center mb-5" style="max-width:900px;">
             <h5 class="section-title px-3"> <?= __('index_titulo_destinos') ?></h5>
-            <h1 class="mb-0"><?= __('index_desc_destinos')?></h1>
+            <h2 class="mb-0 fw-bold color-primary-green"><?= __('index_desc_destinos')?></h1>
         </div>
 
         <div class="team-carousel-wrapper">

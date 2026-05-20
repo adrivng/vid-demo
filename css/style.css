@@ -130,6 +130,7 @@
     display: inline-block;
     text-transform: uppercase;
     color: var(--bs-primary);
+    font-size: xx-large;
 }
 
 .section-title::before,
@@ -424,6 +425,8 @@
     background-size: cover;
     padding: 35px 0;
     text-align: center;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 /* ── Breadcrumb por página ── */
