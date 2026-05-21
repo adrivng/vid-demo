@@ -37,6 +37,24 @@
     opacity: .88;
 }
 
+/* ── BACK ── */
+.prog-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #1a7a4a;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: opacity 0.2s;
+}
+.prog-back:hover {
+    opacity: 0.75;
+    text-decoration: none;
+    color: #1a7a4a;
+}
+
 /* ── LAYOUT ── */
 .prog-layout {
     display: grid;

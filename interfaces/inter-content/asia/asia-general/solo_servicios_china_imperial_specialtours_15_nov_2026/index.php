@@ -34,6 +34,9 @@ require_once $subir . 'includes/head.php';
 </div>
 
 <div class="container py-5">
+    <a class="prog-back" href="../../../../../internacional.php">
+        <i class="fa fa-arrow-left"></i> Volver a Internacional
+    </a>
     <div class="prog-layout">
         <aside class="prog-sidebar">
             <div class="prog-card">
@@ -91,34 +94,9 @@ require_once $subir . 'includes/head.php';
     </div>
 </div>
 
-<!-- WhatsApp -->
-<div class="wa-overlay" id="waOverlay" onclick="closeWAOutside(event)">
-    <div class="wa-modal">
-        <button class="wa-modal__close" onclick="closeWA()">&#x2715;</button>
-        <div class="wa-modal__icon"><i class="fab fa-whatsapp"></i></div>
-        <h5>Habla con nuestros expertos</h5>
-        <p id="waSubtitle">Un asesor te atiende ahora mismo.</p>
-        <a class="wa-agent" id="waLink1" href="#" target="_blank" rel="noopener">
-            <div class="wa-agent__avatar">A</div>
-            <div class="wa-agent__info"><strong>Andrea Ramos</strong><span>Experta en Caribe y Sudamérica</span></div>
-            <i class="fa fa-chevron-right wa-agent__arrow"></i>
-        </a>
-        <a class="wa-agent" id="waLink2" href="#" target="_blank" rel="noopener">
-            <div class="wa-agent__avatar">C</div>
-            <div class="wa-agent__info"><strong>Carlos Mendoza</strong><span>Especialista en Europa y Asia</span></div>
-            <i class="fa fa-chevron-right wa-agent__arrow"></i>
-        </a>
-        <a class="wa-agent" id="waLink3" href="#" target="_blank" rel="noopener">
-            <div class="wa-agent__avatar">L</div>
-            <div class="wa-agent__info"><strong>Lucía Torres</strong><span>Asesora Internacional y Nacional</span></div>
-            <i class="fa fa-chevron-right wa-agent__arrow"></i>
-        </a>
-        <div class="wa-modal__footer">🔒 Atención personalizada · Sin costo adicional</div>
-    </div>
-</div>
+<?php require_once $subir . 'includes/whatsapp-modal.php'; ?>
 
 <?php require_once $subir . 'includes/footer.php'; ?>
 <?php require_once $subir . 'includes/scripts.php'; ?>
-<script src="<?= $subir ?>js/whatsapp-cotizar.js"></script>
 </body>
 </html>

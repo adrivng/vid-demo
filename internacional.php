@@ -191,6 +191,11 @@ $countries = [
                     <?php foreach ($c['cities'] as $city): ?>
                     <a class="intl-explorer__city" href="internacional/<?= $slug ?>/<?= $city['slug'] ?>.php"><?= $city['name'] ?></a>
                     <?php endforeach; ?>
+                    <?php if ($slug === 'mexico'): ?>
+                    <a class="intl-explorer__city" href="https://excursiontravelperu.com/" target="_blank" rel="noopener" style="padding:4px 12px;text-align:center;">
+                        <img src="img/icons/excursion-logo_2.png" style="width:130px;height:auto;display:block;margin:0 auto;" alt="Excursion Travel Peru">
+                    </a>
+                    <?php endif; ?>
                 </div>
             </div>
             <?php endforeach; ?>

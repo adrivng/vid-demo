@@ -29,9 +29,12 @@ $subir = $subir ?? '';
                         <div class="footer-item d-flex flex-column">
                             <h4 class="mb-4 text-white"><?= __('footer_lima') ?></h4>
                             <a href="#"><i class="fas fa-home me-2"></i><small>Av. José Larco 930, Miraflores 15074</small></a>
-                            <a href="mailto:soporte@vidatur.net"><i class="fas fa-envelope me-2"></i><small>soporte@vidatur.net</small></a>
-                            <a href="tel:+51999999999"><i class="fas fa-phone me-2"></i><small>+51 999 999 999</small></a>
-                            <a href="#" class="mb-3"><i class="fas fa-print me-2"></i><small>+51 837 212 312</small></a>
+                            <a href="mailto:reservas@vidatur.net"><i class="fas fa-envelope me-2"></i><small>reservas@vidatur.net</small></a>
+                            <a href="mailto:reservas3@vidatur.net"><i class="fas fa-envelope me-2"></i><small>reservas3@vidatur.net</small></a>
+                            <a href="mailto:reservas4@vidatur.net"><i class="fas fa-envelope me-2"></i><small>reservas4@vidatur.net</small></a>
+                            <a href="mailto:reservas8@vidatur.net"><i class="fas fa-envelope me-2"></i><small>reservas8@vidatur.net</small></a>
+                            <a href="tel:+51999999999"><i class="fas fa-phone me-2"></i><small>Telefono:(01) 7550071</small></a>
+                            <a href="#" class="mb-3"><i class="fas fa-print me-2"></i><small>+51 977-912-165</small></a>
                             <div class="d-flex align-items-center">
                                 <i class="fas fa-share fa-2x text-white me-2"></i>
                                 <a class="btn-square btn btn-primary rounded-circle mx-1" href="#"><i class="fab fa-facebook-f"></i></a>

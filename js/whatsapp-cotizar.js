@@ -14,19 +14,11 @@
 //    - phone: número con código de país, SIN espacios ni guiones
 //             Perú = 51 + 9 dígitos  ej: 51987654321
 // ─────────────────────────────────────────────────────────────
-const WA_AGENTS = [
-    {
-        link:  'waLink1',
-        phone: '51999000001',   // ◄ CAMBIA: número de Andrea
-    },
-    {
-        link:  'waLink2',
-        phone: '51999000002',   // ◄ CAMBIA: número de Carlos
-    },
-    {
-        link:  'waLink3',
-        phone: '51999000003',   // ◄ CAMBIA: número de Lucía
-    },
+const WA_AGENTS = [ //puedes agregar más objetos para más asesores, siguiendo el mismo formato
+    { link: 'waLink1', phone: '51977535513' },
+    { link: 'waLink2', phone: '51997601143' },
+    { link: 'waLink3', phone: '51955243971' },
+    { link: 'waLink4', phone: '51981571169' },
 ];
 
 // ─────────────────────────────────────────────────────────────
