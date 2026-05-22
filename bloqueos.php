@@ -5,8 +5,6 @@ $activePage = 'bloqueos';
 require_once 'includes/head.php';
 require_once 'config/database.php';
 
-
-
 $sql = "
 
 SELECT 
@@ -305,118 +303,54 @@ ksort($categoriasUnicas);
 
 <script>
 
-/* =========================================================
-   SIDEBAR TOGGLE
-========================================================= */
-
 function toggleSidebar(btn) {
-
-    const body = btn.nextElementSibling;
-    const icon = btn.querySelector('.fa');
-
+    var body = btn.nextElementSibling;
+    var icon = btn.querySelector('.fa');
     body.classList.toggle('open');
-
     icon.classList.toggle('fa-chevron-up');
     icon.classList.toggle('fa-chevron-down');
-
 }
-
-/* =========================================================
-   FILTER
-========================================================= */
 
 function filterPkg(btn, cat) {
-
-    document.querySelectorAll('.sidebar-btn, .btn-filter')
-    .forEach(b => b.classList.remove('active'));
-
-    document.querySelectorAll(`[onclick="filterPkg(this,'${cat}')"]`)
-    .forEach(b => b.classList.add('active'));
-
-    const cards = document.querySelectorAll('.pkg-card');
-
-    let visible = 0;
-
-    cards.forEach(card => {
-
-        const show =
-            cat === 'all'
-            || card.dataset.cat.includes(cat);
-
-        card.style.display = show ? '' : 'none';
-
-        if(show){
-            visible++;
-        }
-
+    document.querySelectorAll('.sidebar-btn, .btn-filter').forEach(function(b) {
+        b.classList.remove('active');
     });
-
-    const counter = document.getElementById('pkgResultCount');
-
-    counter.textContent =
-        cat === 'all'
-        ? ''
-        : `${visible} resultado${visible !== 1 ? 's' : ''}`;
-
+    document.querySelectorAll('[onclick="filterPkg(this,\'' + cat + '\')"]').forEach(function(b) {
+        b.classList.add('active');
+    });
+    var visible = 0;
+    document.querySelectorAll('.pkg-card').forEach(function(card) {
+        var show = cat === 'all' || card.dataset.cat.includes(cat);
+        card.style.display = show ? '' : 'none';
+        if (show) visible++;
+    });
+    document.getElementById('pkgResultCount').textContent = cat === 'all' ? '' : visible + ' resultado' + (visible !== 1 ? 's' : '');
+    location.hash = cat === 'all' ? '' : cat;
 }
 
-/* =========================================================
-   CONTADORES
-========================================================= */
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    const cards = document.querySelectorAll('.pkg-card');
-
-    const counts = {};
-
-    cards.forEach(card => {
-
-        const categories = card.dataset.cat.trim().split(/\s+/);
-
-        categories.forEach(cat => {
-
+document.addEventListener('DOMContentLoaded', function() {
+    var cards = document.querySelectorAll('.pkg-card');
+    var counts = {};
+    cards.forEach(function(card) {
+        (card.dataset.cat.trim().split(/\s+/)).forEach(function(cat) {
             if (!cat) return;
-
-            if(!counts[cat]){
-                counts[cat] = 0;
-            }
-
+            if (!counts[cat]) counts[cat] = 0;
             counts[cat]++;
-
         });
-
     });
-
-    Object.keys(counts).forEach(cat => {
-
-        const el = document.getElementById('count-' + cat);
-
-        if(el){
-
-            el.textContent = counts[cat];
-
-        }
-
+    Object.keys(counts).forEach(function(cat) {
+        var el = document.getElementById('count-' + cat);
+        if (el) el.textContent = counts[cat];
     });
-
+    var cat = location.hash.replace('#', '');
+    if (cat) filterPkg(null, cat);
 });
 
-/* =========================================================
-   INIT — abrir todos los paneles al cargar
-========================================================= */
-
-document.querySelectorAll('.sidebar-section__body')
-.forEach(b => b.classList.add('open'));
-
-document.querySelectorAll('.sidebar-section__toggle .fa')
-.forEach(i => {
-
+document.querySelectorAll('.sidebar-section__body').forEach(function(b) { b.classList.add('open'); });
+document.querySelectorAll('.sidebar-section__toggle .fa').forEach(function(i) {
     i.classList.remove('fa-chevron-down');
     i.classList.add('fa-chevron-up');
-
 });
-
 </script>
 
 <?php require_once 'includes/footer.php'; ?>

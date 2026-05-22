@@ -6,7 +6,7 @@ require_once 'includes/head.php';
 <link href="css/eventos.css" rel="stylesheet">
 <style>
 .cont-hero {
-    background: #2d7a3a;
+    background: #317755;
     padding: 110px 20px 40px;
     text-align: center
 }

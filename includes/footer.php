@@ -63,7 +63,8 @@ $subir = $subir ?? '';
                                 <div class="footer-item d-flex flex-column">
                                     <h4 class="mb-4 text-white"><?= __('footer_servicios') ?></h4>
                                     <a href="<?= $subir ?>bloqueos.php"><i class="fas fa-angle-right me-2"></i> <?= __('footer_bloqueos') ?></a>
-                                    <a href="#"><i class="fas fa-angle-right me-2"></i> <?= __('footer_salidas') ?></a>
+                                    <a href="peru.php"><i class="fas fa-angle-right me-2"></i> <?= __('footer_nacional') ?></a>
+                                    <a href="internacional.php"><i class="fas fa-angle-right me-2"></i> <?= __('footer_internacional') ?></a>
                                     <a href="https://vidatur.paquetedinamico.com/" target="_blank"><i class="fas fa-angle-right me-2"></i> <?= __('footer_online') ?></a>
                                 </div>
                             </div>
