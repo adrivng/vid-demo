@@ -31,6 +31,7 @@ require_once 'includes/head.php';
 }
 @media (max-width: 768px) {
     .ev-cards { grid-template-columns: 1fr; }
+    .ev-card { min-height: 260px; height: 40vh; max-height: 360px; }
 }
 
 .ev-card {
@@ -81,6 +82,11 @@ require_once 'includes/head.php';
 .ev-card--conv { background-image: url('eventos/images/convencion_cuba/image__001.jpg'); }
 .ev-card--fam  { background-image: url('eventos/images/fam_cancun_2021/FAM%20CANCUN%202.jpg'); }
 .ev-card--event{ background-image: url('eventos/images/convencion2/foto01.jpg'); }
+
+@media (max-width: 576px) {
+  .cont-hero { padding: 90px 16px 30px; }
+  .cont-hero h1 { font-size: 1.5rem; }
+}
 </style>
 </head>
 <body>

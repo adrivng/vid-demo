@@ -401,16 +401,21 @@
 @media (max-width: 768px) {
     .carousel-header .carousel-inner .carousel-item img,
     .carousel-header .carousel-inner .carousel-item .carousel-caption {
-        height: 650px;
-        margin-top: -100px;
+        height: 450px;
     }
 
-    .carousel-header { height: 620px !important; }
+    .carousel-header { height: 420px !important; }
 
     .carousel-header .carousel-control-prev .carousel-control-prev-icon,
     .carousel-header .carousel-control-next .carousel-control-next-icon { opacity: 0; }
+}
 
-    .search-bar { margin-top: -100px; transition: 0.5s; }
+@media (max-width: 576px) {
+    .carousel-header .carousel-inner .carousel-item img,
+    .carousel-header .carousel-inner .carousel-item .carousel-caption {
+        height: 360px;
+    }
+    .carousel-header { height: 340px !important; }
 }
 
 
@@ -418,12 +423,18 @@
    8. BREADCRUMB HEADER (páginas internas)
    ===================================================== */
 .bg-breadcrumb {
-    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+    /* background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
                 url(../img/images-portadas/mod-peru-cusco.png);
     background-position: center 100%;
     background-repeat: no-repeat;
     background-size: cover;
     padding: 35px 0;
+    text-align: center;
+    max-width: 1600px;
+    margin: 0 auto; */
+     
+    background-color: #317755; /* 👈 Reemplaza este código por tu color (HEX o RGB) */
+    padding: 70px 0px 0px 0px;
     text-align: center;
     max-width: 1600px;
     margin: 0 auto;
@@ -432,51 +443,59 @@
 /* ── Breadcrumb por página ── */
 
 .bg-breadcrumb--nosotros {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+    /* background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
                       url(../img/images-portadas/mod-nosotros-portada.png);
-    background-position: center center;
+    background-position: center center; */
+    background-color: #317755;
 }
 
 .bg-breadcrumb--bloqueos {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+    /* background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
                       url(../img/images-portadas/mod-bloqueos-ciudad.png);
-    background-position: center 52%;
+    background-position: center 52%; */
+    background-color: #317755;
 }
 
 .bg-breadcrumb--internacional {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+    /* background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
                       url(../img/images-portadas/mod-internacional.png);
-    background-position: center 66.5%;
+    background-position: center 66.5%; */
+    background-color: #317755;
 }
 
 .bg-breadcrumb--eventos {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+    /* background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
                       url(../img/packages-2.jpg);
-    background-position: center center;
+    background-position: center center; */
+    background-color: #317755;
 }
 
 .bg-breadcrumb--videos {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+    /* background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
                       url(../img/packages-3.jpg);
-    background-position: center center;
+    background-position: center center; */
+    background-color: #317755;
 }
 
 .bg-breadcrumb--cuentas {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+    /* background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
                       url(../img/bck-nosotros.jpg);
-    background-position: center center;
+    background-position: center center; */
+    background-color: #317755;
 }
 
 .bg-breadcrumb--equipo {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+    /* background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
                       url(../img/bck-nosotros.jpg);
-    background-position: center center;
+    background-position: center center; */
+    background-color: #317755;
 }
 
 .bg-breadcrumb--registro {
-    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
+    /* background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5)),
                       url(../img/images-portadas/mod-nostros_registro.png);
-    background-position: center center;
+    background-position: center center; */
+    background-color: #317755;
 }
 
 /* Agrega más según necesites */
@@ -1598,4 +1617,53 @@
     .beneficio-card h6 { font-size: .7rem; }
     .about.py-5 { padding-top: 1rem !important; padding-bottom: 1.5rem !important; }
     .about .container.py-5 { padding-top: 0 !important; padding-bottom: 0 !important; }
+}
+
+@media (max-width: 576px) {
+  .bg-breadcrumb {
+    padding: 40px 0;
+  }
+  .bg-breadcrumb .container.py-5 {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  .bg-breadcrumb h3.display-3 {
+    font-size: 2rem;
+    margin-bottom: 0;
+  }
+  .carousel-header .carousel-caption h1.display-2 {
+    font-size: 2rem;
+  }
+  .carousel-header .carousel-caption h4 {
+    font-size: .85rem;
+  }
+  .section-title {
+    font-size: 1.2rem;
+  }
+  .section-title::before,
+  .section-title::after {
+    width: 24px;
+  }
+  .section-title::before {
+    margin-right: -24px;
+  }
+  .section-title::after {
+    margin-left: -24px;
+  }
+  .cont-hero {
+    padding: 90px 16px 30px;
+  }
+  .cont-hero h1 {
+    font-size: 1.5rem;
+  }
+  .destino-card {
+    width: 120px;
+    padding: 14px 10px;
+  }
+  .booking {
+    background-attachment: scroll;
+  }
+  .subscribe {
+    background-attachment: scroll;
+  }
 }

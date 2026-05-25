@@ -7,7 +7,7 @@ require_once $subir . 'includes/head.php';
 <link rel="stylesheet" href="<?= $subir ?>css/team.css">
 <style>
 .cont-hero {
-    background: #2d7a3a;
+    background: #317755;
     padding: 110px 20px 40px;
     text-align: center
 }
